@@ -1,0 +1,49 @@
+/* 
+Sinosoft UI Toolbar plugin styles
+*/
+
+.sinosoft-ui-toolbar { position: inherit; overflow-x: hidden; }
+.sinosoft-ui-toolbar.attop { z-index: 2; float: left; border-bottom: 1px solid black; background: url(../images/toolbar_bg_horizon.jpg) 0 50% repeat-x;  }
+.sinosoft-ui-toolbar.atbottom { position: absolute; z-index: 2; float: left; background: url(../images/toolbar_bg_horizon.jpg) 0 50% repeat-x; }
+.sinosoft-ui-toolbar.atleft { float: left; width: 26px; padding: 5px 0; background: url(../images/toolbar_bg_vertical.jpg) 50% 0 repeat-y; }
+.sinosoft-ui-toolbar.atright { float: right; width: 26px; padding: 5px 0; background: url(../images/toolbar_bg_vertical.jpg) 50% 0 repeat-y; }
+
+.attop .scroll_wrap, .atbottom .scroll_wrap { float: left; background: url(../images/toolbar_bg_horizon.jpg) 0 50% repeat-x;  }
+
+.sinosoft-ui-toolbar .button-group { float: left; display: inline; overflow: hidden; }
+.sinosoft-ui-toolbar .button-group.horizon { padding-right: 5px; background: url(../images/toolbar_group_separ_ver.gif) 100% 0 repeat-y; }
+.sinosoft-ui-toolbar .button-group.vertical { background: url(../images/toolbar_group_separ_hor.gif) 0 100% repeat-x; }
+
+.sinosoft-ui-toolbar label { float: left; height: 26px; line-height: 26px; cursor: pointer; padding: 0 !important; margin: 0 !important; display: inline; white-space: nowrap; }
+.sinosoft-ui-toolbar label span { float: left; }
+.sinosoft-ui-toolbar label input { float: left; margin: 0; }
+.sinosoft-ui-toolbar button.btn, button.checker, .sinosoft-ui-toolbar .btnset-wrapper {
+    float: left; display: inline; cursor: pointer; white-space: nowrap; overflow: visible;
+    text-align: center; text-decoration: none; color: black; border: 0;
+}
+.sinosoft-ui-toolbar input.text_field {
+    float: left; height: 14px; line-height: 14px; margin: 3px 0; padding: 2px; display: inline; border: 1px solid gray; background: transparent;
+}
+input.text_field:focus { outline: none; }
+.btn.horizon, .checker.horizon { background: url(../images/toolbar_bg_horizon.jpg) 0 50% repeat-x; }
+.btn.vertical, .checker.vertical { background: url(../images/toolbar_bg_vertical.jpg) 50% 0 repeat-y; }
+.sinosoft-ui-toolbar .btn.horizon.hover, .checker.hover { background: url(../images/toolbar_btn_hover_horizon.jpg) 0 50% repeat-x; }
+.sinosoft-ui-toolbar .btn.vertical.hover { background: url(../images/toolbar_btn_hover_vertical.jpg) 50% 0 repeat-y; }
+.sinosoft-ui-toolbar .btn.horizon.active, .checker.checked { background: url(../images/toolbar_btn_active_horizon.jpg) 0 50% repeat-x; }
+.sinosoft-ui-toolbar .btn.vertical.active { background: url(../images/toolbar_btn_active_vertical.jpg) 0 50% repeat-y; }
+.sinosoft-ui-toolbar button.enabled { color: black; }
+.sinosoft-ui-toolbar button.disabled { color: gray !important; }
+.sinosoft-ui-toolbar .btn span.icon { float: left; width: 16px; height: 16px; margin: 5px 0; display: inline; text-align: center; vertical-align: middle; }
+.sinosoft-ui-toolbar .btn span.icon img { border: 0; }
+.sinosoft-ui-toolbar .btn span.label { float: left; height: 26px; line-height: 26px; text-align: center; white-space: nowrap; }
+
+.sinosoft-ui-toolbar .btnset-wrapper { padding: 0 5px; height: 26px; display: inline; cursor: default; white-space: nowrap; overflow: visible; }
+.sinosoft-ui-toolbar .btnset-wrapper span.set_title { float: left; height: 26px; line-height: 26px; margin-right: 5px; display: inline; color: white; }
+.sinosoft-ui-toolbar .btnset { float: left; margin: 3px; display: inline; }
+.sinosoft-ui-toolbar select { float: left; margin: 3px; display: inline; }
+
+.sinosoft-ui-toolbar a.more-btns {
+    position: absolute; z-index: 2; float: left; width: 20px; text-align: center; text-decoration: none;
+    color: white; background: url(../images/toolbar_bg_horizon.jpg) 0 50% repeat-x;
+}
+.sinosoft-ui-toolbar a.more-btns:hover { color: orange; }

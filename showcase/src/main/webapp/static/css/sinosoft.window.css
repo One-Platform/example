@@ -1,0 +1,37 @@
+/* CSS Document */
+.cusWindow{position:absolute; z-index:100; display:none; width:300px;background:#fff}
+.cusWindow{border:#959fa9 1px solid;}
+.if1 { position:absolute; left:0px; top:30px; height:170px; width:300px; border-width:0px; z-index:150;}
+/*
+通过这个例子我可以学到，本来是css渐变色，我完全可以用css实现之后把它变成背景图片，这样filter就不用管它了
+有filter的东西再IE中就不能再绑定事件或者设置cusor等某些css样式
+.cusWindow .cusWindow_title{height:30px; color:#fff; padding-left:8px; font-weight:bold; line-height:30px;
+background: -webkit-gradient(linear, left top, left bottom, from(#3a79b8), to(#2e629d));
+background: -moz-linear-gradient(top,  #3a79b8,  #2e629d);
+background: -o-linear-gradient(top, #3a79b8, #2e629d);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a79b8', endColorstr='#2e629d');
+background: linear-gradient(top, #3a79b8, #2e629d);}
+*/
+.cusWindow .cusWindow_head{height:30px; color:#fff; font-weight:bold; background:url(../images/window/headBg.jpg);}
+.cusWindow .cusWindow_title{float:left; line-height:30px; padding-left:3px;}
+
+/* 这三个图片给他们总共80px的宽度 */
+.min_size{position:relative; z-index:400;height:21px; width:22px; background:url(../images/window/win_icon.gif) no-repeat -132px; margin-top:5px; float:right; }
+.max_size{position:relative; z-index:400;height:21px; width:22px; background:url(../images/window/win_icon.gif) no-repeat -44px; margin-top:5px; float:right; }
+.res_size{position:relative; z-index:400;height:21px; width:22px; background:url(../images/window/win_icon.gif) no-repeat -88px; margin-top:5px; float:right;}
+.close_window{position:relative; z-index:400;height:21px; width:22px; background:url(../images/window/win_icon.gif) no-repeat; margin-top:5px; float:right;}
+
+.cusWindow .cusWindow_cont{ padding-left:8px; overflow:auto;}
+.left{height:150px; width:6px; position:absolute; left:-3px; cursor:e-resize; top:0px; background:red; filter:alpha(opacity=0); -moz-opacity:0.0;-khtml-opacity:0.0;opacity:0.0;}
+.right{height:150px; width:6px; position:absolute; right:-3px; cursor:e-resize; top:0px; background:red; filter:alpha(opacity=0); -moz-opacity:0.0;-khtml-opacity:0.0;opacity:0.0;}
+.top{height:6px; width:200px; line-height:3px; position:absolute; top:-3px; cursor:n-resize;}
+.bottom{height:6px; width:200px; position:absolute; bottom:-3px; cursor:n-resize; background:red; filter:alpha(opacity=0); -moz-opacity:0.0;-khtml-opacity:0.0;opacity:0.0;}
+
+.left_top{width:12px; height:12px; line-height:12px; position:absolute; top:-2px; left:-2px; cursor:nw-resize;}
+.right_top{width:12px; height:12px; line-height:12px; position:absolute; top:-2px; right:-2px; cursor:ne-resize;}
+.left_bottom{width:8px; height:8px; line-height:8px; position:absolute; bottom:-4px; left:-4px; cursor:ne-resize;}
+.right_bottom{width:10px; height:10px; line-height:10px; position:absolute; bottom:-4px; right:-4px; cursor:nw-resize;}
+
+
+.shadow {position:relative; top:0px; left:0px; width:100%; height:100%; background:black; filter:alpha(opacity=0); -moz-opacity:0;-khtml-opacity:0;opacity:0;}
+.bgShadow {position:absolute; top:0px; left:0px; width:100%; height:100%; background:black; filter:alpha(opacity=10); -moz-opacity:0.1;-khtml-opacity:0.1;opacity:0.1;}

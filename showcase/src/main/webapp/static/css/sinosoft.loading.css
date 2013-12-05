@@ -1,0 +1,38 @@
+.loading{position:absolute; left:0; z-index:999; top:0; display:none; width:200px;background:#fff}
+.loading{border:#959fa9 3px solid;}
+.loading .loading_title{line-height:30px; height:30px; color:#fff; padding:0 8px; font-weight:bold;
+background: -webkit-gradient(linear, left top, left bottom, from(#3a79b8), to(#2e629d));
+background: -moz-linear-gradient(top,  #3a79b8,  #2e629d);
+background: -o-linear-gradient(top, #3a79b8, #2e629d);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#3a79b8', endColorstr='#2e629d');
+background: linear-gradient(top, #3a79b8, #2e629d);}
+/*下边的background的左右，上下得计算*/
+.skin_1 .load_text{ padding-top:25px; text-align:center;}
+
+.skin_0 span{display:block; position:relative; left:40px;}
+
+.skin_3 .loading_cont{text-align:center;}
+.skin_3 img{margin-top:15px;}
+.skin_3 .load_text{margin-top:8px;}
+
+.skin_4 .loading_cont{line-height:60px; vertical-align:middle; text-align:center;}
+.skin_4 img{vertical-align:middle;}
+.skin_4 span{margin-left:4px;}
+
+#test2{ border:#000 1px solid;}
+
+.bg_one{ background:url(../images/loading/5-120P50T642-52.gif) no-repeat;}
+.bg_two{ background:url(../images/loading/5-120604091309-51.gif) no-repeat;}
+.bg_three{ background:url(../images/loading/5-120604091337.gif) no-repeat;}
+.bg_four{ background:url(../images/loading/5-120604091352-50.gif) no-repeat;}
+.bg_five{ background:url(../images/loading/loading2.gif) no-repeat;}
+.bg_six{ background:url(../images/loading/spinner.gif) no-repeat;}
+
+.shadow {position:absolute; z-index:998; background:black; filter:alpha(opacity=10); -moz-opacity:0.1;-khtml-opacity:0.1;opacity:0.1;}
+.ifm {position:absolute; z-index:997; background:black; filter:alpha(opacity=10); -moz-opacity:0.1;-khtml-opacity:0.1;opacity:0.1;}
+
+
+
+
+
+

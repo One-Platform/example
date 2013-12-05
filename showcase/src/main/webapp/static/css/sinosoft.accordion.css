@@ -1,0 +1,8 @@
+.accord{background:#fff}
+.accord_title,.accord_select{background:url(../images/accordion/accordion_bg.gif) repeat-x;height:27px;line-height:27px;padding:0 10px;cursor:pointer}
+.accord_select{height:28px;line-height:28px;background-position:0 bottom}
+.accord_title span{display:block;width:7px;height:7px;background:url(../images/accordion/accordion_icon.gif) no-repeat right 0;float:right;margin-top:10px;}
+.accord_select span{background-position:0 bottom}
+.accord_title .accord_hover{background-position:0 0}
+.accord_select .accord_hover{background-position:right bottom}
+.accord_cont{display:none;overflow:auto}

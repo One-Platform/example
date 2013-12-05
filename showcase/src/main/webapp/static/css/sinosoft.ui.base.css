@@ -1,0 +1,15 @@
+*{margin:0;padding:0;font-size:12px;}
+table{border-collapse:separate;}
+table,td,th{vertical-align:middle;}
+a img{border:none}
+ul{list-style:none;}
+html,body{font-size:12px;font-family: "Microsoft Yahei", "Verdana","HelveticaNeue", Helvetica, Arial, serif;color:#000;}
+
+.box_shadow{background:#444;opacity:0.3;filter:Alpha(Opacity=30);position:absolute;z-index:2;margin:5px 0 0 4px;padding:4px;display:none}
+
+.floatleft { float: left; }
+.floatright { float: right; }
+.floatcenter { float: none; margin-left: auto !important; margin-right: auto !important; }
+.clear { float: none; clear: both; }
+
+.font_yahei { font-family: "Microsoft Yahei", Hei, serif; }
