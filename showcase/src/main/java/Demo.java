@@ -9,5 +9,7 @@ public class Demo {
     private String name;
     int y = 3;
   //  int yang=2;
+    //qjlAdd
+    private int myTest = 123;
 }
 
