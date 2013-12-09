@@ -11,5 +11,6 @@ public class Demo {
   //  int yang=2;
     //qjlAdd
     private int myTest = 123;
+    public int a = 3;
 }
 
