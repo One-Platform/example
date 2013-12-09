@@ -6,4 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 public class Demo {
+    int y = 3;
+    int yang=2;
 }
