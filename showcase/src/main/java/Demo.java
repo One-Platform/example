@@ -12,5 +12,10 @@ public class Demo {
     //qjlAdd
     private int myTest = 123;
     public int a = 3;
+
+    //qjl add
+    public Demo() {
+        System.out.println("构造方法！");
+    }
 }
 
