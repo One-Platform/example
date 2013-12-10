@@ -19,7 +19,7 @@ import java.util.*;
  * Time: 上午11:08
  * To change this template use File | Settings | File Templates.
  */
-@WebService(targetNamespace = "http://webservice.demo.one.sinosoft.com", name = "DemoWebService")
+@WebService(targetNamespace = "http://cxf.webservices.showcase.one.sinosoft.com", name = "DemoWebService")
 public interface DemoWebService {
 
     /**
@@ -30,7 +30,7 @@ public interface DemoWebService {
     @WebMethod(operationName = "getDepartment")
     public
     @XmlJavaTypeAdapter(ResponseAdapter.class)
-    Response getDepartment(@WebParam(name = "request", targetNamespace = "http://webservice.demo.one.sinosoft.com") Request request);
+    Response getDepartment(@WebParam(name = "request", targetNamespace = "http://cxf.webservices.showcase.one.sinosoft.com") Request request);
 
     /**
      * xml文档传输
@@ -47,7 +47,7 @@ public interface DemoWebService {
      */
     @WebMethod(operationName = "getEmployees")
     @XmlJavaTypeAdapter(MapAdapter.class)
-    public Map<String,ArrayList<Employee>> getEmployees(@WebParam(name = "request", targetNamespace = "http://webservice.demo.one.sinosoft.com") Request request);
+    public Map<String,ArrayList<Employee>> getEmployees(@WebParam(name = "request", targetNamespace = "http://cxf.webservices.showcase.one.sinosoft.com") Request request);
 
     @WebMethod(operationName = "getEmployeeList")
     public List<Employee> getEmployeeList();
