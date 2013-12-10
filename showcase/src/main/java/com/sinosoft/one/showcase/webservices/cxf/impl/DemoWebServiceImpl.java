@@ -25,12 +25,12 @@ import java.util.*;
  * Time: 上午11:19
  * To change this template use File | Settings | File Templates.
  */
-@WebService(serviceName="DemoWebService",endpointInterface = "com.sinosoft.one.showcase.webservices.cxf.DemoWebservice",targetNamespace = "http://webservice.demo.one.sinosoft.com")
+@WebService(serviceName="DemoWebService",endpointInterface ="com.sinosoft.one.showcase.webservices.cxf.DemoWebService",targetNamespace = "http://cxf.webservices.showcase.one.sinosoft.com")
 public class DemoWebServiceImpl implements DemoWebService {
 
 
-    @Override
-    public Response getDepartment(@WebParam(name = "request", targetNamespace = "http://webservice.demo.one.sinosoft.com") Request request) {
+
+    public Response getDepartment(@WebParam(name = "request", targetNamespace = "http://cxf.webservices.showcase.one.sinosoft.com") Request request) {
         Response response  = new Response();
         byte[] b1 = {127};
         Employee e1 = new Employee(23,"aaa",'m',b1,5678.7d);
@@ -63,7 +63,7 @@ public class DemoWebServiceImpl implements DemoWebService {
         return response;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    @Override
+
     public String helloWorld(String request) {
         StringBuffer sb = new StringBuffer("<?xml version='1.0' encoding='utf-8' ?>");
         sb.append("<Employee>");
@@ -75,7 +75,7 @@ public class DemoWebServiceImpl implements DemoWebService {
 
     }
 
-    @Override
+
     public Map<String,ArrayList<Employee>> getEmployees(@WebParam(name = "request", targetNamespace = "http://webservice.demo.one.sinosoft.com") Request request) {
         byte[] b1 = {127};
         Employee e1 = new Employee(23,"aaa",'m',b1,5678.7d);
@@ -90,7 +90,7 @@ public class DemoWebServiceImpl implements DemoWebService {
         return map;
     }
 
-    @Override
+
     public List<Employee> getEmployeeList() {
         byte[] b1 = {127};
         Employee e1 = new Employee(23,"aaa",'m',b1,5678.7d);
@@ -103,7 +103,6 @@ public class DemoWebServiceImpl implements DemoWebService {
         return employees;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    @Override
     public Set<Employee> getEmployeeSet() {
         byte[] b1 = {127};
         Employee e1 = new Employee(23,"aaa",'m',b1,5678.7d);
