@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>showcase模板</title>
+
+    <!-- Bootstrap core CSS
+     注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
+    -->
+    <link href="./static/css/bootstrap/bootstrap.css" rel="stylesheet">
+
+    <!-- Documentation extras -->
+    <link href="./static/css/bootstrap/docs.css" rel="stylesheet" />
+    <link href="./static/css/bootstrap/github.min.css" rel="stylesheet" />
+    <link href="./static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
+    <!--[if lt IE 9]><script src="../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="./static/js/bootstrap/html5shiv.min.js"></script>
+    <script src="./static/js/bootstrap/respond.min.js"></script>
+    <![endif]-->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./static/images/bootstrap/apple-touch-icon-144-precomposed.png" />
+    <link rel="shortcut icon" href="./static/images/bootstrap/favicon.png" />
+</head>
+<body>
+<a class="sr-only" href="#content">Skip to main content</a>
+
+<!-- Docs master nav -->
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            <a href="../" class="navbar-brand">Bootstrap</a> </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li class="active"> <a href="../getting-started">起步</a> </li>
+                <li> <a href="../css">CSS</a> </li>
+                <li> <a href="../components">组件</a> </li>
+                <li> <a href="../javascript">JavaScript插件</a> </li>
+                <li> <a href="../customize">定制</a> </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <a href="../about">关于</a> </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Docs page layout -->
+<div class="bs-header" id="content">
+    <div class="container">
+        <h1>起步</h1>
+        <p>简要介绍Bootstrap，以及如何下载、使用，基本模版和案例，等等。</p>
+    </div>
+</div>
+
+<!-- Callout for the old docs link -->
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="bs-sidebar hidden-print" role="complementary">
+                <ul class="nav bs-sidenav">
+                    <li> <a href="#download">下载Bootstrap</a>
+                        <ul class="nav">
+                            <li><a href="#download-compiled">编译后的CSS、JS和字体文件</a></li>
+                            <li><a href="#download-additional">额外的下载渠道</a></li>
+                            <li><a href="#download-cdn">Bootstrap CDN</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="#whats-included">包含了哪些文件</a>
+                        <ul class="nav">
+                            <li><a href="#whats-included-precompiled">编译版</a></li>
+                            <li><a href="#whats-included-source">源码</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="#template">基本模版</a> </li>
+                    <li> <a href="#examples">案例</a> </li>
+                    <li> <a href="#disable-responsive">禁用响应式布局</a> </li>
+                    <li> <a href="#migration">从2.x升级到3.0版本</a>
+                        <ul class="nav">
+                            <li><a href="#migration-classes">被修改的主要class</a></li>
+                            <li><a href="#migration-new">新增class</a></li>
+                            <li><a href="#migration-dropped">被移除的class</a></li>
+                            <li><a href="#migration-notes">额外注意</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="#browsers">浏览器支持</a> </li>
+                    <li> <a href="#third-parties">对第三方组件的支持</a> </li>
+                    <li> <a href="#accessibility">可访问性</a> </li>
+                    <li> <a href="#license-faqs">许可证FAQ</a> </li>
+                    <li> <a href="#customizing">定制Bootstrap</a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-9" role="main">
+            <h1><a href="http://getbootstrap.com">Bootstrap</a> <a href="http://travis-ci.org/twbs/bootstrap"><img src="https://secure.travis-ci.org/twbs/bootstrap.png" alt="Build Status" /></a> <a href="https://david-dm.org/twbs/bootstrap#info=devDependencies"><img src="https://david-dm.org/twbs/bootstrap/dev-status.png" alt="devDependency Status" /></a></h1>
+            <p><a href="https://saucelabs.com/u/bootstrap"><img src="https://saucelabs.com/browser-matrix/bootstrap.svg" alt="Selenium Test Status" /></a></p>
+            <p>Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by <a href="http://twitter.com/mdo">Mark Otto</a> and <a href="http://twitter.com/fat">Jacob Thornton</a>.</p>
+            <p>To get started, check out <a href="http://getbootstrap.com">http://getbootstrap.com</a>!</p>
+            <h2>Quick start</h2>
+            <p id="template">Three quick start options are available:</p>
+            <ul>
+                <li><a href="https://github.com/twbs/bootstrap/archive/v3.0.3.zip">Download the latest release</a>.</li>
+                <li>Clone the repo: <code>git clone https://github.com/twbs/bootstrap.git</code>.</li>
+                <li>Install with <a href="http://bower.io">Bower</a>: <code>bower install bootstrap</code>.</li>
+            </ul>
+            <p>Read the <a href="http://getbootstrap.com/getting-started/">Getting Started page</a> for information on the framework contents, templates and examples, and more.</p>
+            <h3>What's included</h3>
+            <p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:</p>
+			<pre><code>bootstrap/
+                ├── css/
+                │   ├── bootstrap.css
+                │   ├── bootstrap.min.css
+                │   ├── bootstrap-theme.css
+                │   └── bootstrap-theme.min.css
+                ├── js/
+                │   ├── bootstrap.js
+                │   └── bootstrap.min.js
+                └── fonts/
+                ├── glyphicons-halflings-regular.eot
+                ├── glyphicons-halflings-regular.svg
+                ├── glyphicons-halflings-regular.ttf
+                └── glyphicons-halflings-regular.woff
+            </code></pre>
+            <p>We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). Fonts from Glyphicons are included, as is the optional Bootstrap theme.</p>
+            <h2>Bugs and feature requests</h2>
+            <p>Have a bug or a feature request? <a href="https://github.com/twbs/bootstrap/issues">Please open a new issue</a>. Before opening any issue, please search for existing issues and read the <a href="https://github.com/necolas/issue-guidelines">Issue Guidelines</a>, written by <a href="https://github.com/necolas/">Nicolas Gallagher</a>.</p>
+            <p>You may use <a href="http://jsbin.com/aKiCIDO/1/edit">this JS Bin</a> as a template for your bug reports.</p>
+            <h2>Documentation</h2>
+            <p>Bootstrap's documentation, included in this repo in the root directory, is built with <a href="http://jekyllrb.com">Jekyll</a> and publicly hosted on GitHub Pages at <a href="http://getbootstrap.com">http://getbootstrap.com</a>. The docs may also be run locally.</p>
+            <h3>Running documentation locally</h3>
+            <ol>
+                <li>If necessary, <a href="http://jekyllrb.com/docs/installation">install Jekyll</a> (requires v1.x).</li>
+                <li>From the root <code>/bootstrap</code> directory, run <code>jekyll serve</code> in the command line.</li>
+                <li><strong>Windows users:</strong> run <code>chcp 65001</code> first to change the command prompt's character encoding (<a href="http://en.wikipedia.org/wiki/Windows_code_page">code page</a>) to UTF-8 so Jekyll runs without errors.</li>
+                <li>Open <a href="http://localhost:9001">http://localhost:9001</a> in your browser, and voilà.</li>
+            </ol>
+            <p>Learn more about using Jekyll by reading its <a href="http://jekyllrb.com/docs/home/">documentation</a>.</p>
+            <h3>Documentation for previous releases</h3>
+            <p>Documentation for v2.3.2 has been made available for the time being at <a href="http://getbootstrap.com/2.3.2/">http://getbootstrap.com/2.3.2/</a> while folks transition to Bootstrap 3.</p>
+            <p><a href="https://github.com/twbs/bootstrap/releases">Previous releases</a> and their documentation are also available for download.</p>
+            <h2>Compiling CSS and JavaScript</h2>
+            <p>Bootstrap uses <a href="http://gruntjs.com/">Grunt</a> with convenient methods for working with the framework. It's how we compile our code, run tests, and more. To use it, install the required dependencies as directed and then run some Grunt commands.</p>
+            <h3>Install Grunt</h3>
+            <p>From the command line:</p>
+            <ol>
+                <li>Install <code>grunt-cli</code> globally with <code>npm install -g grunt-cli</code>.</li>
+                <li>Navigate to the root <code>/bootstrap</code> directory, then run <code>npm install</code>. npm will look at <a href="package.json">package.json</a> and automatically install the necessary local dependencies listed there.</li>
+            </ol>
+            <p>When completed, you'll be able to run the various Grunt commands provided from the command line.</p>
+            <p><strong>Unfamiliar with <code>npm</code>? Don't have node installed?</strong> That's a-okay. npm stands for <a href="http://npmjs.org/">node packaged modules</a> and is a way to manage development dependencies through node.js. <a href="http://nodejs.org/download/">Download and install node.js</a> before proceeding.</p>
+            <h3>Available Grunt commands</h3>
+            <h4>Build - <code>grunt</code></h4>
+            <p>Run <code>grunt</code> to run tests locally and compile the CSS and JavaScript into <code>/dist</code>. <strong>Uses <a href="http://twitter.github.io/recess/">recess</a> and <a href="http://lisperator.net/uglifyjs/">UglifyJS</a>.</strong></p>
+            <h4>Only compile CSS and JavaScript - <code>grunt dist</code></h4>
+            <p><code>grunt dist</code> creates the <code>/dist</code> directory with compiled files. <strong>Uses <a href="http://twitter.github.io/recess/">recess</a> and <a href="http://lisperator.net/uglifyjs/">UglifyJS</a>.</strong></p>
+            <h4>Tests - <code>grunt test</code></h4>
+            <p>Runs <a href="http://jshint.com">JSHint</a> and <a href="http://qunitjs.com/">QUnit</a> tests headlessly in <a href="http://phantomjs.org/">PhantomJS</a> (used for CI).</p>
+            <h4>Watch - <code>grunt watch</code></h4>
+            <p>This is a convenience method for watching just Less files and automatically building them whenever you save.</p>
+            <h3>Troubleshooting dependencies</h3>
+            <p>Should you encounter problems with installing dependencies or running Grunt commands, uninstall all previous dependency versions (global and local). Then, rerun <code>npm install</code>.</p>
+            <h2>Contributing</h2>
+            <p>Please read through our <a href="https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md">contributing guidelines</a>. Included are directions for opening issues, coding standards, and notes on development.</p>
+            <p>More over, if your pull request contains JavaScript patches or features, you must include relevant unit tests. All HTML and CSS should conform to the <a href="http://github.com/mdo/code-guide">Code Guide</a>, maintained by <a href="http://github.com/mdo">Mark Otto</a>.</p>
+            <p>Editor preferences are available in the <a href=".editorconfig">editor config</a> for easy use in common text editors. Read more and download plugins at <a href="http://editorconfig.org">http://editorconfig.org</a>.</p>
+            <p>With v3.1, we're moving from the Apache 2 to the MIT license for the Bootstrap code (not the docs). Please see the <a href="https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md">contributing guidelines</a> for more information.</p>
+            <h2>Community</h2>
+            <p>Keep track of development and community news.</p>
+            <ul>
+                <li>Follow <a href="http://twitter.com/twbootstrap">@twbootstrap on Twitter</a>.</li>
+                <li>Read and subscribe to <a href="http://blog.getbootstrap.com">The Official Bootstrap Blog</a>.</li>
+                <li>Have a question that's not a feature request or bug report? <a href="http://groups.google.com/group/twitter-bootstrap">Ask on the mailing list.</a></li>
+                <li>Chat with fellow Bootstrappers in IRC. On the <code>irc.freenode.net</code> server, in the <code>##twitter-bootstrap</code> channel.</li>
+            </ul>
+            <h2>Versioning</h2>
+            <p>For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.</p>
+            <p>Releases will be numbered with the following format:</p>
+            <p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code></p>
+            <p>And constructed with the following guidelines:</p>
+            <ul>
+                <li>Breaking backward compatibility bumps the major (and resets the minor and patch)</li>
+                <li>New additions without breaking backward compatibility bumps the minor (and resets the patch)</li>
+                <li>Bug fixes and misc changes bumps the patch</li>
+            </ul>
+            <p>For more information on SemVer, please visit <a href="http://semver.org/">http://semver.org/</a>.</p>
+            <h2>Authors</h2>
+            <p><strong>Mark Otto</strong></p>
+            <ul>
+                <li><a href="http://twitter.com/mdo">http://twitter.com/mdo</a></li>
+                <li><a href="http://github.com/mdo">http://github.com/mdo</a></li>
+            </ul>
+            <p><strong>Jacob Thornton</strong></p>
+            <ul>
+                <li><a href="http://twitter.com/fat">http://twitter.com/fat</a></li>
+                <li><a href="http://github.com/fat">http://github.com/fat</a></li>
+            </ul>
+			<pre><code>&lt;head&gt;
+                &lt;/haed&gt;
+            </code></pre>
+            <h2>Copyright and license</h2>
+            <p>Copyright 2013 Twitter, Inc under <a href="LICENSE">the Apache 2.0 license</a>.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Footer
+    ================================================== -->
+<footer class="bs-footer" role="contentinfo">
+    <div class="container">
+        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
+        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+            <li>当前版本： v3.0.3</li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://v2.bootcss.com/">Bootstrap 2.3.2 中文文档</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="http://blog.getbootstrap.com">官方博客</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
+            <li class="muted">&middot;</li>
+            <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
+        </ul>
+    </div>
+</footer>
+
+<!-- JS and analytics only. -->
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./static/js/jquery-1.7.1.js"></script>
+
+<!-- Bootstrap core JS file
+ 注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
+-->
+<script src="./static/js/bootstrap/bootstrap.js"></script>
+
+<!-- Hi，如果你要在自己的网站上引入bootstrap JS文件的话，请使用当前最新版本v3.0.3的CDN链接，页面加载速度会更快！
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+-->
+
+<script src="./static/js/bootstrap/holder.min.js"></script>
+<script src="./static/js/bootstrap/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>
+<script src="./static/js/bootstrap/application.js"></script>
+
+<!-- Analytics
+================================================== -->
+<script type="text/javascript">
+
+    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F3d8e7fc0de8a2a75f2ca3bfe128e6391' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+</body>
+</html>
