@@ -51,11 +51,11 @@
     <!--cxfservlet end-->
 
     <!-- CryptoSessionListener -->
-    <!-- <listener>
+    <listener>
         <listener-class>com.sinosoft.one.mvc.crypto.listener.CryptoSessionListener</listener-class>
-    </listener> -->
+    </listener>
     <!-- CryptoFilter begin -->
-    <!-- <filter>
+    <filter>
         <filter-name>cryptoFilter</filter-name>
         <filter-class>com.sinosoft.one.mvc.crypto.filter.CryptoFilter</filter-class>
         <init-param>
@@ -70,7 +70,7 @@
         <dispatcher>REQUEST</dispatcher>
         <dispatcher>FORWARD</dispatcher>
         <dispatcher>INCLUDE</dispatcher>
-    </filter-mapping> -->
+    </filter-mapping>
     <!-- CryptoFilter end -->
 
 	<filter>
