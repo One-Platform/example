@@ -33,7 +33,11 @@ public class Employee {
      */
     private double salary;
 
-    public int getAge() {
+    public Employee() {
+		
+	}
+
+	public int getAge() {
         return age;
     }
 
