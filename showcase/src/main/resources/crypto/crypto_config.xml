@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CryptoConfig xmlns="http://com.sinosoft.one/schema/mvc/cryptoconfig"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://com.sinosoft.one/schema/mvc/cryptoconfig ">
+	<!-- form提交时，后台的解密url -->
+	<uncrypto url="/showcase/crypto/bgUncrypto"/>
+	<!-- ajax提交时，后台的解密url -->
+	<uncrypto url="/showcase/crypto/ajaxBgUncrypto"/>
+</CryptoConfig>
