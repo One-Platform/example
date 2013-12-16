@@ -24,6 +24,9 @@ function encode(key,data) {
 
 function crypto_form(key,type,formid) {
 	var _isIncludes = false, _isExcludes = false;
+	$("#" + formid).find("textarea").each(function() {
+		$(this).text($(this).val());
+	});
 	var $cloneForm = $("#" + formid).clone();
 	var _details = "";
 	if(type != "") {

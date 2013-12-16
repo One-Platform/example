@@ -4,7 +4,7 @@
 <!-- form请求时，需要引用的加密标签 -->
 <%@ taglib uri="http://mvc.one.sinosoft.com/crypto/form" prefix="f" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="zh-CN">
 <head>
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -87,7 +87,7 @@
 					<h6 class="form-signin-heading" id="formRequestCrypto">Form加密：目前只支持对&lt;/input&gt;标签的加密</h6>
 						<input type="text" class="form-control"  id="loginName1" name="loginName" placeholder="用户名" required autofocus>
 						<input type="password" class="form-control" id="password1" name="password" placeholder="密码" required>
-						<textarea class="form-control"  id="description1" name="description" id="description1" name="description" placeholder="描述信息（此属性不能被加密）"></textarea><p></p>
+						<textarea class="form-control"  id="description1" name="description" placeholder="描述信息（此属性不能被加密）"></textarea><p></p>
 						<button class="btn btn-lg btn-primary" type="submit">Form前端加密</button>
 				</form>
 			</div>
