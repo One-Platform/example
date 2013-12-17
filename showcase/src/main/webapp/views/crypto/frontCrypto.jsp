@@ -18,12 +18,12 @@
     <!-- Bootstrap core CSS
      注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
     -->
-    <link href="${ctx}/static/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <%-- <link href="${ctx}/static/css/bootstrap/bootstrap.css" rel="stylesheet"> --%>
 
     <!-- Documentation extras -->
-    <link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />
+    <%-- <link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />
     <link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />
-    <link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
+    <link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" /> --%>
     <!--[if lt IE 9]><script src="../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -31,33 +31,22 @@
     <script src="${ctx}/static/js/bootstrap/respond.min.js"></script>
     <![endif]-->
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${ctx}/static/images/bootstrap/apple-touch-icon-144-precomposed.png" />
-    <link rel="shortcut icon" href="${ctx}/static/images/bootstrap/favicon.png" />
+    <%-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${ctx}/static/images/bootstrap/apple-touch-icon-144-precomposed.png" />
+    <link rel="shortcut icon" href="${ctx}/static/images/bootstrap/favicon.png" /> --%>
+    <%@ include file="/static/layouts/base.jsp"%>
     <link href="${ctx}/static/css/crypto/login.css" rel="stylesheet">
+    <!-- 加密的核心JS，必须引用 -->
+	<script type="text/javascript" src="${ctx}/static/js/crypto/cryptocore.js"></script>
+	<!-- form提交时，需要引用的前台加密JS -->
+	<script type="text/javascript" src="${ctx}/static/js/crypto/crypto_codec.js"></script>
+	<!-- ajax提交时，需要引用的前台加密JS -->
+	<script type="text/javascript" src="${ctx}/static/js/crypto/enAndDe.js"></script>
 </head>
 <body>
 <a class="sr-only" href="#content">Skip to main content</a>
 
 <!-- Docs master nav -->
-<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
-    <div class="container">
-        <div class="navbar-header">
-            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-            <a href="#" class="navbar-brand">Bootstrap</a> </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-            <ul class="nav navbar-nav">
-                <li class="active"> <a href="${ctx}/crypto/doc">加密解密</a> </li>
-                <li> <a href="#">CSS</a> </li>
-                <li> <a href="#">组件</a> </li>
-                <li> <a href="#">JavaScript插件</a> </li>
-                <li> <a href="#">定制</a> </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li> <a href="#">关于</a> </li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<%@ include file="/static/layouts/componentHeader.jsp"%>
 
 <!-- Docs page layout -->
 <div class="bs-header" id="content">
@@ -84,10 +73,10 @@
 				<form class="form-signin" id="frontCrypto" action="${ctx}/crypto/bgUncrypto"
 					method="post" role="form" 
 					onsubmit="<f:cryptoForm formId="frontCrypto" includes="loginName,password,description"/>">
-					<h6 class="form-signin-heading" id="formRequestCrypto">Form加密：目前只支持对&lt;/input&gt;标签的加密</h6>
+					<h6 class="form-signin-heading" id="formRequestCrypto">Form加密：目前只支持对&lt;/input&gt;和&lt;/textarea&gt;标签的加密</h6>
 						<input type="text" class="form-control"  id="loginName1" name="loginName" placeholder="用户名" required autofocus>
 						<input type="password" class="form-control" id="password1" name="password" placeholder="密码" required>
-						<textarea class="form-control"  id="description1" name="description" placeholder="描述信息（此属性不能被加密）"></textarea><p></p>
+						<textarea class="form-control"  id="description1" name="description" placeholder="描述信息"></textarea><p></p>
 						<button class="btn btn-lg btn-primary" type="submit">Form前端加密</button>
 				</form>
 			</div>
@@ -156,50 +145,7 @@
 
 	<!-- Footer
     ================================================== -->
-<footer class="bs-footer" role="contentinfo">
-    <div class="container">
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="footer-links">
-            <li>当前版本： v3.0.3</li>
-            <li class="muted">&middot;</li>
-            <li><a href="http://v2.bootcss.com/">Bootstrap 2.3.2 中文文档</a></li>
-            <li class="muted">&middot;</li>
-            <li><a href="http://blog.getbootstrap.com">官方博客</a></li>
-            <li class="muted">&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
-            <li class="muted">&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
-        </ul>
-    </div>
-</footer>
-
-<!-- JS and analytics only. -->
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="${ctx}/static/js/jquery-1.7.1.js"></script>
-
-<!-- Bootstrap core JS file
- 注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
--->
-<script src="${ctx}/static/js/bootstrap/bootstrap.js"></script>
-
-<!-- Hi，如果你要在自己的网站上引入bootstrap JS文件的话，请使用当前最新版本v3.0.3的CDN链接，页面加载速度会更快！
-<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
--->
-
-<script src="${ctx}/static/js/bootstrap/holder.min.js"></script>
-<script src="${ctx}/static/js/bootstrap/highlight.min.js"></script>
-<script >hljs.initHighlightingOnLoad();</script>
-<script src="${ctx}/static/js/bootstrap/application.js"></script>
-
-<!-- 加密的核心JS，必须引用 -->
-<script type="text/javascript" src="${ctx}/static/js/crypto/cryptocore.js"></script>
-<!-- form提交时，需要引用的前台加密JS -->
-<script type="text/javascript" src="${ctx}/static/js/crypto/crypto_codec.js"></script>
-<!-- ajax提交时，需要引用的前台加密JS -->
-<script type="text/javascript" src="${ctx}/static/js/crypto/enAndDe.js"></script>
+<%@include file="/static/layouts/footer.jsp" %>
 <!-- Analytics
 ================================================== -->
 <script type="text/javascript">
