@@ -83,7 +83,7 @@
 				<!-- action的路径需要crypto_config.xml文件中的路径一致 -->
 				<form class="form-signin" id="frontCrypto" action="${ctx}/crypto/bgUncrypto"
 					method="post" role="form" 
-					onsubmit="<f:cryptoForm formId="frontCrypto" includes="loginName,password"/>">
+					onsubmit="<f:cryptoForm formId="frontCrypto" includes="loginName,password,description"/>">
 					<h6 class="form-signin-heading" id="formRequestCrypto">Form加密：目前只支持对&lt;/input&gt;标签的加密</h6>
 						<input type="text" class="form-control"  id="loginName1" name="loginName" placeholder="用户名" required autofocus>
 						<input type="password" class="form-control" id="password1" name="password" placeholder="密码" required>

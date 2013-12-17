@@ -51,13 +51,20 @@ function crypto_form(key,type,formid) {
 		$cloneForm.submit();
 		return false;
 	} else if(_isIncludes) {
+		var _isInput=true;
         for(var l=_details.length,i=0; i<l; i++) {
             var _clear = $cloneForm.find("input[name='"+_details[i]+"']").val();
 			if(_clear == undefined) {
+				_isInput=false;
 				_clear = $cloneForm.find("textarea[name='"+_details[i]+"']").val();
 			}
             if(_clear != undefined) {
-                $cloneForm.find("input[name='"+_details[i]+"']").val( encode(key,_clear) );
+            	if(_isInput){
+            		$cloneForm.find("input[name='"+_details[i]+"']").val( encode(key,_clear) );
+            	}else{
+            		$cloneForm.find("textarea[name='"+_details[i]+"']").val( encode(key,_clear) );
+            	}
+                /*$cloneForm.find("input[name='"+_details[i]+"']").val( encode(key,_clear) );*/
             }
         }
 		$cloneForm.append("<input type='text' name='crypto_attributies_names' value='"+ _details +"'  />").submit();
