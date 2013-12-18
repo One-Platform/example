@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<groups xmlns="http://www.isdc.ro/wro">
+    <group name='core'>
+        <css>/static/css/bootstrap/bootstrap.css</css>
+        <css>/static/css/bootstrap/docs.css</css>
+        <css>/static/css/bootstrap/github.min.css</css>
+        <css>/static/css/bootstrap/bootstrap_master.css</css>
+        <js>/static/js/jquery-1.7.1.js</js>
+        <js>/static/js/bootstrap/bootstrap.js</js>
+
+    </group>
+
+    <group name='coreV1'>
+        <css>/static/platform.css</css>
+        <css>/static/window/sinosoft.window.css</css>
+        <js>/static/jquery/1.7.1/jquery-1.7.1.js</js>
+        <js>/static/jquery/form/jquery.form.js</js>
+    </group>
+</groups>
