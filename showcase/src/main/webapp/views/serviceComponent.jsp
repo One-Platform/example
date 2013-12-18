@@ -37,10 +37,10 @@
       <div class="row">
         <div class="col-sm-6 col-md-2 ">
           <div class="thumbnail">
-            <a href="#" title="WebService" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/min.png" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="WebService"></a>
+            <a href="${ctx}/webservices/webservice" title="WebService" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/min.png" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="WebService"></a>
             <div class="caption">
               <h3> 
-                <a href="#" title="WebService" target="_blank" >WebService</a>
+                <a href="${ctx}/webservices/webservice" title="WebService" target="_blank" >WebService</a>
               </h3>
             </div>
           </div>
