@@ -121,7 +121,7 @@ crypto</em>config.xml
 3.3  JSP的form表单中使用“onsubmit”属性来进行加密事件，在onsubmit中使用加密标签&lt;/cryptoForm&gt;对数据进行加密。<br />
 加密标签&lt;/cryptoForm&gt;有两个属性，“formId”是当前form表单的id（必须项，所以form表单必须提供“id”属性值），“includes”指定哪些属性是需要加密的（必须项）。<br />
 “includes”的值是需要加密的“name”属性的属性名，多个属性名之间使用“,”分隔。<br />
-需要注意：form请求时，只支持对&lt;/input&gt;标签的加密。</p>
+需要注意：form请求时，只支持对&lt;/input&gt;和&lt;/textarea&gt;标签的加密。</p>
 <pre><code>&lt;%@ page contentType=&quot;text/html;charset=UTF-8&quot;%&gt;
 &lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot;%&gt;
 &lt;%@ taglib prefix=&quot;form&quot; uri=&quot;http://www.springframework.org/tags/form&quot;%&gt;
@@ -144,7 +144,7 @@ crypto</em>config.xml
 &lt;body&gt;
     &lt;!-- action的路径需要crypto_config.xml文件中的路径一致 --&gt;
     &lt;form id=&quot;frontCrypto&quot; action=&quot;${ctx}/crypto/bgUncrypto&quot; method=&quot;post&quot;
-        onsubmit=&quot;&lt;f:cryptoForm formId=&quot;frontCrypto&quot; includes=&quot;loginName,password&quot;/&gt;&quot;&gt;
+        onsubmit=&quot;&lt;f:cryptoForm formId=&quot;frontCrypto&quot; includes=&quot;loginName,password,description&quot;/&gt;&quot;&gt;
         &lt;ul&gt;
             &lt;li&gt;用户名：&lt;input type=&quot;text&quot; id=&quot;loginName1&quot; name=&quot;loginName&quot; /&gt;&lt;/li&gt;
             &lt;li&gt;密 码：&lt;input type=&quot;password&quot; id=&quot;password1&quot; name=&quot;password&quot; /&gt;&lt;/li&gt;
