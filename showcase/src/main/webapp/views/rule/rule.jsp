@@ -29,8 +29,8 @@
 <!-- Docs page layout -->
 <div class="bs-header" id="content">
     <div class="container">
-        <h1>起步</h1>
-        <p>简要介绍Bootstrap，以及如何下载、使用，基本模版和案例，等等。</p>
+        <h1>Rule</h1>
+        <p>简要介绍Rule，以及如何下载、使用，基本模版和案例，等等。</p>
     </div>
 </div>
 
