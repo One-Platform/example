@@ -37,7 +37,7 @@
       <div class="row">
         <div class="col-sm-6 col-md-2 ">
           <div class="thumbnail">
-            <a href="${ctx}/webservices/webservice" title="WebService" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/min.png" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="WebService"></a>
+            <a href="${ctx}/webservices/webservice" title="WebService" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/sinosoft.jpg" width="150" height="150" data-src="${ctx}/static/images/window/sinosoft.jpg" alt="WebService"></a>
             <div class="caption">
               <h3> 
                 <a href="${ctx}/webservices/webservice" title="WebService" target="_blank" >WebService</a>
@@ -56,18 +56,20 @@
             </div>
           </div>
         </div>
+
+          <div class="col-sm-6 col-md-2 ">
+              <div class="thumbnail">
+                  <a href="${ctx}/rule/rule" title="规则引擎" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/sinosoft.jpg" width="150" height="150" data-src="${ctx}/static/images/window/sinosoft.jpg" alt="规则引擎"></a>
+                  <div class="caption">
+                      <h3>
+                          <a href="${ctx}/rule/rule" title="规则引擎" target="_blank" >规则引擎</a>
+                      </h3>
+                  </div>
+              </div>
+          </div>
     </div>
 
-    <div class="col-sm-6 col-md-2 ">
-        <div class="thumbnail">
-            <a href="${ctx}/rule/rule" title="规则引擎" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/min.png" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="批处理引擎"></a>
-            <div class="caption">
-                <h3>
-                    <a href="${ctx}/rule/rule" title="规则引擎" target="_blank" >规则引擎</a>
-                </h3>
-            </div>
-        </div>
-    </div>
+
 </div>
    </div>
 <!-- Footer -->
