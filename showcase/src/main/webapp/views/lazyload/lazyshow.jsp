@@ -35,7 +35,7 @@
 
 <!-- Callout for the old docs link -->
 <div class="container bs-docs-container">
-    <div class="row">
+    <div id="one" class="row">
         <div class="col-md-3">
             <div class="bs-sidebar hidden-print" role="complementary">
                 <ul class="nav bs-sidenav">
@@ -49,7 +49,7 @@
     <%--浏览器在初始化页面的时候，不管该html元素是否隐藏，都会去解析。但是，当你把页面的某些元素放进textarea中的时候，浏览器会把该html元素仅仅当做字符处理。我们的延迟加载正是利用这个原理，--%>
     <%--在页面加载的时候，把不是在初始化的时候必须展示出来的元素放在textarea中，等到用的时候再通过我们的控件把这些元素进行加载。通过这种方式，提高页面的加载速度。--%>
 <%--</p>--%>
-<p id="one">
+<p>
     本组件主要是针对页面操作或展示上含有多个步骤，多个标签页等业务场景。例如车险的网销；页面比较大，分屏展示等等。
 </p>
 <h4>1、需要引入的js</h4>

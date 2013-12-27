@@ -11,15 +11,15 @@
 <meta http-equiv="Expires" content="0" />
 <title>压缩合并组件介绍</title>
     <link href="${ctx}/static/css/bootstrap/bootstrap.css" rel="stylesheet">
-    <%--<link href="${ctx}/wro/core.css" rel="stylesheet" />--%>
-    <link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />
-    <link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />
-    <link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
+    <link href="${ctx}/wro/core.css" rel="stylesheet" />
+    <%--<link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />--%>
+    <%--<link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />--%>
+    <%--<link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />--%>
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${ctx}/static/images/bootstrap/apple-touch-icon-144-precomposed.png" />
     <link rel="shortcut icon" href="${ctx}/static/images/bootstrap/favicon.png" />
     <script type="text/javascript" src="${ctx}/wro/core.js"></script>
-    <%--<script src="${ctx}/static/js/bootstrap/application.js"></script>--%>
+    <script src="${ctx}/static/js/bootstrap/application.js"></script>
 </head>
 
 <body>
@@ -53,7 +53,7 @@
 本组件本着灵活高扩展性的原则，允许用户在文件压缩前和压缩后加入自己的处理类，对相关压缩文件进行处理。</p>
 <h4>1、添加Maven依赖</h4>
 <p>在maven项目中pom.xml中添加如下依赖即可</p>
-<pre><code>pom.xml文件
+<pre><code id="two">pom.xml文件
 &lt;dependency&gt;
     &lt;groupId&gt;ro.isdc.wro4j&lt;/groupId&gt;  
     &lt;artifactId&gt;wro4j-core&lt;/artifactId&gt;  
@@ -61,9 +61,9 @@
 &lt;/dependency&gt;
 如果想要直接拷贝Jar包的话可以在根目录下lib文件夹找到所需要的Jar包
 </code></pre>
-<h4 id="two">2、配置web.xml</h4>
+<h4>2、配置web.xml</h4>
 <p>在web.xml中加入如下代码，配置wro4j的监听器：</p>
-<pre><code>&lt;filter&gt;  
+<pre><code id="three">&lt;filter&gt;
     &lt;filter-name&gt;WebResourceOptimizer&lt;/filter-name&gt;  
     &lt;filter-class&gt;  
         ro.isdc.wro.http.WroFilter  
@@ -75,9 +75,9 @@
 &lt;/filter-mapping&gt;
 </code></pre>
 
-<h4 id="three">3、创建wro.xml</h4>
+<h4>3、创建wro.xml</h4>
 <p>在WEB-INF目录下创建wro.xml。代码如下：</p>
-<pre><code>xml代码
+<pre><code id="four">xml代码
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;  
 &lt;groups xmlns=&quot;http://www.isdc.ro/wro&quot;&gt;  
     &lt;group name='core'&gt;  
@@ -90,7 +90,7 @@
 &lt;/groups&gt;
 </code></pre>
 
-<h4 id="four">4、wro.properties文件</h4>
+<h4>4、wro.properties文件</h4>
 <p>在WEB-INF目录下创建wro.properties。该文件是本组建的一个配置文件，通过过它我们可以配置一些信息用于开发和调试，
 下面我们看一下该文件中有哪些配置选项：<br />
  	<table>
