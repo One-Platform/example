@@ -23,7 +23,7 @@
 		                <a href="${ctx}/component/service" target="_blank">服务</a>
 		              </li>
 		              <li>
-		                <a href="#" target="_blank">数据</a>
+		                <a href="${ctx}/component/data" target="_blank">数据</a>
 		              </li>
               		</ul>
             	</li>
