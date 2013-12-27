@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>应用层支撑</title>
+    <title>数据层支撑</title>
     
     <%@ include file="/static/layouts/base.jsp"%>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${ctx}/static/images/bootstrap/apple-touch-icon-144-precomposed.png" />
@@ -25,25 +25,25 @@
 <!-- Docs page layout -->
 	<div class="bs-header" id="content">
 		<div class="container">
-			<h1>应用层支撑</h1>
-			<p>详细介绍应用层组件，包括使用场景、案例，等等。</p>
+			<h1>数据层支撑</h1>
+			<p>详细介绍数据层组件，包括使用场景、案例，等等。</p>
 		</div>
 	</div>
 
 	<div class="container projects">
 		<div class="projects-header page-header">
-        <h2>应用层相关组件推荐</h2>
+        <h2>数据层相关组件推荐</h2>
       </div>
 			<div class="row">
 				<div class="col-sm-6 col-md-2 ">
 					<div class="thumbnail">
-						<a href="${ctx}/crypto/doc" title="加密解密" target="_blank"><img
-							class="lazy" src="${ctx}/static/images/component/crypto.png"
+						<a href="${ctx}/component/cache/doc" title="缓存服务" target="_blank"><img
+							class="lazy" src="${ctx}/static/images/component/cache.png"
 							width="150" height="150"
-							data-src="${ctx}/static/images/component/crypto.png" alt="加密解密"></a>
+							data-src="${ctx}/static/images/component/cache.png" alt="缓存服务"></a>
 						<div class="caption">
 							<h3>
-								<a href="${ctx}/crypto/doc" title="加密解密" target="_blank">加密解密</a>
+								<a href="${ctx}/component/cache/doc" title="缓存服务" target="_blank">缓存服务</a>
 							</h3>
 						</div>
 					</div>
