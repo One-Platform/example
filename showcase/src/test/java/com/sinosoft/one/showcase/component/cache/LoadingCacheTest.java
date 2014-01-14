@@ -38,13 +38,13 @@ public class LoadingCacheTest {
 	
 	//测试get方法，使用CacheLoader指定原子操作，自填充
 	@Test
-	public void testGetWithLoad() throws ExecutionException{
+	public void testGet() throws ExecutionException{
 		String value=loaderCache.get("a");
 		Assert.assertEquals("abc", value);
 	}
 	//测试getAll，指定keys
 	@Test
-	public void testGetAllWithKeys() throws ExecutionException{
+	public void testgetAll() throws ExecutionException{
 		Map<String, String> map=new HashMap<String, String>();
 		map.put("a", "1");
 		map.put("b", "2");
@@ -60,7 +60,7 @@ public class LoadingCacheTest {
 		Assert.assertEquals(null, result.get("c"));
 		Assert.assertEquals(2, result.size());
 	}
-	//测试refresh，使用异步方式
+	//测试refresh
 	@SuppressWarnings("static-access")
 	@Test
 	public void testRefresh() throws ExecutionException, InterruptedException{
@@ -75,11 +75,12 @@ public class LoadingCacheTest {
 						return String.valueOf(value);
 					}					
 				});
-		//初始时，缓存内不包括key=a的键值对，此时cache.refresh()会调用CacheLoader.load()
-		cache.refresh("a");
+		//初始时，缓存内不包括key=a的键值对，此时cache.get()会调用CacheLoader.load()
+		String beforeRefreshed=cache.get("a");
 		Runnable runnable=new Runnable() {
 			public void run() {
 				logger.info(Thread.currentThread().getName()+":::start");
+				//此时cache.refresh()会调用CacheLoader.load()
 				cache.refresh("a");
 				try {
 					logger.info(Thread.currentThread().getName()+":::end,value:::"+cache.get("a"));
@@ -94,8 +95,9 @@ public class LoadingCacheTest {
 			thread.start();
 		}
 		Thread.currentThread().sleep(1*1000);
-		logger.info("after refreshed");
-		logger.info("value:::"+cache.get("a"));
+		String afterRefreshed=cache.get("a");
+		logger.info("after refreshed value:::"+afterRefreshed);
+		Assert.assertNotSame(beforeRefreshed, afterRefreshed);
 		Thread.currentThread().sleep(5*1000);
 		logger.info("end");
 	}
