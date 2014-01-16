@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:onejpa="http://com.sinosoft.one/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans-3.1.xsd 
+http://www.springframework.org/schema/batch 
+http://www.springframework.org/schema/batch/spring-batch-2.2.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.1.xsd 
+http://www.springframework.org/schema/tx 
+http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
+http://com.sinosoft.one/schema/data/jpa 
+    http://com.sinosoft.one/schema/data/jpa/one-data-jpa.xsd">
+	<import resource="applicationContext.xml" />
+	<bean id="prpInsured" class="com.sinosoft.one.showcase.batch.model.PrpInsured" scope="prototype"></bean>
+	
+	<batch:job id="exceldatabaseJob" incrementer="">
+		<batch:step id="exceldatabasestep">
+			<batch:tasklet transaction-manager="transactionManager"
+				start-limit="1">
+				
+				<batch:chunk reader="excelItemReader" processor="excelItemProcessor"
+					writer="databaseWriter" commit-interval="10" skip-limit="100">
+					<batch:skippable-exception-classes>
+						<batch:exclude class="java.lang.RuntimeException" />
+						<batch:include class="java.io.FileNotFoundException" />
+						<batch:include
+							class="org.springframework.batch.item.file.transform.IncorrectTokenCountException" />
+						<batch:include class="java.lang.IllegalStateException" />
+						<batch:include
+							class="org.springframework.batch.item.excel.ExcelFileParseException" />
+						<batch:include
+							class="org.springframework.batch.item.file.FlatFileParseException" />
+					</batch:skippable-exception-classes>
+				</batch:chunk>  
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+
+	<bean id="excelItemReader" class="org.springframework.batch.item.excel.poi.PoiItemReader">
+		<property name="resource" value="file:src/main/resources/Insured_0707.xls" />
+		<property name="currentRow" value="1" /><!-- 开始的行数 0为第一行 -->
+		<property name="rowMapper">
+			<bean class="org.springframework.batch.item.excel.mapping.ExcelRowMapper">
+				<property name="lineTokenizer" ref="lineTokenizer">
+				</property>
+				<property name="fieldSetMapper">
+					<bean
+						class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper">
+						<property name="prototypeBeanName" value="prpInsured"></property>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- step1 -->
+	<!-- lineTokenizer -->
+	<bean id="lineTokenizer"
+		class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+		<property name="names">
+			<list>
+				<value>PRPINSUREDCODE</value>
+				<value>birthday</value>
+				<value>name</value>
+				<value>sex</value>
+				<value>occupationCode</value>
+				<value>certificateType</value>
+				<value>certificateNo</value>
+				<value>insuredType</value>
+				<value>occupationName</value>
+				<value>isRepeat</value>
+			</list>
+		</property>
+	</bean>
+	<!-- step1 end -->
+	
+	
+	<!-- step2  -->
+	<!-- step2 end -->
+	
+	<!-- 定时任务 开始 -->
+	<!-- <bean id="ledgerJobDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"> 
+		<property name="targetObject"> 定时执行的类 <ref bean="quartzLedgerJob" /> </property> 
+		<property name="targetMethod"> 定时执行的类方法 <value>execute</value> </property> 
+		</bean> -->
+	<!-- <bean id="ledgerCronTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean"> 
+		这里不可以直接在属性jobDetail中引用taskJob，因为他要求的是一个jobDetail类型的对象，所以我们得通过MethodInvokingJobDetailFactoryBean来转一下 
+		<property name="jobDetail"> <ref bean="ledgerJobDetail" /> </property> 在每天上午10点40分准时触发 
+		<property name="cronExpression"> <value>0 * 15 * * ?</value> <value>0 45 
+		10 * * ? * </value> </property> </bean> -->
+	<!-- <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> 
+		添加触发器 <property name="triggers"> <list> 将上面定义的测试定时任务注入（可以定义多个定时任务，同时注入） <ref 
+		local="ledgerCronTrigger" /> </list> </property> </bean> -->
+</beans>
