@@ -59,10 +59,10 @@
           
           <div class="col-sm-6 col-md-2 ">
           <div class="thumbnail">
-            <a href="#" title="批处理引擎" target="_blank" ><img class="lazy" src="${ctx}/static/images/component/batch.png" width="150" height="150" data-src="${ctx}/static/images/component/batch.png" alt="批处理引擎"></a>
+            <a href="${ctx}/views/batch/batch.jsp" title="批处理引擎" target="_blank" ><img class="lazy" src="${ctx}/static/images/component/batch.png" width="150" height="150" data-src="${ctx}/static/images/component/batch.png" alt="批处理引擎"></a>
             <div class="caption">
               <h3> 
-                <a href="#" title="批处理引擎" target="_blank" >批处理引擎</a>
+                <a href="${ctx}/views/batch/batch.jsp" title="批处理引擎" target="_blank" >批处理引擎</a>
               </h3>
             </div>
           </div>

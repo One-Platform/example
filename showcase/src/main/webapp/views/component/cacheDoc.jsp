@@ -42,9 +42,13 @@
                     <li> <a href="#quickstart">使用说明</a>
                         <ul class="nav">
                             <li><a href="#buildcache">构建cache</a></li>
-                            <li><a href="#listener">监听器</a></li>
                             <li><a href="#cacheparameters">缓存参数</a></li>
-                            <li><a href="#callinterfaces">接口调用</a></li>
+                            <li><a href="#callinterfaces">接口调用</a>
+                            	<ul class="nav">
+                            	<li><a href="#cacheInterface">Cache接口</a></li>
+                            	<li><a href="#LoadingCacheInterface">LoadingCache接口</a></li>
+                        		</ul>
+                        	</li>
                         </ul>
                     </li>                    
                 </ul>
@@ -54,12 +58,12 @@
      	<h1 id="introduction">缓存组件简介</h1>
 <p>本缓存组件是一个轻量级的缓存框架，吞吐量大，性能高，接口简单易用。当前的版本只支持本地内存缓存，在后续的版本中会陆续支持磁盘缓存，分布式缓存，远程缓存等。</p>
 <h2 id="environment">1 环境搭建</h2>
-<p>对于非maven项目，需要添加相应的jar包：cache-1.0.0-SNAPSHOT.jar; 对于maven项目，需要在pom.xml文件中添加如下依赖：<br />
+<p>对于非maven项目，需要添加相应的jar包：one-cache-0.0.1-beta.jar; 对于maven项目，需要在pom.xml文件中添加如下依赖：<br />
 pom.xml</p>
 <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;com.sinosoft.one&lt;/groupId&gt;
-    &lt;artifactId&gt;cache&lt;/artifactId&gt;
-    &lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;
+    &lt;artifactId&gt;one-cache&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-beta&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -109,50 +113,23 @@ public void callableExample() throws ExecutionException{
 }
 </code></pre>
 
-<h3 id="listener">2.2 设置删除监听器</h3>
-<p>如果想在缓存条目被删除时定义自己的动作，可以为缓存设置一个监听器。</p>
-<pre><code>/**
- * 为自己的缓存设置删除监听器，只需重写RemovalNotification.onRemoval()。
- */
-RemovalListener&lt;String,String&gt; removalListener = new RemovalListener&lt;String,String&gt;(){
-      public void onRemoval(RemovalNotification&lt;String,String&gt; removal){
-        logger.info(&quot;listener executor,remove reason:{}&quot;,removal.getCause().name());
-      }
-    };
-CacheLoader&lt;String,String&gt; loader =new CacheLoader&lt;String,String&gt;(){
-        public String load(String key)throws Exception{
-            return &quot;loading&quot;+key;
-          }
-        };
-/**
- * 删除的监听器操作默认是以同步方式执行的，这会降低缓存的性能，所以建议使用异步方式（RemovalListeners.asynchronous()）。
- * Executors.newSingleThreadExecutor()是执行该监听器的线程。
- */
-Cache listenerCache=CacheBuilder.newBuilder()
-        .maximumSize(10)
-        .expireAfterAccess(2, TimeUnit.SECONDS)
-        .expireAfterWrite(2, TimeUnit.SECONDS)
-        .removalListener(RemovalListeners.asynchronous(removalListener, Executors.newSingleThreadExecutor()))
-        .build(loader);
-</code></pre>
-
-<h3 id="cacheparameters">2.3 缓存参数介绍</h3>
-<p>1.可以选择性的调用CacheBuilder的某些方法，为自己的缓存设置一些基本参数。<br />
+<h3 id="cacheparameters">2.2 缓存参数介绍</h3>
+<p>1.可以选择性的调用CacheBuilderSelector的某些方法，为自己的缓存设置一些基本参数。<br />
 2.缓存暂不支持选择清除策略，默认为LRU（最近最少使用）。</p>
 <pre><code>/**
- * 默认的CacheBuilder
+ * 默认的CacheBuilderSelector
  * 
- * 构造一个默认的CacheBuilder，即：没有任何形式的缓存自动移除策略。
+ * 构造一个默认的CacheBuilderSelector，即：没有任何形式的缓存自动移除策略。
  * @return
  */
-public CacheBuilder&lt;Object, Object&gt; newBuilder();
+public CacheBuilderSelector&lt;Object, Object&gt; newBuilder();
 /**
  * 缓存的最大条目数
  * 
  * @param size
  * @return
  */
-public CacheBuilder&lt;K, V&gt; maximumSize(long size);
+public CacheBuilderSelector&lt;K, V&gt; maximumSize(long size);
 /**
  * 写后多长时间过期
  * 
@@ -163,7 +140,7 @@ public CacheBuilder&lt;K, V&gt; maximumSize(long size);
  * @param unit
  * @return
  */
-public CacheBuilder&lt;K, V&gt; expireAfterWrite(long duration, TimeUnit unit);
+public CacheBuilderSelector&lt;K, V&gt; expireAfterWrite(long duration, TimeUnit unit);
 /**
  * 读后多长时间过期
  * 
@@ -175,7 +152,7 @@ public CacheBuilder&lt;K, V&gt; expireAfterWrite(long duration, TimeUnit unit);
  * @param unit
  * @return
  */
-public CacheBuilder&lt;K, V&gt; expireAfterAccess(long duration, TimeUnit unit);
+public CacheBuilderSelector&lt;K, V&gt; expireAfterAccess(long duration, TimeUnit unit);
 /**
  * 写后多长时间刷新
  * 
@@ -187,18 +164,7 @@ public CacheBuilder&lt;K, V&gt; expireAfterAccess(long duration, TimeUnit unit);
  * @param unit
  * @return
  */
-public CacheBuilder&lt;K, V&gt; refreshAfterWrite(long duration, TimeUnit unit);
-/**
- * 移除监听器
- * 
- * 指定一个监听器实例，所有使用该CacheBuilder的缓存在每次缓存条目被移除时都会被通知。
- * 使用该CacheBuilder构建的缓存，在缓存条目被移除以后会回调这个方法。
- * 回调监听器会作为缓存日常维护的一部分。
- * @param listener
- * @return
- */
-public &lt;K1 extends K, V1 extends V&gt; CacheBuilder&lt;K1, V1&gt; removalListener(
-  RemovalListener&lt;? super K1, ? super V1&gt; listener);
+public CacheBuilderSelector&lt;K, V&gt; refreshAfterWrite(long duration, TimeUnit unit);
 /**
  * 构建缓存
  * 
@@ -213,18 +179,35 @@ public &lt;K1 extends K, V1 extends V&gt; Cache&lt;K1, V1&gt; build(
           CacheLoader&lt;? super K1, V1&gt; loader);
 </code></pre>
 
-<h3 id="callinterfaces">2.4 缓存的接口调用</h3>
-<p>缓存构建完成后，只需调用Cache接口提供的方法，就可以进行缓存的增删改查操作。</p>
-<pre><code>com.sinosoft.one.cache;
+<h3 id="callinterfaces">2.3 缓存的接口调用</h3>
+<p>缓存构建完成后，只需调用Cache和LoadingCache接口提供的方法，就可以进行相应的缓存操作。  
+</p>
+<p id="cacheInterface">2.3.1 Cache接口提供了缓存基本的增删改查操作，在调用时再指定原子操作，是Callable方式的。</p>
+<pre><code>package com.sinosoft.one.cache;
 
-
+import java.util.Map;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 
-import com.google.common.collect.ImmutableMap;
-
+/**
+ * 缓存接口，提供对缓存的基本操作。
+ * 
+ * @version 0.0.1
+ * @date 2013/12/26
+ * @author ZFB
+ *
+ */
 public interface Cache&lt;K, V&gt; {
 
+    /**
+     * 从缓存中获取指定key的键值对
+     * 
+     * @param key
+     *        指定的key
+     * @return V
+     *        返回该指定key所关联的value；如果缓存中不存在该key所关联的value，那么返回null
+     */
+    V getIfPresent(Object key);
     /**
      * 存入缓存
      * 
@@ -234,16 +217,17 @@ public interface Cache&lt;K, V&gt; {
     void put(K key, V value);
 
     /**
-     * 获得指定的缓存条目，CacheLoader方式
+     * 存入缓存，批量操作
      * 
-     * @param key
-     * @return
-     * @throws ExecutionException
+     * 批量存入缓存，效果等同于多次调用put(K key, V value)。
+     * 如果此方法在执行过程中，map内的键值对被修改了，那么此方法的行为就不可预知了。
+     * @param m
      */
-    V get(K key) throws ExecutionException;
+    void putAll(Map&lt;? extends K,? extends V&gt; m);
 
     /**
-     * 获取指定的缓存条目，Callable方式
+     * 获取指定的缓存条目
+     * 
      * 
      * @param key
      * @param valueLoader
@@ -253,26 +237,6 @@ public interface Cache&lt;K, V&gt; {
     V get(K key, Callable&lt;? extends V&gt; valueLoader) throws ExecutionException;
 
     /**
-     * 批量获取指定的缓存条目，批量
-     * 
-     * @param keys
-     * @return
-     * @throws ExecutionException
-     */
-    ImmutableMap&lt;K, V&gt; getAll(Iterable&lt;? extends K&gt; keys) throws ExecutionException;
-
-    /**
-     * 重新加载指定key的值，这个操作是异步的。
-     * 加载新value的过程中，如果该key的旧value没有被清除，那么它依然有效。此时如果有请求的话，那么旧的value会被返回。
-     * 如果新value加载成功，那么它会取代旧value。
-     * 加载新value的过程中，如果发生异常，那么该key的旧value会被保留，异常会被吞噬并且记入log。
-     * 如果当前的缓存包括了指定key的键值对，那么会调用CacheLoader.reload()加载新value，否则调用CacheLoader.load()。
-     * 如果进行refresh操作时，发现有另外一个线程正在进行这个操作，那么当前线程什么也不做，直接返回。
-     * @param key
-     */
-    void refresh(K key);
-
-    /**
      * 删除指定条目
      * 
      * @param key
@@ -280,14 +244,14 @@ public interface Cache&lt;K, V&gt; {
     void remove(Object key);
 
     /**
-     * 批量删除缓存条目，批量
+     * 批量删除缓存条目
      * 
      * @param keys
      */
     void removeAll(Iterable&lt;?&gt; keys);
 
     /**
-     * 删除所有的缓存条目，批量
+     * 删除所有的缓存条目
      */
     void removeAll();
 
@@ -297,6 +261,46 @@ public interface Cache&lt;K, V&gt; {
      * 因此这个方法适用于“写缓存”操作非常少的场景（如果确实需要调用的话）。
      */
     void cleanUp();
+}
+</code></pre>
+
+<p id="LoadingCacheInterface">2.3.2 LoadingCache接口扩展了Cache接口，在构建缓存时需要提供默认的原子操作，是CacheLoader方式的。</p>
+<pre><code>package com.sinosoft.one.cache;
+
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
+
+public interface LoadingCache&lt;K, V&gt; extends Cache&lt;K, V&gt; {
+
+    /**
+     * 获得指定的缓存条目
+     * 
+     * @param key
+     * @return
+     * @throws ExecutionException
+     */
+    V get(K key) throws ExecutionException;
+
+    /**
+     * 批量获取指定的缓存条目
+     * 
+     * @param keys
+     * @return
+     * @throws ExecutionException
+     */
+    Map&lt;K, V&gt; getAll(Iterable&lt;? extends K&gt; keys) throws ExecutionException;
+
+    /**
+     * 重新加载指定key的值。
+     * 加载新value的过程中，如果该key的旧value没有被清除，那么它依然有效。此时如果有请求的话，那么旧的value会被返回。
+     * 如果新value加载成功，那么它会取代旧value。
+     * 加载新value的过程中，如果发生异常，那么该key的旧value会被保留，异常会被吞噬并且记入log。
+     * 如果当前的缓存包括了指定key的键值对，那么会调用CacheLoader.reload()加载新value，否则调用CacheLoader.load()。
+     * 如果进行refresh操作时，发现有另外一个线程正在进行这个操作，那么当前线程什么也不做，直接返回。
+     * &lt;p&gt;注意：如果没有覆写CacheLoader.reload()，那么这个操作是同步的；建议以异步方式覆写CacheLoader.reload()。
+     * @param key
+     */
+    void refresh(K key);
 
 }
 </code></pre>
