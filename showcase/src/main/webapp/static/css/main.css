@@ -1,0 +1,19 @@
+.project--container.project--container--link:hover {
+    text-decoration: none;
+    box-shadow: 0 0 3px #563d7c;
+    border-color: #563d7c;
+}
+.project--container.project--container--link {
+    color: #34302d;
+    transition: all .2s;
+}
+
+.project--container {
+    border: 1px solid #34302d;
+    display: inline-block;
+    height: 300px;
+    margin: 0 .5% 20px;
+    vertical-align: top;
+    text-align: center;
+    padding: 30px 5%;
+}

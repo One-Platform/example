@@ -1,5 +1,21 @@
-<footer class="bs-footer" role="contentinfo">
+<%@ page language="java" pageEncoding="UTF-8" %>
+<footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
-        Copyright &copy; 2013 <a href="http://www.sinosoft.com.cn">www.sinosoft.com.cn</a>
+        <div class="bs-docs-social">
+            <ul class="bs-docs-social-buttons">
+                <li>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+                </li>
+                <li>
+                    <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=twbs&amp;repo=bootstrap&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
+                </li>
+                <%--<li >--%>
+                    <%--QQ交流群:--%>
+                <%--</li>--%>
+                <%--<li class="tweet-btn">--%>
+                   <%--@Mail--%>
+                <%--</li>--%>
+            </ul>
+        </div>
     </div>
 </footer>
