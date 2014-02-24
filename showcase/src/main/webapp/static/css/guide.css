@@ -1,0 +1,60 @@
+
+.guides-section--container {
+    border: 1px solid #34302D;
+    display: block !important;
+    margin-top: 50px;
+    min-height: 284px;
+}
+.guides-section--container:first-child {
+    margin-top: 0;
+}
+.guides-section--container .section-title--container {
+    background-color: #34302D;
+    color: #EEEEEE;
+    float: left;
+    height: 284px;
+    margin: -40px 40px 40px -40px;
+    padding: 40px 0;
+    text-align: center;
+    width: 324px;
+}
+.guides-section--container .section-title--container .section-title--icon {
+    /*background-image: url("../img/iconsprite.png");*/
+    display: inline-block;
+    height: 100px;
+    width: 72px;
+}
+.guides-section--container .section-title--container .section-title--icon.gs-guides--icon {
+    background-position: -1px -737px;
+}
+.guides-section--container .section-title--container .section-title--title {
+    font-family: "Montserrat",sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 30px 20px 25px;
+    text-transform: uppercase;
+}
+.guides-section--container .section-title--container .section-title--intro {
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0 40px;
+}
+.guides-section--container .guides--wrapper {
+    margin-right: -40px;
+}
+.guides-section--container .guide--container {
+    display: inline-block;
+    margin: 0 4px 20px 0;
+    vertical-align: top;
+    width: 29.269%;
+}
+.guides-section--container .guide--container .guide--title {
+    color: #563D7C;
+    font-size: 16px;
+    line-height: 22px;
+}
+.guides-section--container .guide--container .guide--subtitle {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 5px;
+}
