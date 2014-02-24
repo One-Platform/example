@@ -5,10 +5,15 @@
 
 <!-- bootstrap的核心CSS -->
 <link href="${ctx}/static/css/bootstrap/bootstrap.css" type="text/css" rel="stylesheet"/>
+<%--font-awesome--%>
+<link href="${ctx}/static/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 <!-- Documentation extras -->
 <link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />
 <link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />
 <link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
+
+<link href="${ctx}/static/css/main.css" rel="stylesheet" />
+
 
 <script src="${ctx}/static/js/jquery-1.7.1.js"></script>
 <!-- Bootstrap core JS file-->
