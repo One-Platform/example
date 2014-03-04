@@ -23,7 +23,7 @@
     height: 100px;
     width: 72px;
     display: inline-block;
-    background-image: url("iconsprite.png");
+    background-image: url("../images/iconsprite.png");
 }
 
 .guides-section--container .section-title--container .section-title--icon.gs-guides--icon {
