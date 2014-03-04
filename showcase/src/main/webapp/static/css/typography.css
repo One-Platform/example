@@ -30,9 +30,9 @@ p {
     line-height: 24px;
 }
 
-p a, ul a {
-    color: #563d7c;
-}
+/*p a, ul a {*/
+    /*color: #563d7c;*/
+/*}*/
 
 code {
     font-size: 14px;

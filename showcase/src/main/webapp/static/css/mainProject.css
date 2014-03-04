@@ -259,7 +259,7 @@ a:hover.spring-logo span {
 .right-pane-widget--container li a {
     font-size: 14px;
     line-height: 14px;
-    color: #563d7c;
+    /*color: #563d7c;*/
 }
 
 .right-pane-widget--container li:first-child {
@@ -797,11 +797,11 @@ footer .container-fluid {
 
 .item--dropdown .item--body .item--body--version .docs-link {
     display: inline-block;
-    color: #563d7c;
+    /*color: #563d7c;*/
 }
 
 .item--dropdown .item--body .item--body--version .docs-link:hover {
-    color: #7ac04c;
+    color: #563D7C;
 }
 
 .item--dropdown .item--body .item--body--version .docs-link.reference-link {
