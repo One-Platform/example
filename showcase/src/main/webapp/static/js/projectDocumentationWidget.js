@@ -4,12 +4,11 @@ Spring.ProjectDocumentationWidget = function () {
     var quickStartEl = $('[data-download-widget-controls]');
     var mavenWidgetEl = $('.js-download-maven-widget');
     var documentationEl = $('.js-documentation-widget');
-    var projectUrl = apiBaseUrl + "/project_metadata/" + projectId;
+//    var projectUrl = apiBaseUrl + "/project_metadata/" + projectId;
+    var projectUrl = "http://localhost:9000/showcase/webVersion";
     var promise = Spring.loadProject(projectUrl);
     promise.then(function (project) {
-       // alert(project.releases);
         Spring.buildDocumentationWidget(documentationEl, project);
-        //alert(2)
         Spring.buildQuickStartWidget(quickStartEl, mavenWidgetEl, project);
     });
 };
@@ -20,7 +19,8 @@ Spring.buildQuickStartWidget = function (quickStartEl, mavenWidgetEl, project) {
     new Spring.QuickStartSelectorView({el: quickStartEl, model: project, template: $("#project-download-widget-controls-template").text(), snippetWidgetEl: mavenWidgetEl}).render();
 }
 Spring.loadProject = function (url) {
-    return $.ajax(url, {dataType: 'jsonp', processData: false}).then(function (value) {
+    return $.ajax({type:"get",url:url,dataType:"json"}).then(function (value) {
+
         return new Spring.Project(value);
     });
 }
