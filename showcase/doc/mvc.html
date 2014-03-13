@@ -1,0 +1,1661 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei";
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: #ffffff;
+
+}
+ 
+a, a:visited {
+  color: #0088cc;
+  text-decoration: none;
+}
+ 
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+ 
+p { margin: 0 0 20px; }
+small { font-size: 85%; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+ 
+h1,h2,h3,h4,h5,h6 {
+  margin: 10px 0;
+  font-family: inherit, "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+ 
+h1,h2,h3 { line-height: 40px; }
+h1 { font-size: 38px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 14px; }
+h6 { font-size: 14px; }
+
+.lead {font-family:"ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+ 
+ul,ol {
+  padding: 0;
+  margin: 0 0 10px 25px;
+}
+ 
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+ 
+li { line-height: 20px; }
+ 
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
+ 
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 20px;
+  border-left: 5px solid #eeeeee;
+}
+ 
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+ 
+code {
+  padding: 2px 4px;
+  color: #d14;
+  white-space: nowrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+ 
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+ 
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0;
+}
+ 
+table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+ 
+table th,
+table td {
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+}
+ 
+table th { font-weight: bold; }
+table thead th { vertical-align: bottom; }
+ 
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
+}
+	
+
+pre code { background: transparent; }
+@media (min-width: 768px) {
+    .bs-docs-home .bs-social, 
+    .bs-docs-home .bs-masthead-links {
+      margin-left: 0;
+    }
+}
+</style>
+<title>1. Web MVC Framework</title>
+
+</head>
+<body>
+<h1>1. Web MVC Framework</h1>
+
+<h2>1.1 Restful风格的web应用</h2>
+
+<p>REST并不是一种架构，而是一组架构约束条件和原则，他最重要的原则是客户端和服务器之间的交互在请求之间是无状态的。</p>
+
+<h2>1.2 版本历史</h2>
+
+<p>当前版本为1.0.3</p>
+
+<h2>1.3 One-MVC基本原理介绍</h2>
+
+<p>One-MVC基于Spring MVC3，对于SpringMVC的优势我们予以保留，并在此基础上做了优化以及增加了很多的最佳实践。One-MVC包含了许多特性，具体如下：</p>
+
+<p><url>
+<li>基于Filter</li>
+<li>零配置文件</li>
+<li>完全支持REST</li>
+<li>支持通过参数绑定数据</li>
+<li>支持Bean Validation 以及 Param Validation</li>
+<li>支持Portal</li>
+<li>支持Pipe</li>
+<li>有专门的技术团队提供支持</li>
+<li>快速响应问题和新需求</li>
+</url></p>
+
+<h2>1.4 如何构建一个Restful风格的web项目</h2>
+
+<p>您可以参考我们的指南文档，<a href="#">快速构建Restful风格的Web工程</a></p>
+
+<h2>1.5 One-MVC项目结构的约定</h2>
+
+<p>One-mvc通过约束项目结构（文件夹目录结构）,达到路径映射及资源文件的映射需要。开发者在使用one-mvc时需要遵守改约定。one-mvc的项目结构约定有一下几点：</p>
+
+<p>1、java资源文件的结构约定。在One-mvc框架中java资源主要由控制器(Controller)和拦截器（Interceptor）组成,所以在java资源结构中，这两类文件需要同一放置于Controllers包下。同时将同一类业务功能的控制器和拦截器放于同一包下，例如：
+<img src="http://i.imgur.com/URN85PS.png" alt="" /></p>
+
+<p>在图中有关account业务功能的Controller等java资源文件都同一放位于controllers.account包下</p>
+
+<p>2、视图资源文件的结构约定。这里主要的视图资源文件为jsp,统一位于views文件夹下。同时遵守同一累业务功能的资源放于同一文件夹。如：
+<img src="http://i.imgur.com/WA7UHxX.png" alt="" /></p>
+
+<h1>2. 控制器(controller)</h1>
+
+<h2>2.1 Controller的定义</h2>
+
+<p>one-mvc的Controller相当于struts中的action，由于one-mvc是无任何配置文件的框架。定义Controller的前提条件是遵守项目结构约定,在Controllers包下及所有的子包中，所有类名后缀定义为controller结尾的类，则自动会被定义为控制器（Controller）。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+public class DemoController {
+
+}
+</code></pre>
+
+<p>清单2-1-1</p>
+
+<h2>2.2 路径的映射</h2>
+
+<h3>2.2.1 REST的URL</h3>
+
+<p>（待写）</p>
+
+<h3>2.2.1 URL请求对应到controller</h3>
+
+<p>一个URL请求如何对应到相应的controller?在One-mvc中,我们对项目结构做了约定，这样做是有原因的，因为在URL映射中我们将用到这样的约定，会把目结构的约定体现在映射规则中。one-mvc的URL映射分为三个层级，分别为包、类、方法三个。</p>
+
+<h4>2.2.1.1 默认的映射规则</h4>
+
+<p>第一层级映射，是包级别的映射，它是URL映射中默认的映射规则：</p>
+
+<p><strong>controllers包下的每一级子包将作为URL的一个节点。</strong></p>
+
+<p>例如包结构为：<img src="http://i.imgur.com/YKNi5Y2.png" alt="" />的工程项目中，我们的URL请求想要映射到account包下的controller，那么在我们发送的HTTP请求的URL中，必须要将“account”作为URL的第一个节点。即http://localhost:8080/demo/<strong>account</strong>/...。其中demo作为项目名，在下文中不在重述。</p>
+
+<p>以此类推如果controllers包下有二级或者三级子包，也必须将包名作为URL的节点。</p>
+
+<pre><code>二级子包：com.sinosoft.one.demo.controllers.account.dosomething
+对应URL：localhost:8080/demo/account/dosomething/...
+
+三级子包：com.sinosoft.one.demo.controllers.account.dosomething.dosomething2
+对应URL：localhost:8080/demo/account/dosomething/dosomething2/...
+</code></pre>
+
+<p>清单2-2-1</p>
+
+<h4>2.2.1.2 controller上的URL映射</h4>
+
+<p>当URL通过包级别的映射后，映射将从控制器controller的java类级别开始第二层级的映射。这个级别的映射有两种方式。</p>
+
+<p>方式一：<strong>通过在controller类上增加@Path标签进行映射</strong>。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+@Path("user")
+public class UserController {
+}
+</code></pre>
+
+<p>清单2-2-2
+在以上代码中<strong>@Path("user")</strong>定义了controller层级的路径。通过包层级的映射后，该映射的URL请求为：localhost:8080/demo/account/user/...</p>
+
+<p>方式二：<strong>不写@Path标签，通过controller类名前缀进行映射</strong>。</p>
+
+<p>当我们定义了一个controller后，如果不写@Path标签，那么作为控制器类名的前缀将自动作为URL的节点。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+public class GroupController {
+}
+</code></pre>
+
+<p>清单2-2-3
+以上代码中GroupController类上不增加Path标签，那么该控制器类的类名前缀Group,则自动作为URL的节点。该映射的URL为：localhost:8080/demo/account/group/...</p>
+
+<h4>2.2.1.3 controller方法的URL映射</h4>
+
+<p>通过包、类级层级的映射后，mvc将进行方法级别第三层级映射，也是最后一个层级的映射。映射方式与controller类似，同样有两种方式。</p>
+
+<p>方式一：<strong>在方法上增加@Get或@Post标签</strong></p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+@Path("user")
+public class UserDetailController {
+
+    @Post("update”)
+    public String updateForm(Invocation inv) {
+        return "userForm";
+    }
+
+    @Get("delete”)
+    public String deleteForm(Invocation inv) {
+        return "userForm";
+    }
+}
+</code></pre>
+
+<p>清单2-2-4
+以上代码中,在UserDetailController类里，我们定义了两个方法updateForm、deleteForm，同时在方法体之上分别增加了@Post("update”)与@Get("delete”)标签。那么它们分别映射的URL，对应@Post("update”)的是进行post请求的localhost:8080/demo/account/user/update，对应@Get("delete”)的是进行get请求的http://localhost:8080/demo/account/user/delete</p>
+
+<p>方式二：<strong>不写@Post或者@Get标签，通过方法名进行映射</strong>。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+@Path("group")
+public class GroupController {
+
+    public String list(Invocation inv) {
+        List&lt;Group&gt; groups = accountManager.getAllGroup();
+        inv.addModel("groups", groups);
+        return "groupList";
+    }
+}
+</code></pre>
+
+<p>清单2-2-5
+当我们的方法体上未写任何@Post与@Get标签时，将自动使用方法名进行映射。对应的URL映射为：http://localhost:8080/demo/account/group/list,该URL可以同时匹配post或者get请求。</p>
+
+<h3>2.2.3 多路径映射</h3>
+
+<p>通常情况下，我们会遇到这样的问题，我们的controller方法是可以在多个URL中使用的。为了不进行重复的代码编写，可以将多个URL映射到同一个controller或者controller方法中。</p>
+
+<p><strong>controller的多路径映射</strong></p>
+
+<p>不能通过controller名前缀映射，需要在controller类上增加@Path标签，书写方式修改为
+@Path({"node1"，"node2"})</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+@Path({"user","employe"})
+public class UserController {
+
+}
+</code></pre>
+
+<p>清单2-2-6
+以上代码中对应的URL请求分别为</p>
+
+<p>user：http://localhost:8080/demo/account/user/......</p>
+
+<p>employe：http://localhost:8080/demo/account/employe/......</p>
+
+<p><strong>方法的多路径映射</strong></p>
+
+<p>与controller的多路径映射类似，不能通过方法名映射，需要在方法体上添加@Post或@Get请求，书写方式修改为@Get({"node1","node2"})或@Post({"node1","node2"})</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+@Path("user")
+public class UserDetailController {
+
+    @Post({"list”,"findall"})
+    public String list(Invocation inv) {
+        return "userForm";
+    }
+
+    @Get({"create","save"})
+    public String save(Invocation inv) {
+        return "userForm";
+    }
+}
+</code></pre>
+
+<p>清单2-2-7</p>
+
+<p>清单2-2-7代码对应的url分别为</p>
+
+<p>post:http://localhost:8080/demo/account/user/list,http://localhost:8080/demo/account/user/findall</p>
+
+<p>get:http://localhost:8080/demo/account/user/create,http://localhost:8080/demo/account/user/save</p>
+
+<h3>2.2.4 post、get、put、delete请求</h3>
+
+<p>one-mvc以@Get或者@Post来标注方法,分别对应HTTP的GET和POST请求,并且一个controller方法可以同时使用不同的请求方式。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+
+@Path("user")
+public class UserDetailController {
+
+    @Post("list”)
+    @Get("list”)
+    public String list(Invocation inv) {
+        return "userForm";
+    }
+
+    @Get("updata")
+    public String updata(Invocation inv) {
+        return "userinfo";
+    }
+
+    @Post("save")
+    public String save(Invocation inv) {
+        return "userForm";
+    }
+}
+</code></pre>
+
+<p>清单2-2-8</p>
+
+<p>one-mvc还提供了@Put与@Delete请求,这两种请求主要用于在进行数据库添加与删除操作时，使用的约定类型请求。并且当在controller方法体上标注@Delete、@put标签时，只能通过delete或put请求访问。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+@Path("user")
+public class UserDetailController {
+
+    //对应 /user 并且仅支持DELETE访问
+    @Delete
+    public String delete(@Param("username")string username,Invocation inv) {
+        return "userinfo";
+    }
+
+    //对应 /user/remove 并且仅支持DELETE访问
+    @Delete("remove") 
+    public String remove(@Param("userid")string userid,Invocation inv) {
+        return "userForm";
+    }
+}
+</code></pre>
+
+<p>清单2-2-9</p>
+
+<p>在页面视图，我们通过以下方式发送delete请求。</p>
+
+<pre><code>&lt;form action="${ctx}/user" method="delete"&gt;
+    姓名：&lt;input name="username" id="name" type="text" /&gt;&lt;br /&gt; 
+    &lt;input type="submit" value="Form提交" /&gt;
+/form&gt;
+&lt;form action="${ctx}/user/remove" method="delete"&gt;
+    姓名：&lt;input name="userid" id="id" type="text" /&gt;&lt;br /&gt; 
+    &lt;input type="submit" value="Form提交" /&gt;
+/form&gt;
+</code></pre>
+
+<p>@Put与@delete类似,在controlle方法体添加@Put,并且请求定义请求为put</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+@Path("user")
+public class UserDetailController {
+
+    //对应 /user/put 并且仅支持put访问
+    @Put("put") 
+    public String put(@Param("user")User user,Invocation inv) {
+        return "userForm";
+    }
+}
+</code></pre>
+
+<p>页面视图</p>
+
+<pre><code>&lt;form action="${ctx}/user/put" method="put"&gt;
+    姓名：&lt;input name="user.name" id="name" type="text" /&gt;&lt;br /&gt; 
+    年龄：&lt;input name="user.age" id="age" type="text" /&gt;&lt;br /&gt; 
+    &lt;input type="submit" value="Form提交" /&gt;
+/form&gt;
+</code></pre>
+
+<h2>2.3 参数的绑定</h2>
+
+<p>在one-mvc中，我们用@Param("paramName")来绑定参数</p>
+
+<p><p/>
+<strong>注意：</strong>
+在参数的绑定中我们是根据@Param("paramName")的paramName和页面元素的name属性做匹配的</p>
+
+<pre><code>public String login(@Param("paramName")boolean flag,@Param("name") String name，@Param("user") User user,@Param("userList") userList,Invocation inv){
+    if(flag){
+        //TODE:someting.        
+    }
+}
+</code></pre>
+
+<h3>2.3.1 基本类型的参数绑定</h3>
+
+<p>one-mvc支持8种基本数据类型的绑定</p>
+
+<pre><code>boolean：只有1和true表示"ture",0和其他的均表示为"false"。
+
+float/double：默认将传递过来的数字精确到一位小数，如果数字本身精确为更高，则保持不变
+
+int/short/long：如果传递的参数大小大于或小于int/short/long类型值的范围或者传递的不是整数，那么传递过来的值将使用默认值0，既如果我传递的参数大小为2147483648，那么得到的结果为0
+
+chart：仅能接收单字符(英文或中文字符)
+
+byte： 仅能绑定 -128至127的整数
+</code></pre>
+
+<p><strong>示例：</strong>
+<strong><em><p>前台页面写法</p></em></strong></p>
+
+<pre><code>&lt;input type="text" name="flag"&gt;
+</code></pre>
+
+<p><strong><em><p>后台controllers写法</p></em></strong></p>
+
+<pre><code>public String test(@Param("flag") boolean flag,Invocation inv){
+    if(flag){
+        return "welcome";
+    }else{
+        return "error";
+    }
+}   
+</code></pre>
+
+<h3>2.3.2 集合类型的参数绑定</h3>
+
+<p>List类型的绑定</p>
+
+<pre><code>//在后台controller里边，我们定义的方式和普通类型是一样的，如下：
+public String test(@Param("userList") List&lt;User&gt; userList,Invocation inv){
+    for(User user : userList){
+        //TODO:sometion.
+    }
+} 
+
+//在前台jsp页面中的写法，我们需要注意一下，如下:
+&lt;!-- one-mvc会按照顺序将下边的input标签中的值绑定到后台的List中--&gt;
+&lt;td&gt;&lt;input type="text" name="userList"&gt;&lt;/td&gt;
+&lt;td&gt;&lt;input type="text" name="userList"&gt;&lt;/td&gt;
+&lt;td&gt;&lt;input type="text" name="userList"&gt;&lt;/td&gt;    
+
+//直接在将参数拼接到get类型的请求中
+http://localhost:9000/showcase/test?userList=listData_1&amp;userList=listData_2 
+</code></pre>
+
+<p>Map类型的绑定</p>
+
+<pre><code>//后台controller中的写法与List没什么区别，这里就不再介绍了
+//这里我们主要说一下jsp页面的写法
+&lt;!--我们用“:”来将map对象和它的key值分开 --&gt;
+&lt;td&gt;&lt;input type="text" name="mapData:key1"&gt;&lt;/td&gt;
+&lt;td&gt;&lt;input type="text" name="mapData:key2"&gt;&lt;/td&gt;
+&lt;td&gt;&lt;input type="text" name="mapData:key3"&gt;&lt;/td&gt;
+
+//直接在将参数拼接到get类型的请求中
+http://localhost:9000/showcase/test?mapData:key1=data_1&amp;mapData:key2=data_2
+</code></pre>
+
+<h3>2.3.3 枚举类型的参数绑定</h3>
+
+<p>我们首先创建一个枚举类</p>
+
+<pre><code>public enum CourseType {
+    ENGLISH,MATH,CHINESE,OTHER
+}
+</code></pre>
+
+<p>下边写我们的controller</p>
+
+<pre><code>public String test(@Param("courseType")CourseType courseType,Invocation inv){
+    return "welcome";
+}
+</code></pre>
+
+<p>最后，我们将我们的JSP页面定义出来</p>
+
+<pre><code>&lt;td&gt;&lt;input type="text" name="courseType"&gt;&lt;/td&gt;  
+</code></pre>
+
+<h3>2.3.4 java bean类型的参数绑定</h3>
+
+<p>one-mvc支持自定义对象的属性绑定，下边我们来举例说明一下</p>
+
+<p>首先我们定义一下Student、Course类</p>
+
+<pre><code>public class Student {
+
+    private Long id;
+
+    private String name;
+
+    private Integer age;
+
+    private Date birthday;
+
+    private Course mathCourse;
+
+    private Course englishCourse;
+
+    private List&lt;Course&gt; otherCourses;
+    //@todo getter and setter
+}
+
+public class Course {
+
+    //见前面的enum示例
+    private CourseType type;
+
+    private String name;
+
+    private Float score;
+
+    //@todo getter and setter
+}
+</code></pre>
+
+<p>下面我们编写controller</p>
+
+<pre><code>@Path("")
+public class DataBindController {
+
+    //JavaBean的绑定
+    /*
+    mvc会自动根据表单的name属性匹配Student的属性。
+    对于嵌套属性只需要用'.'来表示嵌套关系即可 例如 mathCourse.score
+    对于List&lt; Course &gt;类型还要加上属性的下标 例如 courses[0].score
+    如果form表单只是一个JavaBean的映射可以不用@Param()注解，
+    如果form表单是多个JavaBean的映射那就必须增加@Param("beanName")注解，并且在input的name属性增加对于的'beanName.'前缀
+    */
+   public String test(@Param("student")Student student,Invocation inv){
+        return "welcome";
+   }
+}
+</code></pre>
+
+<p>最后，我们来编写JSP页面</p>
+
+<pre><code>&lt;form action="${ctx}/test" method="get"&gt;
+编号：&lt;input name="student.id" id="id" type="text" /&gt;&lt;br /&gt; 姓名：&lt;input
+    name="student.name" id="name" type="text" /&gt;&lt;br /&gt; 年龄：&lt;input
+    name="student.age" id="age" type="text" /&gt;&lt;br /&gt; 出生日期：&lt;input
+    name="student.birthday" id="birthday" type="text" /&gt;&lt;br /&gt; 数学成绩：&lt;input
+    name="student.mathCourse.score" id="mathScore" type="text" /&gt;&lt;br /&gt;
+英语成绩：&lt;input name="student.englishCourse.score" id="englishScore" type="text" /&gt;&lt;br /&gt;
+&lt;hr /&gt;
+其他成绩1：&lt;input name="student.otherCourses[0].score" type="text" /&gt;&lt;br /&gt;
+其他成绩2：&lt;input name="student.otherCourses[1].score" type="text" /&gt;&lt;br /&gt;
+其他成绩3：&lt;input name="student.otherCourses[2].score" type="text" /&gt;&lt;br /&gt;
+其他成绩4：&lt;input name="student.otherCourses[3].score" type="text" /&gt;&lt;br /&gt;
+&lt;input type="submit" value="Form提交" /&gt;
+
+&lt;/form&gt;
+</code></pre>
+
+<h2>2.4 控制器的返回路径</h2>
+
+<p>在one-mvc的web应用程序中，通过使用controller的方法返回值方式作为视图的返回方式。对于普通的url请求（非ajax），通过在controller的方法中返回string进行视图跳转。同时项目结构的约定，被使用到路径返回规则中。</p>
+
+<h3>2.4.1 如何定位返回页面</h3>
+
+<p>MVC中的视图的存放路径是被约束的，统一放置于views文件夹下，在前面章节中已经进行描述。每个controller方法处理完成后需要返回视图，首先要确定controllers的包结构与mvc项目中视图文件夹中的结构一致。通过包结构的约定，以及controller的返回值确定视图的返回。</p>
+
+<p>例如：
+在controllers包下有一个account子包。</p>
+
+<p><img src="http://i.imgur.com/Jg6Kz0o.png" alt="" />
+图2-4-1</p>
+
+<p>同时在views目录下也有一个同名的account子包。</p>
+
+<p><img src="http://i.imgur.com/H1A3Ge3.png" alt="" />
+图2-4-2</p>
+
+<p>account子包中的controler的视图将返回views的account子包下的页面。</p>
+
+<p>而controller方法中通过返回字符串的形式返回，该字符串返回值则是具体视图去掉的名称。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+@Path("user")
+public class UserController {
+
+    @Get("list")
+    public String list(Invocation inv) {
+        List&lt;User&gt; users = accountManager.getAllUser();
+        inv.addModel("users", users);
+        return "userList"; 
+    }
+}
+</code></pre>
+
+<p>以上代码是示例图片2-4-1中的UserController，表示的是account包下UserController的list方法，通过返回字符串"userList",返回到对应示例图片2-4-2中views包下的子包account中的userList.jsp。</p>
+
+<p>目前可以支持回别的VIEWS根目录下的JSP（不支持返回其他子包下的视图），通过返回相对路径的形式即可，这样的返回需要写明视图后缀.jsp。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+@Path("user")
+public class UserController {
+
+    @Get("list")
+    public String list(Invocation inv) {
+        List&lt;User&gt; users = accountManager.getAllUser();
+        inv.addModel("users", users);
+        return "/userList.jsp";
+    }
+}
+</code></pre>
+
+<h3>2.4.2 转发</h3>
+
+<p>在one-mvc中通过转发有两种方式，虽然都是使用在controller返回字符串的形式，但是在转发时可以返回一个URL路径的字符串，例如return "/mvc/home/test/hello" 或者 "a:/mvc/home/test/hello"，都是进行转发。以‘a:’开头代表本控制器内的方法</p>
+
+<h3>2.4.3 重定向</h3>
+
+<p>在one-mvc中通过在ontroller的方法返值的字符串中使用"r:XXX/XXX/XXX......"的方式进行转发。</p>
+
+<pre><code>package com.sinosoft.one.demo.controllers.account;
+@Path("user")
+public class UserController {
+
+    @Get("delete/{id}")
+    public String delete(@Param("id") Long id, Invocation inv) {
+        accountManager.deleteUser(id);
+        inv.addFlash("message", "删除用户成功");
+        return "r:/account/user/list";
+    }
+}
+</code></pre>
+
+<p>清单中的"r:/account/user/list"，就是代表着重定向到"/account/user/list" URL上,同时该URL也会对应到MVC另一个controller的方法</p>
+
+<h3>2.4.4 无参数类型的返回值方式</h3>
+
+<p>如果我们的controller不需要返回视图，那么controller的方法只需返回void即可。</p>
+
+<h2>2.5 Invocation</h2>
+
+<p>Invocation封装了框架对控制器方法的一次调用相关的信息：请求和响应对象、目标控制器方法、方法参数值等。Invocation主要用来处理数据的传递，比如：页面和后台之间的数据传递，重定向后数据的传递，以及传递仅本次调用可见、和视图渲染无关的一些参数等。</p>
+
+<p>注意:当不存在请求转发,一个用户请求只存在一个调用实例;当用户请求可能被转发时,转发前和转发后的控制器方法调用是不同的调用,则一个用户请求将不只包含了一个调用实例.</p>
+
+<h3>2.5.1 获取http内置对象</h3>
+
+<pre><code>public HttpServletRequest getRequest();
+此方法用来返回本次调用的HttpServletRequest对象
+
+public HttpServletResponse getResponse();
+此方法用来返回本次调用的HttpServletResponse对象
+
+public ServletContext getServletContext();
+此方法用来返回ServletContext对象
+</code></pre>
+
+<h3>2.5.2 绑定数据</h3>
+
+<p>Invocation常用绑定数据的方法有以下几个:</p>
+
+<pre><code>public void addModel(Object value);
+public void addModel(String name, Object value);
+</code></pre>
+
+<p>例如在controller中定义如下方法：</p>
+
+<pre><code>public String render(Invocation inv) {  
+    //在页面渲染业务数据  
+    inv.addModel("user", new User("1", "kylin"));  
+    // id=1, name=kylin  
+    return "userInfo";  
+}  
+</code></pre>
+
+<p>在jsp中可以用el表达式取出来：</p>
+
+<pre><code>id = $｛user.id｝,name = $｛user.name｝渲染user的值  
+</code></pre>
+
+<p>这俩方法都是将对象(object,array,collection等)加入到MVC中的Model中作为一个属性,通过它传递给View.将使用该对象的类名头字母小写的字符串作为名字.</p>
+
+<p>不同的是:第一个方法中如果对象是数组,去数组元素的类的类名字头字母小写加上"List"作为名字，如果对象是集合元素,取其第一个元素的类的类名字头字母小写加上"List"作为名字,如果该值为空或者其集合长度为0的话,将被忽略.第二个方法就是键值对的组合.在前台可以直接使用el表达式来取.此方法采用servletReqeust的setAttributel来实现,所以可以用来传递转发后的数据.</p>
+
+<pre><code>public Invocation setAttribute(String name, Object value);
+public Object getAttribute(String name);
+</code></pre>
+
+<p>这一对方法用来设置和调用一个和本次调用关联的属性,这个属性可以在多个拦截器中共享。这对方法仅能在本次调用中使用,如果出现转发则失效.
+例如在controller中定义如下方法：</p>
+
+<pre><code>public String render(Invocation inv){
+    inv.setAttribute("now","2014年03月05");
+    return "welcome";
+}
+</code></pre>
+
+<p>在自定义的Inteceptor中可以这样来取：</p>
+
+<pre><code>@Override  
+protected Object after(Invocation inv, Object instruction) throws Exception {  
+    // 控制器方法调用之后，可以在这里做些你想做的  
+    String now = (String)inv.getAttribute("now"); 
+    System.out.println(now);       
+    return super.after(inv, instruction);  
+}  
+
+public void addFlash(String name, String msg);
+这个方法用于向重定向跳转后的页面传递参数，比如提示信息.前台可以直接通过el表达式来获取值。
+</code></pre>
+
+<h2>2.6 将数据返回视图</h2>
+
+<p>控制器将数据返回时,ajax请求和非ajax请求所用的方法不同。ajax请求统一用Reply来返回,非ajax请求是将数据装载进Invocation里,然后再取。</p>
+
+<h3>2.6.1 Ajax请求</h3>
+
+<h4>2.6.1.1 返回JSON数据</h4>
+
+<p>使用Replys.with(Object).as(Json.class)来返回,前台使用直接取用即可;</p>
+
+<pre><code>Controller：
+@Post("getName")
+public Reply getName(){
+    Person person = new Person();
+    person.setName("aaa");
+    return Replys.with(person).as(Json.class);
+}
+Jsp:
+ 姓名:&lt;input id="name"/&gt;&lt;button onclick="getName();"&gt;获取&lt;/button&gt;
+&lt;script type="text/javascript"&gt;
+function getName(){
+    $.ajax({
+        type:"post",
+        url:"${ctx}/getName",
+        dataType:"json",
+        success:function (data) {
+            $("#name").text(data.name);
+        },
+        error:function () {
+            alert("error");
+        }
+    });
+}
+</code></pre>
+
+<h4>2.6.1.2 返回XML数据</h4>
+
+<p>对于Ajax请求,使用Replys.with(Object).as(Xml.class)来返回,前台返回的是xmlDocument对象，用js来取值。</p>
+
+<pre><code>Controller：
+@Post("getName")
+public Reply getName(){
+    Person person = new Person();
+    person.setName("aaa");
+    return Replys.with(person).as(Xml.class);
+}
+Jsp:
+&lt;script type="text/javascript"&gt;
+function getName(){
+    $.ajax({
+        type:"post",
+        url:"${ctx}/getName",
+        dataType:"xml",
+        success:function (data) {
+            alert($(data).find("name").text());
+        },
+        error:function () {
+            alert("error");
+        }
+    });
+}
+&lt;/script&gt;
+</code></pre>
+
+<h4>2.6.1.3 返回简单字符</h4>
+
+<p>对于Ajax请求,使用Replys.with(str);或者
+Replys.simple().success("str");来返回。</p>
+
+<pre><code>Controller:
+@Post("getStr")
+public Reply getStr(){
+    return  Replys.simple().success("hello World");
+}
+Jsp:
+  $(function(){
+    $.ajax({
+        type:"post",
+        url:"${ctx}/getStr",
+        dataType:"json",
+        success:function (data) {
+          alert(data.message)
+        },
+        error:function () {
+            alert("error");
+        }
+    });
+}
+);
+</code></pre>
+
+<h3>2.6.2 非Ajax请求</h3>
+
+<p>对于非Ajax的请求,数据装载的媒介都是Invocation,所以不管是什么数据都可以直接放入即可。</p>
+
+<h4>2.6.2.1 返回对象数据</h4>
+
+<p>使用Invocation的addModel放入非常简单,前台用el表达式和jstl标签取值。</p>
+
+<pre><code>实体对象Company是一个复杂的对象，里面包含集合，map，对象等对象：
+public class Company {
+
+private String id;
+private String name;
+private List&lt;Department&gt; departmentList = new ArrayList&lt;Department&gt;();
+private Person leader;
+private Map&lt;String,Department&gt; departmentLeader = new HashMap&lt;String,Department&gt;();
+
+}
+controller写法：
+ @Get("company")
+public String getCompany(Invocation inv){
+    Person header = new Person();
+    header.setName("header");
+    Department department = new Department();
+    department.setName("department");
+    Company company = new Company();
+    company.setName("com");
+    company.setLeader(header);
+    company.getDepartmentList().add(department);
+    company.getDepartmentLeader().put("supervisor",department);
+    inv.addModel("company",company);
+    return "company";
+}
+jsp取值，要用到jstl的迭代来对集合和map取值：
+${company.name}
+${company.leader.name}
+
+&lt;c:forEach  items="${company.departmentLeader}" var="item"&gt;
+    &lt;c:out value="${item.key}" /&gt;
+    &lt;c:out value="${item.value.name}" /&gt;
+&lt;/c:forEach&gt;
+</code></pre>
+
+<h4>2.6.2.2 返回非对象类型</h4>
+
+<p>对于非Ajax请求，采用的都是将键值对放入到Invocation中去，前台使用el表达式根据键来取得值。</p>
+
+<pre><code>Controller写法:
+@Get("json")
+public String getJson(Invocation inv){
+
+    inv.addModel("json",5);
+    return "json";
+}
+JSP取值:
+&lt;body&gt;
+${json}
+&lt;/body&gt;
+</code></pre>
+
+<h1>3. 视图(view)</h1>
+
+<h2>3.1 Jsp</h2>
+
+<h3>3.1.1 Form</h3>
+
+<p>one-mvc支持普通的form表单和spring form tag，下边介绍一下spring form tag。</p>
+
+<h4>3.1.1.1 spring form tag</h4>
+
+<pre><code>form:input path:Path to property for data binding
+form:password  path showPassword（Is the password value to be shown? Defaults to false.）
+form:hidden 
+form:select
+</code></pre>
+
+<p>和使用任何JSP扩展标签一样，在使用Spring表单标签之前，你必须在JSP页面中添加一行引用Spring表单标签的声明，如下所示：</p>
+
+<pre><code>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
+&lt;%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%&gt; ①引入标签的声明
+&lt;html&gt;
+… ②声明后，在页面中就可以使用任意Spring表单标签了
+&lt;/html&gt; 
+</code></pre>
+
+<h3>3.1.2 标签</h3>
+
+<p>one-mvc提供了3个标签，flash、msg、pipe,下边我们来逐一介绍一下</p>
+
+<pre><code>flash标签
+页面引入：http://mvc.one.sinosoft.com/tags/flash
+</code></pre>
+
+<h2>3.2 Velocity</h2>
+
+<h1>4. url管理</h1>
+
+<h1>5. 拦截器(Interceptor)</h1>
+
+<p>面向切面编程（AOP）方法可以让一个项目更加关注核心逻辑,拦截器目标是controller层提供各种在控制器执行前、执行后的代码切入，以达到各种可AOP的目标。</p>
+
+<h2>5.1 拦截器的位置</h2>
+
+<p>拦截器和控制器是分不开的,拦截器的拦截对象就是控制器,所以拦截器和控制器是在一起的,哪里有控制器,哪里就可以有拦截器.具体的说就是在controllers和子包下实现了ControllerInterceptorAdapter 的类都是拦截器.</p>
+
+<h2>5.2 拦截器的拦截条件</h2>
+
+<p>我们可以通过重写ControllerInterceptorAdapter的一些方法达到条件性的拦截，具体的拦截条件如下：</p>
+
+<ul>
+<li>getRequiredAnnotationClass:返回一个Annotation类型,表示这个拦截器只对此Annotation标注过的controller才生效.</li>
+<li>isForAction:定义满足某条件的才会被拦截.</li>
+<li>isForDispatcher:根据响应的情况判断是否拦截，比如说是正常请求、内部forward、还是include.
+
+<h2>5.3 拦截器的实现</h2></li>
+</ul>
+
+
+<h3>5.3.1 Annotation</h3>
+
+<p>java注解是附加在代码中的一些元信息，用于一些工具在编译、运行时进行解析和使用，起到说明、配置的功能。
+注解不会也不能影响代码的实际逻辑，仅仅起到辅助性的作用。包含java.lang.annotation 包中。</p>
+
+<p>1、元注解</p>
+
+<p>元注解是指注解的注解。包括  @Retention @Target @Document @Inherited四种。</p>
+
+<p>1.1、@Retention: 定义注解的保留策略</p>
+
+<p>@Retention(RetentionPolicy.SOURCE)   //注解仅存在于源码中，在class字节码文件中不包含
+@Retention(RetentionPolicy.CLASS)     // 默认的保留策略，注解会在class字节码文件中存在，但运行时无法获得，
+@Retention(RetentionPolicy.RUNTIME)  // 注解会在class字节码文件中存在，在运行时可以通过反射获取到</p>
+
+<p>1.2、@Target：定义注解的作用目标
+@Target(ElementType.TYPE)   //接口、类、枚举、注解
+@Target(ElementType.FIELD) //字段、枚举的常量
+@Target(ElementType.METHOD) //方法
+@Target(ElementType.PARAMETER) //方法参数
+@Target(ElementType.CONSTRUCTOR)  //构造函数
+@Target(ElementType.LOCAL_VARIABLE)//局部变量
+@Target(ElementType.ANNOTATION_TYPE)//注解
+@Target(ElementType.PACKAGE) ///包 <br/>
+ 由以上的源码可以知道，他的elementType 可以有多个，一个注解可以为类的，方法的，字段的等等
+1.3、@Document：说明该注解将被包含在javadoc中</p>
+
+<p>1.4、@Inherited：说明子类可以继承父类中的该注解
+2、java 注解的自定义
+@Retention(RetentionPolicy.RUNTIME)</p>
+
+<p>定义的这个注解是注解会在class字节码文件中存在，在运行时可以通过反射获取到。</p>
+
+<p>@Target({ElementType.TYPE,ElementType.METHOD})</p>
+
+<p>因此这个注解可以是类注解，也可以是方法的注解</p>
+
+<p>这样一个注解就自定义好了，当然注解里面的成员可以为基本的数据类型，也可以为数据，Object等等.</p>
+
+<pre><code>例子：
+/** 
+* 这是一个annotation，所谓annotation就是一个“标签”，他的职责是“表明” 
+*/  
+@Inherited  
+@Target( { ElementType.TYPE, ElementType.METHOD })  
+@Retention(RetentionPolicy.RUNTIME)  
+@Documented  
+public @interface InterceptorFlag {  
+
+}  
+</code></pre>
+
+<h3>5.3.2 ControllerInterceptorAdapter</h3>
+
+<p>拦截器有4个重要的方法分别处理控制器方法执行的前、中、后</p>
+
+<ul>
+<li>before：在controller执行前执行。</li>
+<li>after：在controller执行中（后）执行，如果一个返回抛出了异常，则不会进来。</li>
+<li>round：这才是真正的controller执行中执行，不过用得很少。</li>
+<li>afterCompletion：在controller执行后执行，不论是否异常，都会进来。</li>
+</ul>
+
+
+<p>例子：</p>
+
+<pre><code>    public class FristDemoInterceptor extends   ControllerInterceptorAdapter {  
+
+    //在controller执行前执行  
+    @Override  
+    protected Object before(Invocation inv) throws Exception {  
+    Date date = new Date();  
+    String dateStr = DateFormatUtils.format(date, "yyyy-MM-dd HH:mm:ss");  
+    inv.addModel("date", dateStr);  
+    return super.before(inv);  
+    }  
+
+    //这才是真正的controller执行中执行，不过用得很少。  
+    @Override  
+    protected Object round(Invocation inv, InvocationChain chain)  
+            throws Exception {  
+    return super.round(inv, chain);  
+    }  
+
+    //在controller执行中（后）执行，如果一个返回抛出了异常，则不会进来。  
+    @Override  
+    protected Object after(Invocation inv, Object instruction) throws Exception {  
+    String loginUserName = (String)inv.getRequest().getSession().getAttribute("loginUserName");  
+    if(loginUserName != null){  
+        inv.addModel("welInfo", "您好，"+loginUserName+"先生，今天天气不错！");  
+    }  
+    return super.after(inv, instruction);  
+    }  
+
+    //在controller执行后执行，不论是否异常，都会进来。  
+    @Override  
+    public void afterCompletion(Invocation inv, Throwable ex) throws Exception {  
+    super.afterCompletion(inv, ex);  
+    }  
+
+    }  
+</code></pre>
+
+<h3>5.3.3 Interceptor标签</h3>
+
+<p>@Intercepted(allow = { "a", "b", "c" })
+@Intercepted(deny= { "a", "b", "c" })
+指示Mvc是否对所要分派的控制器(controller)及其方法(action)进行某些拦截器.配置在Controller级别上,也可以配置在某个具体的方法级别上.Mvc优先找方法声明的Intercepted标注,然后再是类的标注.控制器默认不用标注{@link Intercepted}都将被拦截。 使用@Intercepted主要是用来改变默认的行为,使只有某些拦截器才能拦截该控制器.开发者可以使用2种设置方式,一种是通过配置allow,表示只有在allow内的拦截器才能拦截到;另一种是通过配置deny,表示除了deny中的拦截器都要拦截到.如果没有配置allow以及deny表示所有拦截器都能拦截到。如果allow和deny同时配置,则只有同时满足deny和allow才能拦截到,allow和deny里面的字符串表示的是相关拦截器在applicationContext中的id或name。对拦截器本身是和controller在相同的package中的一些规定:Mvc会自动把它们放到module中来，它们的id则为它们的类名(首字母改小写)或者去掉最后"Interceptor"后留下的名字(同样首字母也要变为小写).当然,如果这些@ControllerInterceptor}配置了@Component,则按照Comonent的规定定义它们的id.</p>
+
+<h3>5.3.4 拦截器的顺序</h3>
+
+<p>拦截器可以通过两种方式定义顺序:</p>
+
+<ul>
+<li>通过在拦截器的构造方法中设置拦截器的优先级setPriority(int);</li>
+<li>通过增加interceptors-order.xml配置文件统一配置拦截器的顺序.</li>
+</ul>
+
+
+<p>如果即在构造方法中设置了优先级,又在interceptors-order.xml中配置了拦截器的顺序,那么以xml中配置的为准.interceptors-order.xml文件中,拦截器的顺序从上到下.</p>
+
+<pre><code>interceptors-order.xml(格式样例):
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;  
+&lt;interceptors&gt;  
+&lt;interceptor&gt;  
+    &lt;com class="sinos"&gt;&lt;/com&gt;oft.platform.platformDemo.controllers.SecondDemoInterceptor&lt;/interceptor&gt;  
+&lt;interceptor&gt;com.sinosoft.platform.platformDemo.controllers.FristDemoInterceptor&lt;/interceptor&gt;  
+&lt;/interceptors&gt; 
+</code></pre>
+
+<h1>6. 数据校验</h1>
+
+<p>数据校验发生在所有的应用层,是从视图层到持久层的共同任务.通常相同的验证逻辑发生在每一层,这样是非常耗时并且容易出错.为了避免这些验证的重复,开发人员开讲验证逻辑捆绑至参数上。</p>
+
+<h2>6.1 One-mvc的数据校验</h2>
+
+<p>one-mvc的数据校验采用将需要验证的属性直接捆绑至参数,并且可以很方便的将验证结果返回给前台页面.对于请求的类型MVC会自动识别Ajax或普通Http的请求,并进行不同的响应,mvc提供了一系列的校验条件和对应的消息,校验的消息可以自己指定.mvc的校验扩展了hibernate-validator,不但可以验证javaBean的属性还可以验证Controller方法里的参数。</p>
+
+<h2>6.2 @Validation中的规则</h2>
+
+<p>@validation注解是mvc的专用注解,用来给Controller方法里的参数增加验证,以及把验证信息返回给页面.Controller方法参数的验证有两种:第一种是直接用javax.validation里的各种注解来验证,这个可以用来验证单个属性.第二种是用mvc自己的注解后缀为Ex,总共有15个,如下所列.这种注解主要有俩参数,第一个参数是自定义验证信息,第2个参数是数组,里面是需要验证的参数。</p>
+
+<pre><code>AssertFalseEx //必须是false
+AssertTrueEx //必须是true
+DecimalMaxEx //Decimal的最大值
+DecimalMinEx //Decimal的最小值
+DigitsEx //数字的范围
+FutureEx //必须是时间,并且比当前时间大
+MaxEx //数字最大值
+MinEx //数字最小值 
+NotBlankEx //不能为空
+NotEmptyEx //字符串,集合,map不能为Null和empy
+NotNullEx //不能为""和null
+NullEx //必须是Null
+PastEx //必须是时间,并且比当前时间小
+PatternEx //字符串必须和所提供的正则表达式想匹配
+SizeEx //字符串,集合,数组,map必须和给定得size一样
+</code></pre>
+
+<h2>6.3 参数的校验</h2>
+
+<p>只需在参数前面加上@Param和@Validation注解即可.用@Param("paramName"),用@Validation(errorPath = "validateParam")表示验证validateParam方法的参数.errorPath参数用来指定验证错误信息的显示页面,一般和参数的提交页面是同一个.</p>
+
+<pre><code>Controller写法：
+ @Post("param")  
+public String validateParam(@Validation(errorPath = "validateParam")  
+        @Param("id") @NotNull @Min(2012)  Long id,  
+        @Param("name") @NotEmpty  
+        @Size(max=10,min=2,message = "参数的长度应该在{max},{min}之间") String name,  
+        Invocation inv) {  
+    inv.addModel("message", "操作成功");  
+    return "validateParam";  
+}  
+Jsp:
+&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;  
+&lt;%@ taglib prefix="mvc" uri="http://mvc.one.sinosoft.com/validation/msg" %&gt;  
+&lt;%--这里使用了MVC提供的errorMsg标签，用以显示验证过后的错误信息--%&gt;  
+&lt;html&gt;  
+&lt;head&gt;  
+&lt;title&gt;对Param的数据校验&lt;/title&gt;  
+&lt;/head&gt;  
+&lt;body&gt;  
+&lt;h4&gt;${message}&lt;/h4&gt;  
+&lt;p&gt;单个参数的验证&lt;/p&gt;  
+&lt;form name="paramForm" action="/validate/param" method="post"&gt;  
+编号：&lt;input name="id" type="text" /&gt;&lt;mvc:errorMsg property="id" /&gt;&lt;br/&gt;  
+姓名：&lt;input name="name" type="text" /&gt;&lt;mvc:errorMsg property="name"/&gt;&lt;br/&gt;  
+&lt;input type="submit" value="Form提交" /&gt;  
+&lt;/form&gt;  
+&lt;/body&gt;  
+&lt;/html&gt;
+</code></pre>
+
+<p>还有一种用的mvc自定义个扩展注解,将在下面章节给大家介绍.</p>
+
+<h2>6.4 javabean的校验</h2>
+
+<p>javaBean的属性增加校验条件然后给ValidateController增加Bean校验的事例方法.可以使用hibernate-validator的所有对javaBean的验证,详细的参考<a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-gettingstarted-uel">hibernate-validator</a>.这里我们主要简单的介绍JavaBean的验证和mvc的扩展注解一起使用。</p>
+
+<pre><code>JavaBean示例:
+public class Student {  
+
+//学生id不能为空并且最小2012  
+@NotNull  
+@Min(2012)  
+private Long id;  
+//学生姓名长度最小为2最大10，并且不能是空串  
+//可以自己指定错误消息，而不采用默认的消息  
+@NotEmpty  
+@Size( min = 2, max = 10 ,message = "名字的长度应该在{min} - {max}之间")  
+private String name;  
+@Max(22)  
+@Min(12)  
+private Integer age;  
+
+private Float mathScore;  
+
+private Float englishScore;  
+
+private Date birthday;  
+
+//@TODO add Getter Setter *****  
+}  
+Controller示例：
+@Path("")  
+public class ValidateController {  
+
+
+//跳转到validateBean.jsp用  
+@Get("bean")  
+public String toBeanJsp() {  
+
+    return "validateBean";  
+}  
+
+//验证的条件采用Student中的配置  
+@Post("bean")  
+public String validateBean1( @Validation(errorPath = "validateBean") Student stu,  
+        Invocation inv) {  
+    inv.addModel("message", "操作成功");  
+    return "validateBean";  
+}  
+
+//验证的条件是临时指定的在@Validation配置，同时Student的验证条件依然生效  
+@Post("config")  
+public String validateBean2( @Validation(errorPath = "validateBean",  
+        notNull = @NotNullEx(props = {"age","birthday"}),  
+        max = @MaxEx(props = {"mathScore","englishScore"},value = 100),  
+        min = @MinEx(props = {"mathScore","englishScore"},value = 0),  
+        past = @PastEx(props = "birthday") ) Student stu,  
+        Invocation inv) {  
+
+    inv.addModel("message","操作成功");  
+    return "validateBean";  
+}  
+
+}  
+</code></pre>
+
+<h2>6.5 校验的错误信息</h2>
+
+<p>errorMessage用以显示验证过后的错误信息,使用时必须引入mvc的检验标签。errerMessage有property和type两个属性.property是必须填写的,表示显示哪个属性或参数的错误信息.type表示显示的类型有propertyPath、message、invalidValue三种.invalidValue:表示错误的值, message:表示错误信息, propertyPath:表示被校验的属性名称或参数名称</p>
+
+<pre><code>&lt;%@ taglib prefix="mvc" uri="http://mvc.one.sinosoft.com/validation/msg" %&gt; 
+&lt;mvc:errorMsg property="id" /&gt;
+</code></pre>
+
+<h2>6.6 自定义的数据校验</h2>
+
+<p>详情请参见<a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-gettingstarted-uel">hibernate-validator</a>.</p>
+
+<h1>7 文件上传</h1>
+
+<p>one-web支持多种格式,多个文件的上传。您只需在页面上,上传表单要enctype="multipart/form-data",method="POST" 两个属性,表单里要有type为file的input用于选择文件，file类型的input个数不限。</p>
+
+<h2>7.1 单个文件的上传</h2>
+
+<p>单个文件的上传只要form中有file类型的input。</p>
+
+<p>单个文件的表单:</p>
+
+<pre><code>&lt;form name="" action="uploade/save" method="post" enctype="multipart/form-data"&gt;  
+&lt;label&gt;资料上传:&lt;/label&gt;  
+&lt;div class="controls"&gt;  
+    &lt;input type="file" id="doc" name="fileName1"/&gt;  
+    &lt;input type="submit" value="Form提交" /&gt;
+&lt;/div&gt;  
+&lt;/form&gt; 
+</code></pre>
+
+<p>控制器代码：</p>
+
+<pre><code>//@Param的参数和input的name相同  
+@Post("save")  
+public String save(@Param("fileName1") MultipartFile file,  
+Invocation inv)  throws IllegalStateException, IOException  {  
+//MultipartFile 提供了常用的文件操作方法  
+file.getInputStream();  
+file.getBytes();  
+file.getName();  
+file.transferTo(); //Transfer the received file to the given    destination file.  
+return "@upload success";  
+}  
+</code></pre>
+
+<h2>7.2 多个文件的上传</h2>
+
+<p>多文件的上传是依靠file类型的input 的name属性的前缀来区分的例如 name=doc1和name=doc2 可以用@Param("doc")同时获取。</p>
+
+<p>多文件的Form表单：</p>
+
+<pre><code>&lt;form name="" action="uploade/save" method="post" enctype="multipart/form-data"&gt;  
+&lt;label&gt;资料上传:&lt;/label&gt;  
+&lt;div class="controls"&gt;  
+    &lt;input type="file" id="doc" name="doc1"/&gt;  
+    &lt;input type="file" id="doc2" name="doc2"/&gt;  
+    &lt;input type="file" id="doc3" name="filea"/&gt;  
+    &lt;input type="file" id="doc4" name="fileb"/&gt;  
+    &lt;input type="submit" value="Form提交" /&gt;
+&lt;/div&gt;  
+&lt;/form&gt;  
+</code></pre>
+
+<p>控制器代码：</p>
+
+<pre><code>@Post("save")  
+public String save(@Param("doc") MultipartFile[] docs,//获取doc开头的多个文件  
+@Param("file") MultipartFile[] files )//获取file开头的多个文件  
+    throws IllegalStateException, IOException  {  
+    ...  
+    return "@upload success";  
+</code></pre>
+
+<p>}</p>
+
+<h2>7.3 混合文件上传</h2>
+
+<p>混合模式就是上面两种上传的综合，只需要将两个方法的参数累加到一起，将form合并到一起即可。</p>
+
+<h2>7.4 上传所有文件</h2>
+
+<p>上传所有文件的方法为不在控制器的MultipartFile参数增加@Param注解.
+控制器代码：</p>
+
+<pre><code>@Post("save")  
+public String save( MultipartFile[] files //不加@Param注解获取所有file类型的input )  
+    throws IllegalStateException, IOException  {  
+return "@upload success";  
+}  
+</code></pre>
+
+<h1>8. 异常处理</h1>
+
+<ul>
+<li><p>一般来说传统的编程都会到处去try，特别是java里，try来try去的。</p></li>
+<li><p>如果打开你的项目，每个java文件中的代码都有一堆的try，那这时候就是ErrorHandle上阵的时候了。</p></li>
+<li><p>ErrorHanler致力于：统一捕捉和处理各种异常，可区分对待和返回；统一的出错体验。</p></li>
+<li><p>非常类似做web开发时的500统一出错页面这样的东西。</p></li>
+<li><p>controllers包自己或其子包下都可以拥有独立的ControllerErrorHandler。    可以将异常让渡给上级模块的错误处理器处理</p></li>
+</ul>
+
+
+<h2>8.1 最简单的</h2>
+
+<pre><code>//// 直接放在controllers包或其子包下
+public class ErrorHandler implements ControllerErrorHandler {
+    public Object onError(Invocation inv, Throwable ex) throws Throwable {
+        // TODO logger.error("handle err:", ex); 记录错误日志
+        return "@error";
+    }
+}
+</code></pre>
+
+<h2>8.2 放在哪里才能生效？</h2>
+
+<ul>
+<li>放在controllers目录下，和controller们在一起。</li>
+<li>一般来讲，ErrorHandler都是用在web项目里，在最近层起作用。</li>
+<li>所有的方法都可以尽情地向处throws Exception了。不需要再try了</li>
+</ul>
+
+
+<h2>8.3 区分异常类型的</h2>
+
+<pre><code>public class ErrorHandler implements ControllerErrorHandler {
+
+@Override
+public Object onError(Invocation inv, Throwable ex) {
+    if (ex instanceof BizException) {
+        BizException bizEx = (BizException) ex;
+        String code = bizEx.getCode();
+        // 在控制器所在的package中或WEB-INF目录下配置messages.xml，或者messages.property
+        // 可配置多个，优先找控制器自己package的，然后是父package的，最后是WEB-INF的
+        // messages.xml格式参考在下面
+        MessageSource msgSource = inv.getApplicationContext();
+        String msg = msgSource.getMessage(code, bizEx.getArgs(), inv.getRequest().getLocale());
+        // 在jsp中使用${errorMsg}输出该错误
+        inv.addModel("errorMsg", msg);
+        return "/views/biz-500.jsp";
+    }
+    Log logger = LogFactory.getLog(inv.getControllerClass());
+    logger.error("", ex);
+    // forward to webapp/views/500.jsp
+    return "/views/500.jsp";
+}
+}
+</code></pre>
+
+<ul>
+<li><p>在控制器所在的package中或WEB-INF目录下配置messages.xml，或者messages.property</p></li>
+<li><p>可配置多个，优先找控制器自己package的，然后是父package的，最后是WEB-INF的</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd"&gt;
+&lt;properties&gt;
+    &lt;comment&gt;Rhyme&lt;/comment&gt;
+    &lt;entry key="seven-eight"&gt;lay them straight&lt;/entry&gt;
+    &lt;entry key="five-six"&gt;pick up sticks&lt;/entry&gt;
+    &lt;entry key="nine-ten"&gt;a big, fat hen&lt;/entry&gt;
+    &lt;entry key="three-four"&gt;shut the door&lt;/entry&gt;
+    &lt;entry key="one-two"&gt;buckle my shoe&lt;/entry&gt;
+&lt;/properties&gt;
+</code></pre></li>
+</ul>
+
+
+<h2>8.4 更好的区分不同的异常类型</h2>
+
+<pre><code>package com.sinosoft.controllers;
+
+import net.sinosoft.one.web.ControllerErrorHandler;
+import net.sinosoft.one.web.Invocation;
+
+public class ErrorHandler implements ControllerErrorHandler {
+
+    // 把方法第2个参数换上具体的异常类...这个onError就只处理所声明的这类异常
+    public Object onError(Invocation inv, BizException bizEx) {
+        // 略去具体的处理代码......
+        return "/views/biz-500.jsp";
+    }
+    ...
+    // 通用onError方法，处理其他onError无法处理的异常
+    @Override
+    public Object onError(Invocation inv, Throwable ex) {
+        // 略去具体的处理代码......
+        return "/views/500.jsp";
+    }
+}
+</code></pre>
+
+<h2>8.5 将异常让渡给上级模块的错误处理器处理</h2>
+
+<p>controllers自己或其子package下都可以拥有独立的ControllerErrorHandler。 如果在web调用过程中，控制器、拦截器等发生异常时，如果给定的module含有自己ControllerErrorHanlder时， 则由他处理；如果自己没有则调用上级的ControllerErrorHandler处理。</p>
+
+<p>但是如果所在的module有ControllerErrorHandler，如何在有必要的时候将异常抛给上级的ControllerErrorHandler呢？</p>
+
+<pre><code>public class ErrorHandler implements ControllerErrorHandler {
+    // 声明ParentErrorHandler,注意，这里不是ControllerErrorHandler
+    // 万一上级没有ControllerErrorHandler, 这个字段也不会为空
+    @Autowired
+    ParentErrorHandler parent;
+
+    // 处理这个处理器只想处理的
+    public Object onError(Invocation inv, RuntimeException ex) throws Throwable {
+        inv.getResponse().getWriter().write("&lt;pre&gt;RuntimeException&lt;br&gt;");
+        ex.printStackTrace(inv.getResponse().getWriter());
+        inv.getResponse().getWriter().write("&lt;/pre&gt;");
+        return "";
+    }
+
+    // 通用的异常抛给上级ControllerErrorHanlder或上级的上级去处理
+    @Override
+    public Object onError(Invocation inv, Throwable ex) throws Throwable {
+        return parent.onError(inv, ex);
+    }
+}
+</code></pre>
+
+<h2>8.6 异常处理的Adapter</h2>
+
+<p>以上parentErrorHanlder的逻辑，One-MVC提供的ErrorHandlerAdpater类已经封装了</p>
+
+<p>建议您通过extends ErrorHandlerAdapter 实现错误处理器，而非直接实现ControllerErrorHandler</p>
+
+<ul>
+<li>处理这个处理器只想处理的</li>
+<li><p>通用的默认就会抛给上级模块的错误处理器处理</p>
+
+<pre><code>public class ErrorHandler extends ErrorHandlerAdapter {
+
+public Object onError(Invocation inv, RuntimeException ex) throws Throwable {
+
+        inv.getResponse().getWriter().write("&lt;pre&gt;RuntimeException&lt;br&gt;");
+        ex.printStackTrace(inv.getResponse().getWriter());
+        inv.getResponse().getWriter().write("&lt;/pre&gt;");
+        return "";
+    }
+}
+</code></pre></li>
+</ul>
+
+
+<h1>9. Portal</h1>
+
+<p>portal做门户用的.简单来说,把一个网页分成了N个区域,每个区域由不同的action去执行,多线程并行提高cpu使用率.这样更加充分地使用多核cpu.可以更加方便多人协作时对项目进行模块划分,开发的时候,按照url一分,一个url一个模块,所有的页面都可以切成小的豆腐块.要使用portal,必须先在web.xml里声明所使用的线程池大小.
+web.xml配置:</p>
+
+<pre><code>&lt;context-param&gt;  
+    &lt;param-name&gt;portalExecutorCorePoolSize&lt;/param-name&gt;  
+    &lt;param-value&gt;1024&lt;/param-value&gt;  
+&lt;/context-param&gt;
+</code></pre>
+
+<p>Controller配置：</p>
+
+<pre><code>@Get("portal")  
+public String portal(Portal portal) {  
+portal.addWindow("p1", "/wp1");  
+portal.addWindow("p2", "/wp2");  
+return "portal";  
+}  
+
+@Get("wp1")  
+public String portal1() {  
+return "@this is p1";  
+}  
+
+@Get("wp2")  
+public String portal2() {  
+return "@this is p2";  
+}   
+</code></pre>
+
+<p>jsp取值:</p>
+
+<pre><code>&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+portal演示信息：
+&lt;br/&gt;
+    ${p1}
+&lt;br/&gt;
+    ${p2}
+&lt;/body&gt;
+&lt;/html&gt;    
+</code></pre>
+
+<h1>10. Pipe</h1>
+
+<p>pipe起源于facebook的工程师对他们网页提速的方案:将网页分解为Pagelets的小块（在one叫做window的小块）,然后通过后端多重管道运行,以达到性能的最佳.pipe巧妙使用了http 1.1连接有timeout的机制,充分使用一次http连接来传递数据.pipe可使用户在大多数浏览器中感受到延迟减少了一半.
+使用pipe很简单:</p>
+
+<pre><code>controller写法:
+@Path("")
+public class PipeController {
+@Get("pipe")
+public String pipe(Pipe pipe) {
+    pipe.addWindow("p1", "/wp1");
+    pipe.addWindow("p2", "/wp2");
+    return "pipe";
+}
+
+@Get("wp1")
+public String portal1() {
+    return "@this is p1";
+}
+
+@Get("wp2")
+public String portal2() {
+    return "@this is p2";
+}
+}
+Jsp写法:
+&lt;%@ page contentType="text/html;charset=UTF-8"%&gt;
+&lt;%@ taglib uri="http://mvc.one.sinosoft.com/tags/pipe" prefix="mvcpipe"%&gt;
+&lt;%--注意标签的引入--%&gt;
+&lt;%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%&gt;
+&lt;c:set var="ctx" value="${pageContext.request.contextPath}" /&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt;
+&lt;title&gt;portal/pipe演示信息&lt;/title&gt;
+&lt;%--注意引入jquery和mvc-pipe--%&gt;
+&lt;script type="text/javascript" src="${ctx}/static/js/jquery-1.11.0.js"&gt;&lt;/script&gt;
+&lt;script type='text/javascript' src='${ctx}/static/js/mvc-pipe.js'&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+pipe演示信息：
+&lt;br&gt;
+&lt;div class="window"&gt;
+&lt;div class="title"&gt;用户&lt;/div&gt;
+&lt;div class="content" id="p1"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="window"&gt;
+&lt;div class="title"&gt;权限&lt;/div&gt;
+&lt;div class="content" id="p2"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;input type="button" value="加载用户"onclick="showLazyContent('uuuu','p1');" &gt;&amp;nbsp;&amp;nbsp;&lt;input type="button" value="加载权限" onclick="showLazyContent('ytyy','p2');"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;mvcpipe:writes&gt;
+&lt;mvcpipe:write id = "uuuu" lazyLoad = "true" targetId="p1"/&gt;
+&lt;mvcpipe:write id = "ytyy" lazyLoad = "ture" targetId="p2" /&gt;
+&lt;/mvcpipe:writes&gt;
+</code></pre>
+
+<h1>11. 国际化</h1>
+
+<p>为了使应用程序能够兼容多种语言而不需要修改源代码我们就需要考虑国际化了。mvc中的国际化非常简单，只需要配置好语言文件就可以。前台我们使用spring的message标签就可以很方便的取,无需其他的配置.
+语言文件例子(3个properties文件,文件前缀必须一致,后面是语言和国家)：</p>
+
+<pre><code>messages.properties
+title=MVC Demo{i18n}
+
+welcome=Welcome to MVC Demo\!
+
+messages_en_US.properties
+title=(US) MVC Demo{i18n}
+
+welcome=(US)Welcome to  professional DEMO\!
+
+messages_zh_CN.properties
+title=MVC Demo{\国\际\化}
+
+welcome=\欢\迎\来\到 MVC
+</code></pre>
+
+<p>Controller:</p>
+
+<pre><code>@Path("")
+public class MsgController {
+
+@Get("msg")
+public String hello() {
+    return "message";
+}
+}
+</code></pre>
+
+<p>jsp：</p>
+
+<pre><code>&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %&gt;
+&lt;%@taglib uri="http://www.springframework.org/tags" prefix="mvc" %&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;&lt;mvc:message code="title" /&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h2 style="color:red;"&gt;&lt;mvc:message code="welcome" /&gt;&lt;/h2&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</body>
+</html>
