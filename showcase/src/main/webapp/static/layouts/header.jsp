@@ -22,9 +22,9 @@
             <li><a href="${ctx}/document">文档</a></li>
             <li><a href="${ctx}/guides">指南</a></li>
             <li class="dropdown">
-                <a href="${ctx}/peoject" class="dropdown-toggle" data-toggle="dropdown">平台 <b class="caret"></b></a>
+                <a href="${ctx}/peoject" data-target="#" class="dropdown-toggle" data-toggle="dropdown">项目 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">组件</a></li>
+                    <li><a href="#">技术组件</a></li>
                     <li class="divider"></li>
                     <li><a href="#develop">开发</a></li>
                     <li class="divider"></li>

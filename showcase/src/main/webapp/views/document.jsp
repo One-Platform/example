@@ -164,7 +164,7 @@
         </div>
     </div>
     <div style="border-bottom: 1px solid #E5E5E5;padding-top: 20px;margin-bottom: 20px"></div>
-    <p class="lead">组件</p>
+    <p class="lead">技术组件</p>
 
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper"  id="lazyload">
         <div class="item-dropdown--link js-item--open-dropdown">
@@ -257,6 +257,99 @@
             </div>
         </div>
     </div>
+
+    <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="mouseTrap">
+        <div class="item-dropdown--link js-item--open-dropdown">
+            <i class="item-dropdown--icon icon-reorder pull-right"></i>
+            <p class="item-dropdown--title">键盘注册（Mousetrap）</p>
+        </div>
+        <div class="item--dropdown docs-version--dropdown">
+            <div class="item--header">
+                <a class="item--header-link item--left-column" href="http://projects.spring.io/spring-amqp">
+                    <i class="icon-globe"></i>
+                    Site
+                </a>
+                <a class="item--header-link item--right-column" href="http://github.com/spring-projects/spring-amqp">
+                    <i class="icon-github"></i>
+                    Repo
+                </a>
+            </div>
+            <div class="item--body">
+                <div class="item--body-title">
+                    <div class="item--left-column">
+                        Release
+                    </div>
+                    <div class="item--right-column">
+                        Documentation
+                    </div>
+                </div>
+                <div class="item--body">
+                    <div>
+                        <div class="item--body--version">
+                            <div class="item--left-column">
+                                <p>1.3.0 M2</p>
+                                <div class="icon icon-pre-release"></div>
+                            </div>
+                            <div class="item--right-column">
+                                <a  href="http://docs.spring.io/spring-amqp/docs/1.3.0.M2/reference/html">Reference</a>
+                                <a  href="http://docs.spring.io/spring-amqp/docs/1.3.0.M2/api/">API</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item--body--version">
+                            <div class="item--left-column">
+                                <p>1.3.0</p>
+                                <div class="icon icon-snapshot-release"></div>
+                            </div>
+                            <div class="item--right-column">
+                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.3.0.BUILD-SNAPSHOT/reference/html">Reference</a>
+                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.3.0.BUILD-SNAPSHOT/api/">API</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item--body--version">
+                            <div class="item--left-column">
+                                <p>1.2.2</p>
+                                <div class="icon icon-snapshot-release"></div>
+                            </div>
+                            <div class="item--right-column">
+                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.2.2.BUILD-SNAPSHOT/reference/html">Reference</a>
+                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.2.2.BUILD-SNAPSHOT/api/">API</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item--body--version">
+                            <div class="item--left-column">
+                                <p>1.2.1</p>
+                                <div class="icon icon-current-version"></div>
+                                <div class="icon icon-ga-release"></div>
+                            </div>
+                            <div class="item--right-column">
+                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.2.1.RELEASE/reference/html">Reference</a>
+                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.2.1.RELEASE/api/">API</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item--body--version">
+                            <div class="item--left-column">
+                                <p>1.1.4</p>
+                                <div class="icon icon-ga-release"></div>
+                            </div>
+                            <div class="item--right-column">
+                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.1.4.RELEASE/reference/html">Reference</a>
+                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.1.4.RELEASE/api/">API</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="cache">
         <div class="item-dropdown--link js-item--open-dropdown">
@@ -353,7 +446,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="compress">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">压缩合并</p>
+            <p class="item-dropdown--title">压缩合并（Wro4j）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -537,7 +630,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="webservices">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">WebService</p>
+            <p class="item-dropdown--title">Web Service（CXF、AXIS2...）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -721,7 +814,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="batch">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">批处理引擎</p>
+            <p class="item-dropdown--title">批处理引擎（Spring Batch）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -1730,7 +1823,7 @@
         </div>
     </div>
 
-    <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="BW">
+    <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
             <p class="item-dropdown--title">分库分表</p>
@@ -2195,7 +2288,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="environment">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">编译与管理</p>
+            <p class="item-dropdown--title">编译与管理（Maven）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -2473,7 +2566,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper"  id="UT" >
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">单元测试</p>
+            <p class="item-dropdown--title">单元测试（Mockito、PowerMock...）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -2565,7 +2658,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="IT">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">集成测试</p>
+            <p class="item-dropdown--title">集成测试（Spring Test）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -2657,7 +2750,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="FT">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">功能测试</p>
+            <p class="item-dropdown--title">功能测试（Selenium2）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -2749,7 +2842,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="AT">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">自动化测试</p>
+            <p class="item-dropdown--title">自动化测试（Maven）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -2930,104 +3023,13 @@
         </div>
     </div>
 
-    <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="TM">
-        <div class="item-dropdown--link js-item--open-dropdown">
-            <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">测试管理</p>
-        </div>
-        <div class="item--dropdown docs-version--dropdown">
-            <div class="item--header">
-                <a class="item--header-link item--left-column" href="http://projects.spring.io/spring-amqp">
-                    <i class="icon-globe"></i>
-                    Site
-                </a>
-                <a class="item--header-link item--right-column" href="http://github.com/spring-projects/spring-amqp">
-                    <i class="icon-github"></i>
-                    Repo
-                </a>
-            </div>
-            <div class="item--body">
-                <div class="item--body-title">
-                    <div class="item--left-column">
-                        Release
-                    </div>
-                    <div class="item--right-column">
-                        Documentation
-                    </div>
-                </div>
-                <div class="item--body">
-                    <div>
-                        <div class="item--body--version">
-                            <div class="item--left-column">
-                                <p>1.3.0 M2</p>
-                                <div class="icon icon-pre-release"></div>
-                            </div>
-                            <div class="item--right-column">
-                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.3.0.M2/reference/html">Reference</a>
-                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.3.0.M2/api/">API</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="item--body--version">
-                            <div class="item--left-column">
-                                <p>1.3.0</p>
-                                <div class="icon icon-snapshot-release"></div>
-                            </div>
-                            <div class="item--right-column">
-                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.3.0.BUILD-SNAPSHOT/reference/html">Reference</a>
-                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.3.0.BUILD-SNAPSHOT/api/">API</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="item--body--version">
-                            <div class="item--left-column">
-                                <p>1.2.2</p>
-                                <div class="icon icon-snapshot-release"></div>
-                            </div>
-                            <div class="item--right-column">
-                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.2.2.BUILD-SNAPSHOT/reference/html">Reference</a>
-                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.2.2.BUILD-SNAPSHOT/api/">API</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="item--body--version">
-                            <div class="item--left-column">
-                                <p>1.2.1</p>
-                                <div class="icon icon-current-version"></div>
-                                <div class="icon icon-ga-release"></div>
-                            </div>
-                            <div class="item--right-column">
-                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.2.1.RELEASE/reference/html">Reference</a>
-                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.2.1.RELEASE/api/">API</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="item--body--version">
-                            <div class="item--left-column">
-                                <p>1.1.4</p>
-                                <div class="icon icon-ga-release"></div>
-                            </div>
-                            <div class="item--right-column">
-                                <a class="docs-link reference-link" href="http://docs.spring.io/spring-amqp/docs/1.1.4.RELEASE/reference/html">Reference</a>
-                                <a class="docs-link api-link" href="http://docs.spring.io/spring-amqp/docs/1.1.4.RELEASE/api/">API</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div style="border-bottom: 1px solid #E5E5E5;padding-top: 20px;margin-bottom: 20px"></div>
     <p class="lead">管理</p>
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper"  id="nexus">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">组件库管理</p>
+            <p class="item-dropdown--title">组件库管理（Nexus）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -3119,7 +3121,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="QM">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">质量管理</p>
+            <p class="item-dropdown--title">质量管理（Sonar）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
@@ -3581,7 +3583,7 @@
     <div class="item-dropdown-widget docs--item js-item-dropdown--wrapper " data-filterable="Spring AMQP" id="CI">
         <div class="item-dropdown--link js-item--open-dropdown">
             <i class="item-dropdown--icon icon-reorder pull-right"></i>
-            <p class="item-dropdown--title">持续集成</p>
+            <p class="item-dropdown--title">持续集成（Hudson、Maven...）</p>
         </div>
         <div class="item--dropdown docs-version--dropdown">
             <div class="item--header">
