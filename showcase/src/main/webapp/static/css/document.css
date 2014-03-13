@@ -4160,7 +4160,7 @@ a[name="gs"], a[name="tutorials"] {
 }
 .copy-button {
     background-color: #34302D;
-    /*background-image: url("../img/iconsprite.png");*/
+    background-image: url("iconsprite.png");
     background-position: 2px -429px;
     background-repeat: no-repeat;
     border: 0 none;
