@@ -19,7 +19,7 @@
             		<a href="${ctx}/component/service">服务</a>
             	</li>
             	<li>
-            		<a href="#">数据</a>
+            		<a href="${ctx}/component/data">数据</a>
             	</li>
             	
             </ul>

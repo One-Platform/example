@@ -20,4 +20,9 @@ public class ComponentController {
 	public String serviceComponents(){
 		return "serviceComponent";
 	}
+	
+	@Get("data")
+	public String dataComponents(){
+		return "dataComponent";
+	}
 }

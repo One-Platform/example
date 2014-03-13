@@ -38,9 +38,9 @@
 				<div class="col-sm-6 col-md-2 ">
 					<div class="thumbnail">
 						<a href="${ctx}/crypto/doc" title="加密解密" target="_blank"><img
-							class="lazy" src="${ctx}/static/images/window/min.png"
+							class="lazy" src="${ctx}/static/images/component/crypto.png"
 							width="150" height="150"
-							data-src="${ctx}/static/images/window/min.png" alt="加密解密"></a>
+							data-src="${ctx}/static/images/component/crypto.png" alt="加密解密"></a>
 						<div class="caption">
 							<h3>
 								<a href="${ctx}/crypto/doc" title="加密解密" target="_blank">加密解密</a>

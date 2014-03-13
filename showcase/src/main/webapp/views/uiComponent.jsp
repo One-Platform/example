@@ -36,9 +36,9 @@
       <div class="row">
         <div class="col-sm-6 col-md-4 ">
           <div class="thumbnail">
-            <a href="${ctx}/lazyload/lazyshow" title="延迟加载" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/min.png" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="延迟加载"></a>
+            <a href="${ctx}/lazyload/lazyshow" title="延迟加载" target="_blank" ><img class="lazy" src="${ctx}/static/images/lazyload.gif" width="150" height="150" data-src="${ctx}/static/images/lazyload.gif" alt="延迟加载"></a>
             <div class="caption">
-              <h3> 
+              <h3 class="text-center">
                 <a href="${ctx}/lazyload/lazyshow" title="延迟加载" target="_blank" >延迟加载</a>
               </h3>
             </div>
@@ -47,9 +47,9 @@
 
         <div class="col-sm-6 col-md-4 ">
           <div class="thumbnail">
-            <a href="${ctx}/quickkey/showdoc" title="键盘注册" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/min.png" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="键盘注册"></a>
+            <a href="${ctx}/quickkey/showdoc" title="键盘注册" target="_blank" ><img class="lazy" src="${ctx}/static/images/mousetrap.gif" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="键盘注册"></a>
             <div class="caption">
-              <h3> 
+              <h3 class="text-center">
                 <a href="${ctx}/quickkey/showdoc" title="键盘注册" target="_blank" >键盘注册</a>
               </h3>
             </div>
@@ -58,9 +58,9 @@
 
         <div class="col-sm-6 col-md-4 ">
           <div class="thumbnail">
-            <a href="${ctx}/compress/showdoc" title="压缩合并" target="_blank" ><img class="lazy" src="${ctx}/static/images/window/min.png" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="压缩合并"></a>
+            <a href="${ctx}/compress/showdoc" title="压缩合并" target="_blank" ><img class="lazy" src="${ctx}/static/images/wro4j.gif" width="150" height="150" data-src="${ctx}/static/images/window/min.png" alt="压缩合并"></a>
             <div class="caption">
-              <h3> 
+              <h3 class="text-center">
                 <a href="${ctx}/compress/showdoc" title="压缩合并" target="_blank" >压缩合并</a>
               </h3>
             </div>
