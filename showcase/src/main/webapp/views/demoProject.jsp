@@ -7,24 +7,21 @@
 <head>
 <!-- Meta, title, CSS, favicons, etc. -->
 <meta charset="utf-8">
-<script id="undefined" src="${ctx}/static/js/inpage_linkid.js" async=""
-        type="text/javascript"></script>
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
 <title>ONE-Platform</title>
-<link rel="icon" type="image/png" href="http://projects.spring.io/spring-framework/favicon.png">
+<link rel="shortcut icon" href="${ctx}/static/images/bootstrap/favicon.png" />
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap/bootstrap.css">
 
-<link href="${ctx}/static/css/css.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap/bootstrap-select.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/mainProject.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/typography.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/icons.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/projects.css">
-<link rel="stylesheet" type="text/css" href="${ctx}/static/css/buttons.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/guideProject.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/highlight.css">
 
@@ -32,8 +29,7 @@
 <link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />
 <link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
 
-<script src="${ctx}/static/js/ga.js" async="" type="text/javascript"></script>
-<script type="text/javascript" src="${ctx}/static/js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="${ctx}/static/js/jquery-1.11.0.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/bootstrap/bootstrap-select.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/underscore.js"></script>
@@ -47,27 +43,7 @@
     var siteBaseUrl = "/spring-framework";
 </script>
 <script type="text/javascript" src="${ctx}/static/js/copySnippets.js"></script>
-<meta name="google-site-verification" content="7qGntFPD9lWAVCtUu5U77v4l68PsTHf6xpzgjQv2j2M">
-<script>
-    var _gaq = _gaq || [];
-    var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-    _gaq.push(
-            ['_require', 'inpage_linkid', pluginUrl],
-            ['_setAccount', 'UA-2728886-22'],
-            ['_trackPageview'],
-            ['b._require', 'inpage_linkid', pluginUrl],
-            ['b._setAccount', 'UA-2728886-19'],
-            ['b._trackPageview']
-    );
-    (function () {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-</script>
+
 <style type="text/css" charset="utf-8">/* See license.txt for terms of usage */
 /** reset styling **/
 .firebugResetStyles {
@@ -349,9 +325,6 @@
 </div>
 </div>
 
-<div class="github-fork-ribbon--container">
-    <a href="http://github.com/spring-projects/spring-framework"><img style="position: absolute; top: 0; right: 0; border: 0;" src="${ctx}/static/images/forkme.png" alt="Fork me on GitHub"></a>
-</div>
 <div class="project-body--wrapper">
 <div class="project-body--container">
 <div class="container">
@@ -486,18 +459,22 @@
 
             <div class="js-download-maven-widget">
                 <div class="highlight">
-                    <button class="copy-button snippet" id="copy-button-snippet"
-                            data-clipboard-target="code-block-snippet"></button><pre
-                        id="code-block-snippet"><code><span class="nt">&lt;dependencies&gt;</span>
-                    <span class="nt">&lt;dependency&gt;</span>
-                    <span class="nt">&lt;groupId&gt;</span>org.springframework<span
-                            class="nt">&lt;/groupId&gt;</span>
-                    <span class="nt">&lt;artifactId&gt;</span>spring-context<span
-                            class="nt">&lt;/artifactId&gt;</span>
-                    <span class="nt">&lt;version&gt;</span>4.0.2.RELEASE<span class="nt">&lt;/version&gt;</span>
-                    <span class="nt">&lt;/dependency&gt;</span>
-                    <span class="nt">&lt;/dependencies&gt;</span>
-                </code></pre>
+                    <button class="copy-button snippet" id="copy-button-snippet" data-clipboard-target="code-block-snippet"></button>
+                    <pre id="code-block-snippet">
+                    <code>
+                        <span class="nt">&lt;dependencies&gt;</span>
+                        <span class="nt">&lt;dependency&gt;</span>
+                        <span class="nt">&lt;groupId&gt;</span>
+                        org.springframework
+                        <span  class="nt">&lt;/groupId&gt;</span>
+                        <span class="nt">&lt;artifactId&gt;</span>
+                        spring-context<span
+                                class="nt">&lt;/artifactId&gt;</span>
+                        <span class="nt">&lt;version&gt;</span>4.0.2.RELEASE<span class="nt">&lt;/version&gt;</span>
+                        <span class="nt">&lt;/dependency&gt;</span>
+                        <span class="nt">&lt;/dependencies&gt;</span>
+                    </code>
+                    </pre>
                 </div>
             </div>
         </div>
@@ -761,39 +738,41 @@
 
     <div class="item-slider-widget js-item-slider--wrapper" style="display: none">
         <div class="item-slider--container">
-            <!--<div class="item--slider js-item--slider"></div>-->
-            <!--<div class="item js-active js-item" data-snippet-type='maven'>-->
-                <!--Maven-->
-            <!--</div>-->
-            <!--<div class="item js-item" data-snippet-type='gradle'>-->
-                <!--Gradle-->
-            <!--</div>-->
+            <div class="item--slider js-item--slider"></div>
+            <div class="item js-active js-item" data-snippet-type='maven'>
+                Maven
+            </div>
+            <div class="item js-item" data-snippet-type='gradle'>
+                Gradle
+            </div>
         </div>
     </div>
 
 </script>
 <script type="text/html" id="project-download-maven-widget-template">
-    <div class="highlight"><pre><code class="xml"><span class="nt">&lt;dependencies&gt;</span>
-        <span class="nt">&lt;dependency&gt;</span>
-        <span class="nt">&lt;groupId&gt;</span>{@= groupId @}<span class="nt">&lt;/groupId&gt;</span>
-        <span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
-        <span class="nt">&lt;version&gt;</span>{@= version @}<span class="nt">&lt;/version&gt;</span>
-        <span class="nt">&lt;/dependency&gt;</span>
+    <div class="highlight"><pre><code class="xml">
+        <span class="nt">&lt;dependencies&gt;</span>
+            <span class="nt">&lt;dependency&gt;</span>
+                <span class="nt">&lt;groupId&gt;</span>{@= groupId @}<span class="nt">&lt;/groupId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;version&gt;</span>{@= version @}<span class="nt">&lt;/version&gt;</span>
+            <span class="nt">&lt;/dependency&gt;</span>
         <span class="nt">&lt;/dependencies&gt;</span>
     </code></pre>
     </div>
 </script>
 <script type="text/html" id="project-repository-maven-widget-template">
-    <div class="highlight"><pre><code class="xml"><span class="nt">&lt;repositories&gt;</span>
-        <span class="nt">&lt;repository&gt;</span>
-        <span class="nt">&lt;id&gt;</span>{@= repository.id @}<span class="nt">&lt;/id&gt;</span>
-        <span class="nt">&lt;name&gt;</span>{@= repository.name @}<span class="nt">&lt;/name&gt;</span>
-        <span class="nt">&lt;url&gt;</span>{@= repository.url @}<span class="nt">&lt;/url&gt;</span>
-        <span class="nt">&lt;snapshots&gt;</span>
-        <span class="nt">&lt;enabled&gt;</span>{@= repository.snapshotsEnabled @}<span
-                class="nt">&lt;/enabled&gt;</span>
-        <span class="nt">&lt;/snapshots&gt;</span>
-        <span class="nt">&lt;/repository&gt;</span>
+    <div class="highlight"><pre><code class="xml">
+        <span class="nt">&lt;repositories&gt;</span>
+            <span class="nt">&lt;repository&gt;</span>
+                <span class="nt">&lt;id&gt;</span>{@= repository.id @}<span class="nt">&lt;/id&gt;</span>
+                <span class="nt">&lt;name&gt;</span>{@= repository.name @}<span class="nt">&lt;/name&gt;</span>
+                <span class="nt">&lt;url&gt;</span>{@= repository.url @}<span class="nt">&lt;/url&gt;</span>
+                <span class="nt">&lt;snapshots&gt;</span>
+                <span class="nt">&lt;enabled&gt;</span>{@= repository.snapshotsEnabled @}
+                <span class="nt">&lt;/enabled&gt;</span>
+                <span class="nt">&lt;/snapshots&gt;</span>
+            <span class="nt">&lt;/repository&gt;</span>
         <span class="nt">&lt;/repositories&gt;</span>
     </code></pre>
     </div>
