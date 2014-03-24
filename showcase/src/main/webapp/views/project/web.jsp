@@ -16,7 +16,6 @@
 <link rel="shortcut icon" href="${ctx}/static/images/bootstrap/favicon.png" />
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap/bootstrap.css">
 
-<link rel="stylesheet" type="text/css" href="${ctx}/static/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap/bootstrap-select.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/mainProject.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/typography.css">
@@ -24,13 +23,8 @@
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/projects.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/guideProject.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/highlight.css">
+<%@ include file="/static/layouts/base.jsp"%>
 
-<link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />
-<link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />
-<link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
-
-<script type="text/javascript" src="${ctx}/static/js/jquery-1.11.0.js"></script>
-<script type="text/javascript" src="${ctx}/static/js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/bootstrap/bootstrap-select.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/underscore.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/backbone.js"></script>
