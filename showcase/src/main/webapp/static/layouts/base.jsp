@@ -15,7 +15,7 @@
 <link href="${ctx}/static/css/main.css" rel="stylesheet" />
 
 
-<script src="${ctx}/static/js/jquery-1.7.1.js"></script>
+<script src="${ctx}/static/js/jquery-1.11.0.js"></script>
 <!-- Bootstrap core JS file-->
 <script src="${ctx}/static/js/bootstrap/bootstrap.js"></script>    
 <script src="${ctx}/static/js/bootstrap/holder.min.js" type="text/javascript"></script>

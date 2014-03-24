@@ -58,9 +58,9 @@
                 </a>
             </div>
             <div class="col-sm-4">
-                <a class="project--container project--container--link" href="#">
-                    <i class="icon-leaf icon-5x ic" style="color:#563d7c;"></i>
-                    <h3>键盘注册</h3>
+                <a class="project--container project--container--link" href="${ctx}/project/web">
+                    <i class="icon-globe icon-5x ic" style="color:#563d7c;"></i>
+                    <h3>WEB框架</h3>
                     <p>从设计到管理，开发到测试，您都可以在我们的平台得到支持.</p>
                 </a>
             </div>
