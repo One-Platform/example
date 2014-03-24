@@ -26,8 +26,8 @@
     <div class="container">
         <span class="bs-docs-booticon bs-docs-booticon-lg bs-docs-booticon-outline">ONE</span>
         <!-- <h1>Bootstrap</h1> -->
-        <p class="lead">技术创造价值. </p>
-        <p class="lead">让我们为行业应用创造更好的技术解决方案. </p>
+        <p class="lead">技术创造价值 </p>
+        <p class="lead">让我们为行业应用创造更好的技术解决方案 </p>
     </div>
 </main>
 
@@ -77,26 +77,26 @@
         <div class="row bs-docs-featured-sites">
 
             <div class="col-sm-3">
-                <a href="http://e-picc.com.cn" target="_blank" title="Little">
-                    <img src="${ctx}/static/images/picc.png" alt="Little" class="img-responsive">
+                <a href="http://e-picc.com.cn/" target="_blank" title="Little">
+                    <img src="${ctx}/static/images/picc.png" alt="中国人保" class="img-responsive">
                 </a>
             </div>
 
             <div class="col-sm-3">
-                <a href="http://expo.getbootstrap.com/2014/02/10/engine-yard/" target="_blank" title="Engine Yard">
-                    <img src="http://expo.getbootstrap.com/screenshots/engine-yard.jpg" alt="Engine Yard" class="img-responsive">
+                <a href="http://www.cic.cn/" target="_blank" title="Engine Yard">
+                    <img src="${ctx}/static/images/cic.png" alt="中华保险" class="img-responsive">
                 </a>
             </div>
 
             <div class="col-sm-3">
-                <a href="http://expo.getbootstrap.com/2014/02/04/webflow/" target="_blank" title="Webflow">
-                    <img src="http://expo.getbootstrap.com/screenshots/webflow.jpg" alt="Webflow" class="img-responsive">
+                <a href="http://http://www.bocins.com/" target="_blank" title="Webflow">
+                    <img src="${ctx}/static/images/boc.png" alt="中银保险" class="img-responsive">
                 </a>
             </div>
 
             <div class="col-sm-3">
-                <a href="http://expo.getbootstrap.com/2013/05/09/sentry/" target="_blank" title="Sentry">
-                    <img src="http://expo.getbootstrap.com/screenshots/sentry.jpg" alt="Sentry" class="img-responsive">
+                <a href="http://www.tlgins.com.tw/" target="_blank" title="Sentry">
+                    <img src="${ctx}/static/images/tlg.png" alt="台寿保" class="img-responsive">
                 </a>
             </div>
 
