@@ -26,4 +26,9 @@ public class PlatformController {
     public String demoProject(){
         return "demoProject";
     }
+
+    @Get("forum")
+    public String forum(){
+        return "forum";
+    }
 }
