@@ -77,8 +77,8 @@
         <div class="row bs-docs-featured-sites">
 
             <div class="col-sm-3">
-                <a href="http://expo.getbootstrap.com/2014/02/12/little/" target="_blank" title="Little">
-                    <img src="http://expo.getbootstrap.com/screenshots/little.jpg" alt="Little" class="img-responsive">
+                <a href="http://e-picc.com.cn" target="_blank" title="Little">
+                    <img src="${ctx}/static/images/picc.png" alt="Little" class="img-responsive">
                 </a>
             </div>
 

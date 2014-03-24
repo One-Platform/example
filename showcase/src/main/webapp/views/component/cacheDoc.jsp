@@ -316,7 +316,7 @@ public interface LoadingCache&lt;K, V&gt; extends Cache&lt;K, V&gt; {
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<%-- <script src="${ctx}/static/js/jquery-1.7.1.js"></script> --%>
+<%-- <script src="${ctx}/static/js/jquery-1.11.0.js"></script> --%>
 
 <!-- Bootstrap core JS file
  注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
