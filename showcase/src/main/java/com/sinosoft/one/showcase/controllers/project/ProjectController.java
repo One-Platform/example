@@ -13,4 +13,9 @@ public class ProjectController {
     public String web(){
         return "web";
     }
+
+    @Get("doc")
+    public String doc(){
+        return "doc";
+    }
 }
