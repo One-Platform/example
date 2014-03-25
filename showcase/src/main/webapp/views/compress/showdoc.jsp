@@ -173,7 +173,7 @@ namingStrategy=hashEncoder-CRC32
 <%@ include file="/static/layouts/footer.jsp"%>
 
 
-<%--<script type="text/javascript" src="${ctx}/static/js/jquery-1.7.1.js"></script>--%>
+<%--<script type="text/javascript" src="${ctx}/static/js/jquery-1.11.0.js"></script>--%>
 <%--<script src="${ctx}/static/js/bootstrap/bootstrap.js"></script>--%>
 <%--<script src="${ctx}/static/js/bootstrap/holder.min.js"></script>--%>
 <%--<script src="${ctx}/static/js/bootstrap/highlight.min.js"></script>--%>

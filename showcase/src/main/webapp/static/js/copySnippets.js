@@ -1,5 +1,5 @@
 window.Spring = window.Spring || {};
-ZeroClipboard.setDefaults({moviePath:'/showcase/static/js/ZeroClipboard.swf'});
+ZeroClipboard.setDefaults({moviePath:ctx+'/static/js/ZeroClipboard.swf'});
 $(document).ready(function () {
     Spring.configureCopyButtons();
 });

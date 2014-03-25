@@ -16,7 +16,6 @@
 <link rel="shortcut icon" href="${ctx}/static/images/bootstrap/favicon.png" />
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap/bootstrap.css">
 
-<link rel="stylesheet" type="text/css" href="${ctx}/static/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/bootstrap/bootstrap-select.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/mainProject.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/typography.css">
@@ -24,13 +23,8 @@
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/projects.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/guideProject.css">
 <link rel="stylesheet" type="text/css" href="${ctx}/static/css/highlight.css">
+<%@ include file="/static/layouts/base.jsp"%>
 
-<link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />
-<link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />
-<link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
-
-<script type="text/javascript" src="${ctx}/static/js/jquery-1.11.0.js"></script>
-<script type="text/javascript" src="${ctx}/static/js/bootstrap/bootstrap.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/bootstrap/bootstrap-select.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/underscore.js"></script>
 <script type="text/javascript" src="${ctx}/static/js/backbone.js"></script>
@@ -309,7 +303,14 @@
 }
 
 </style>
-
+<script type="text/javascript">
+    function mouseover(){
+       $("#git").css({"color":"black","text-decoration":"NONE" });
+    }
+    function mouseout(){
+        $("#git").css("color","whitesmoke");
+    }
+</script>
 </head>
 <body>
 <!-- header -->
@@ -319,8 +320,10 @@
 
 <div class="bs-docs-header" id="content">
     <div class="container">
-        <h2>one-web  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="icon-github"></i> </h2>
-        <p >优雅的web框架</p>
+        <h2>ONE-WEB  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a id="git" style="color:whitesmoke " href="https://github.com/One-Platform/example" onmouseover="mouseover()" onmouseout="mouseout();" >
+            <i class="icon-github"></i>
+        </a> </h2>
+        <p >一个优雅的RESTful风格的web框架</p>
     </div>
 </div>
 </div>
@@ -450,7 +453,7 @@
         </div>
         <div class="download-widget--body">
             <p>推荐使用依赖管理系统来引入<code>one-web</code>,您可以复制下面的代码来直接引入.
-                需要帮助？请查看我们的<a href="http://spring.io/guides/gs/maven/">Maven</a>使用指南.
+                需要帮助？请查看我们的<a href="#">Maven</a>使用指南.
             </p>
 
             <div class="js-download-maven-widget">
@@ -536,7 +539,7 @@
     <span class="kd">public String</span> <span class="nf">one</span> <span class="n">( Invocation inv )</span><span class="o">{</span><span
             class="o">
         <span class="n">inv</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">"now"</span><span class="o">,</span><span class="k">"This is the frist one!"</span>
-        <span class="o">());</span>
+        <span class="o">);</span>
     <span class="o">}</span>;</span>
 
     <span class="o">}</span>
@@ -640,25 +643,25 @@
         </div>
     </div>
 
-    <div class="right-pane-widget--container no-top-border project-sidebar-resource--wrapper">
-        <h3>入门指南</h3>
-        <ul>
-            <li><a href="http://spring.io/guides/gs/rest-service">Building a RESTful Web Service</a></li>
-            <li><a href="http://spring.io/guides/gs/consuming-rest">Consuming a RESTful Web Service</a></li>
-            <li><a href="http://spring.io/guides/gs/managing-transactions">Managing Transactions</a></li>
-            <li><a href="http://spring.io/guides/gs/relational-data-access">Accessing Relational Data using JDBC with
-                Spring</a></li>
-            <li><a href="http://spring.io/guides/gs/scheduling-tasks">Scheduling Tasks</a></li>
-            <li><a href="http://spring.io/guides/gs/serving-web-content">Serving Web Content</a></li>
-            <li><a href="http://spring.io/guides/gs/validating-form-input">Validating Form Input</a></li>
-            <li><a href="http://spring.io/guides/gs/messaging-jms">Messaging with JMS</a></li>
-        </ul>
-        <h3>解决方案</h3>
-        <ul>
-            <li><a href="http://spring.io/guides/tutorials/rest">Designing and Implementing RESTful Web Services with
-                Spring</a></li>
-        </ul>
-    </div>
+    <%--<div class="right-pane-widget--container no-top-border project-sidebar-resource--wrapper">--%>
+        <%--<h3>入门指南</h3>--%>
+        <%--<ul>--%>
+            <%--<li><a href="http://spring.io/guides/gs/rest-service">Building a RESTful Web Service</a></li>--%>
+            <%--<li><a href="http://spring.io/guides/gs/consuming-rest">Consuming a RESTful Web Service</a></li>--%>
+            <%--<li><a href="http://spring.io/guides/gs/managing-transactions">Managing Transactions</a></li>--%>
+            <%--<li><a href="http://spring.io/guides/gs/relational-data-access">Accessing Relational Data using JDBC with--%>
+                <%--Spring</a></li>--%>
+            <%--<li><a href="http://spring.io/guides/gs/scheduling-tasks">Scheduling Tasks</a></li>--%>
+            <%--<li><a href="http://spring.io/guides/gs/serving-web-content">Serving Web Content</a></li>--%>
+            <%--<li><a href="http://spring.io/guides/gs/validating-form-input">Validating Form Input</a></li>--%>
+            <%--<li><a href="http://spring.io/guides/gs/messaging-jms">Messaging with JMS</a></li>--%>
+        <%--</ul>--%>
+        <%--<h3>解决方案</h3>--%>
+        <%--<ul>--%>
+            <%--<li><a href="http://spring.io/guides/tutorials/rest">Designing and Implementing RESTful Web Services with--%>
+                <%--Spring</a></li>--%>
+        <%--</ul>--%>
+    <%--</div>--%>
 </div>
 </div>
 </div>
