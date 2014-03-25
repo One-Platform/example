@@ -70,39 +70,38 @@
 <div class="col-md-3">
     <div class="bs-docs-sidebar hidden-print" role="complementary">
         <ul class="nav bs-docs-sidenav">
-
             <li>
                 <a href="#1">1.Web Framework</a>
                 <ul class="nav">
-                    <li><a href="#1.1">1.1 版本历史 </a></li>
-                    <li><a href="#1.2">1.2 Web-Platform基本原理和特性介绍</a></li>
-                    <li><a href="#1.3">1.3 如何构建一个Restful风格的web项目 </a></li>
-                    <li><a href="#1.4">1.4 Web-Platform项目结构的约定
+                    <li><a href="#1_1">1.1 版本历史 </a></li>
+                    <li><a href="#1_2">1.2 Web-Platform基本原理和特性介绍</a></li>
+                    <li><a href="#1_3">1.3 如何构建一个Restful风格的web项目 </a></li>
+                    <li><a href="#1_4">1.4 Web-Platform项目结构的约定
                     </a></li>
                 </ul>
             </li>
             <li>
                 <a href="#2">2. 控制器(controller)</a>
                 <ul class="nav">
-                    <li><a href="#2.1">2.1 Controller的定义</a></li>
-                    <li><a href="#2.2">2.2 路径的映射 </a></li>
-                    <li><a href="#2.3">2.3 参数的绑定</a>
+                    <li><a href="#2_1">2.1 Controller的定义</a></li>
+                    <li><a href="#2_2">2.2 路径的映射 </a></li>
+                    <li><a href="#2_3">2.3 参数的绑定</a>
                     </li>
-                    <li><a href="#2.4">2.4 控制器的返回路径 </a>
+                    <li><a href="#2_4">2.4 控制器的返回路径 </a>
                     </li>
 
-                    <li><a href="#2.5">2.5 Invocation</a>
+                    <li><a href="#2_5">2.5 Invocation</a>
                     </li>
-                    <li><a href="#2.6">2.6 将数据返回视图 </a>
+                    <li><a href="#2_6">2.6 将数据返回视图 </a>
                     </li>
                 </ul>
             </li>
             <li>
                 <a href="#3">3. 视图(view)</a>
                 <ul class="nav">
-                    <li><a href="#3.1">3.1 Jsp</a>
+                    <li><a href="#3_1">3.1 Jsp</a>
                     </li>
-                    <li><a href="#3.2">3.2 Velocity</a></li>
+                    <li><a href="#3_2">3.2 Velocity</a></li>
                 </ul>
             </li>
             <li>
@@ -111,40 +110,40 @@
             <li>
                 <a href="#5">5. 拦截器(Interceptor)</a>
                 <ul class="nav">
-                    <li><a href="#5.1">5.1 拦截器的位置</a></li>
-                    <li><a href="#5.2">5.2 拦截器的拦截条件</a></li>
-                    <li><a href="#5.3">5.3 拦截器的实现</a> </li>
+                    <li><a href="#5_1">5.1 拦截器的位置</a></li>
+                    <li><a href="#5_2">5.2 拦截器的拦截条件</a></li>
+                    <li><a href="#5_3">5.3 拦截器的实现</a> </li>
                 </ul>
             </li>
             <li>
                 <a href="#6">6. 数据校验 </a>
                 <ul class="nav">
-                    <li><a href="#6.1">6.1 Web-Platform的数据校验</a></li>
-                    <li><a href="#6.2">6.2 @Validation中的规则</a></li>
-                    <li><a href="#6.3">6.3 参数的校验 </a></li>
-                    <li><a href="#6.4">6.4 javabean的校验</a></li>
-                    <li><a href="#6.5">6.5 校验的错误信息</a></li>
-                    <li><a href="#6.6">6.6 自定义的数据校验</a></li>
+                    <li><a href="#6_1">6.1 Web-Platform的数据校验</a></li>
+                    <li><a href="#6_2">6.2 @Validation中的规则</a></li>
+                    <li><a href="#6_3">6.3 参数的校验 </a></li>
+                    <li><a href="#6_4">6.4 javabean的校验</a></li>
+                    <li><a href="#6_5">6.5 校验的错误信息</a></li>
+                    <li><a href="#6_6">6.6 自定义的数据校验</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#7">7.文件上传 </a>
                 <ul class="nav">
-                    <li><a href="#7.1">7.1 单个文件的上传</a></li>
-                    <li><a href="#7.2">7.2 多个文件的上传</a></li>
-                    <li><a href="#7.3">7.3 混合文件上传</a></li>
-                    <li><a href="#7.4">7.4 上传所有文件 </a></li>
+                    <li><a href="#7_1">7.1 单个文件的上传</a></li>
+                    <li><a href="#7_2">7.2 多个文件的上传</a></li>
+                    <li><a href="#7_3">7.3 混合文件上传</a></li>
+                    <li><a href="#7_4">7.4 上传所有文件 </a></li>
                 </ul>
             </li>
             <li>
                 <a href="#8">8. 异常处理 </a>
                 <ul class="nav">
-                    <li><a href="#8.1">8.1 最简单的</a></li>
-                    <li><a href="#8.2">8.2 放在哪里才能生效</a></li>
-                    <li><a href="#8.3">8.3 区分异常类型的</a></li>
-                    <li><a href="#8.4">8.4 更好的区分不同的异常类型 </a></li>
-                    <li><a href="#8.5">8.5 将异常让渡给上级模块的错误处理器处理</a></li>
-                    <li><a href="#8.6">8.6 异常处理的Adapter </a></li>
+                    <li><a href="#8_1">8.1 最简单的</a></li>
+                    <li><a href="#8_2">8.2 放在哪里才能生效</a></li>
+                    <li><a href="#8_3">8.3 区分异常类型的</a></li>
+                    <li><a href="#8_4">8.4 更好的区分不同的异常类型 </a></li>
+                    <li><a href="#8_5">8.5 将异常让渡给上级模块的错误处理器处理</a></li>
+                    <li><a href="#8_6">8.6 异常处理的Adapter </a></li>
                 </ul>
             </li>
             <li>
@@ -171,7 +170,7 @@
 <div class="bs-docs-section">
     <h1 id="1">1. Web Framework</h1>
 
-    <h2 id="1.1">1.1 版本历史</h2>
+    <h2 id="1_1">1.1 版本历史</h2>
 
     <p>当前版本为1.0.3</p>
 
@@ -186,7 +185,7 @@
     </ol>
 
 
-    <h2 id="1.2">1.2 one-web介绍</h2>
+    <h2 id="1_2">1.2 one-web介绍</h2>
 
     <h3>1.2.1基本原理</h3>
 
@@ -217,11 +216,11 @@
 
     <p>9.快速响应问题和新需求</p>
 
-    <h2 id="1.3">1.3 如何构建一个Restful风格的web项目</h2>
+    <h2 id="1_3">1.3 如何构建一个Restful风格的web项目</h2>
 
     <p>您可以参考我们的指南文档，<a href="#">快速构建Restful风格的Web工程</a></p>
 
-    <h2 id="1.4">1.4 Web-Platform项目结构的约定</h2>
+    <h2 id="1_4">1.4 Web-Platform项目结构的约定</h2>
 
     <p>Web-Platform通过约束项目结构（文件夹目录结构）,达到路径映射及资源文件的映射需要。开发者在使用Web-Platform时需要遵守改约定。Web-Platform的项目结构约定有一下几点：</p>
 
@@ -246,7 +245,7 @@
 <div class="bs-docs-section">
 <h1 id="2">2. 控制器(controller)</h1>
 
-<h2 id="2.1">2.1 Controller的定义</h2>
+<h2 id="2_1">2.1 Controller的定义</h2>
 
 <p>Web-Platform的Controller相当于struts中的action，由于Web-Platform是无任何配置文件的框架。定义Controller的前提条件是遵守项目结构约定,在Controllers包下及所有的子包中，所有类名后缀定义为Controller结尾的类，则自动会被定义为控制器（Controller）。</p>
 
@@ -259,9 +258,9 @@
 
 <p>清单2-1-1</p>
 
-<h2 id="2.2">2.2 路径的映射</h2>
+<h2 id="2_2">2.2 路径的映射</h2>
 
-<h3 id="2.2.1">2.2.1 URL请求对应到controller</h3>
+<h3 >2.2.1 URL请求对应到controller</h3>
 
 <p>一个URL请求如何对应到相应的controller?在Web-Platform中,我们对项目结构做了约定，这样做是有原因的，因为在URL映射中我们将用到这样的约定，会把目结构的约定体现在映射规则中。</p>
 
@@ -484,7 +483,7 @@
 
 <p>该URL可以同时匹配post或者get请求。</p>
 
-<h3 id="2.2.3">2.2.3 多路径映射</h3>
+<h3 >2.2.3 多路径映射</h3>
 
 <p>通常情况下，我们会遇到这样的问题，我们的controller方法是可以在多个URL中使用的。为了不进行重复的代码编写，可以将多个URL映射到同一个controller或者controller方法中。</p>
 
@@ -547,7 +546,7 @@
     http://ip:port/demo/account/user/save
 </code></pre>
 
-<h3 id="2.2.4">2.2.4 post、get、put、delete请求</h3>
+<h3 >2.2.4 post、get、put、delete请求</h3>
 
 <p>web以@Get或者@Post来标注方法,分别对应HTTP的GET和POST请求,并且一个controller方法可以同时使用不同的请求方式。</p>
 
@@ -636,7 +635,7 @@
     /form&gt;
 </code></pre>
 
-<h3 id="2.2.5">2.2.5 用正则表达式表达的URL</h3>
+<h3 >2.2.5 用正则表达式表达的URL</h3>
 
 <ul>
     <li><p>在我们设定的url上是可以使用参数的</p>
@@ -672,7 +671,7 @@
 
 <p>我们修改后，url为 ${ctx}/account/user/remove/[userId]这个请求中的userId就只能为数字了。当然，如果在@Path中使用了参数，那么您也可以参照上边的例子来限定参数的范围。</p>
 
-<h3 id="2.2.6">2.2.6 占位符"$"在url中的使用</h3>
+<h3 >2.2.6 占位符"$"在url中的使用</h3>
 
 <p>在我们的Path和get/post/delete/put设定url时，我们可以使用$符来做占位符。下边我们来详细说一个"$"的具体使用。</p>
 
@@ -748,7 +747,7 @@
 
 <p>可以看到，参数为 用户/测试/演示实例  正好和我们的"$"占位对应，这就说明了，我们的$1/$2/$3正确完成了他们的任务。</p>
 
-<h3 id="2.2.7">2.2.7 模块规约</h3>
+<h3 >2.2.7 模块规约</h3>
 
 <p>你是不是觉得默认的package映射规则有些呆板、冗长？如果项目中设定的包路径过长，那么url的匹配路径将长的无法想象？不要急，我们提供了解决这些问题的方案。</p>
 
@@ -794,7 +793,7 @@
     module.path Mvc将使用这个属性的值作为所在module的path,可以使${parent.module.path}引用上一次级module的path
 </code></pre>
 
-<h2 id="2.3">2.3 参数的绑定</h2>
+<h2 id="2_3">2.3 参数的绑定</h2>
 
 <p>在Web-Platform中，我们在方法的参数列表中使用@Param("paramName")来绑定参数</p>
 
@@ -809,7 +808,7 @@
     }
 </code></pre>
 
-<h3 id="2.3.1">2.3.1 基本类型的参数绑定</h3>
+<h3 >2.3.1 基本类型的参数绑定</h3>
 
 <p>Web-Platform支持8种基本数据类型的绑定</p>
 
@@ -974,11 +973,11 @@
     &lt;/form&gt;
 </code></pre>
 
-<h2 id="2.4">2.4 控制器的返回路径</h2>
+<h2 id="2_4">2.4 控制器的返回路径</h2>
 
 <p>在Web-Platform的web应用程序中，通过使用controller的方法返回值方式作为视图的返回方式。对于普通的url请求（非ajax），通过在controller的方法中返回string进行视图跳转。同时项目结构的约定，被使用到路径返回规则中。</p>
 
-<h3 id="2.4.1">2.4.1 如何定位返回页面</h3>
+<h3 >2.4.1 如何定位返回页面</h3>
 
 <p>MVC中的视图的存放路径是被约束的，统一放置于views文件夹下，在前面章节中已经进行描述。每个controller方法处理完成后需要返回视图，首先要确定controllers的包结构与mvc项目中视图文件夹中的结构一致。通过包结构的约定，以及controller的返回值确定视图的返回。</p>
 
@@ -1050,17 +1049,17 @@
 
 <p>清单中的"r:/account/user/list"，就是代表着重定向到"/account/user/list" URL上,同时该URL也会对应到MVC另一个controller的方法</p>
 
-<h3 id="2.4.4">2.4.4 无参数类型的返回值方式</h3>
+<h3 >2.4.4 无参数类型的返回值方式</h3>
 
 <p>如果我们的controller不需要返回视图，那么controller的方法只需返回void即可。</p>
 
-<h2 id="2.5">2.5 Invocation</h2>
+<h2 id="2_5">2.5 Invocation</h2>
 
 <p>Invocation封装了框架对控制器方法的一次调用相关的信息：请求和响应对象、目标控制器方法、方法参数值等。Invocation主要用来处理数据的传递，比如：页面和后台之间的数据传递，重定向后数据的传递，以及传递仅本次调用可见、和视图渲染无关的一些参数等。</p>
 
 <p>注意:当不存在请求转发,一个用户请求只存在一个调用实例;当用户请求可能被转发时,转发前和转发后的控制器方法调用是不同的调用,则一个用户请求将不只包含了一个调用实例.</p>
 
-<h3 id="2.5.1">2.5.1 获取http内置对象</h3>
+<h3 >2.5.1 获取http内置对象</h3>
 
 <pre><code>public HttpServletRequest getRequest();
     此方法用来返回本次调用的HttpServletRequest对象
@@ -1072,7 +1071,7 @@
     此方法用来返回ServletContext对象
 </code></pre>
 
-<h3 id="2.5.2">2.5.2 绑定数据</h3>
+<h3 >2.5.2 绑定数据</h3>
 
 <p>Invocation常用绑定数据的方法有以下几个:</p>
 
@@ -1126,11 +1125,11 @@
     这个方法用于向重定向跳转后的页面传递参数，比如提示信息.前台可以直接通过el表达式来获取值。
 </code></pre>
 
-<h2 id="2.6">2.6 将数据返回视图</h2>
+<h2 id="2_6">2.6 将数据返回视图</h2>
 
 <p>控制器将数据返回时,ajax请求和非ajax请求所用的方法不同。ajax请求统一用Reply来返回,非ajax请求是将数据装载进Invocation里,然后再取。</p>
 
-<h3 id="2.6.1">2.6.1 Ajax请求</h3>
+<h3 >2.6.1 Ajax请求</h3>
 
 <h4>2.6.1.1 返回JSON数据</h4>
 
@@ -1296,7 +1295,7 @@
 
     <h1 id="3">3. 视图(view)</h1>
 
-    <h2 id="3.1">3.1 Jsp</h2>
+    <h2 id="3_1">3.1 Jsp</h2>
 
     <h3>3.1.1 Form</h3>
 
@@ -1313,7 +1312,7 @@
     </ul>
 
 
-    <h2 id="3.2">3.2 Velocity</h2>
+    <h2 id="3_2">3.2 Velocity</h2>
 
     <p>Web-Platform可以很友好的支持Velocity模板，基本上Velocity模板的使用和JSP页面的使用是一样的，您只需要设置好Velocity模板，就可以把这个vm文件当作JSP一样使用了，它的放置位置，请求方式和JSP是一样的，您不需要任何其他的额外设置。</p>
 
@@ -1407,11 +1406,11 @@
 
     <p>面向切面编程（AOP）方法可以让一个项目更加关注核心逻辑,拦截器目标是controller层提供各种在控制器执行前、执行后的代码切入，以达到各种可AOP的目标。</p>
 
-    <h2 id="5.1">5.1 拦截器的位置</h2>
+    <h2 id="5_1">5.1 拦截器的位置</h2>
 
     <p>拦截器和控制器是分不开的,拦截器的拦截对象就是控制器,所以拦截器和控制器是在一起的,哪里有控制器,哪里就可以有拦截器.具体的说就是在controllers和子包下实现了ControllerInterceptorAdapter 的类都是拦截器.</p>
 
-    <h2 id="5.2">5.2 拦截器的拦截条件</h2>
+    <h2 id="5_2">5.2 拦截器的拦截条件</h2>
 
     <p>我们可以通过重写ControllerInterceptorAdapter的一些方法达到条件性的拦截，具体的拦截条件如下：</p>
 
@@ -1420,7 +1419,7 @@
         <li>isForAction:定义满足某条件的才会被拦截.</li>
         <li>isForDispatcher:根据响应的情况判断是否拦截，比如说是正常请求、内部forward、还是include.
 
-            <h2 id="5.3">5.3 拦截器的实现</h2></li>
+            <h2 id="5_3">5.3 拦截器的实现</h2></li>
     </ul>
 
 
@@ -1542,11 +1541,11 @@
 
     <p>数据校验发生在所有的应用层,是从视图层到持久层的共同任务.通常相同的验证逻辑发生在每一层,这样是非常耗时并且容易出错.为了避免这些验证的重复,开发人员开讲验证逻辑捆绑至参数上。</p>
 
-    <h2 id="6.1">6.1 Web-Platform的数据校验</h2>
+    <h2 id="6_1">6.1 Web-Platform的数据校验</h2>
 
     <p>Web-Platform的数据校验采用将需要验证的属性直接捆绑至参数,并且可以很方便的将验证结果返回给前台页面.对于请求的类型MVC会自动识别Ajax或普通Http的请求,并进行不同的响应,mvc提供了一系列的校验条件和对应的消息,校验的消息可以自己指定.mvc的校验扩展了hibernate-validator,不但可以验证javaBean的属性还可以验证Controller方法里的参数。</p>
 
-    <h2 id="6.2">6.2 @Validation中的规则</h2>
+    <h2 id="6_2">6.2 @Validation中的规则</h2>
 
     <p>@validation注解是mvc的专用注解,用来给Controller方法里的参数增加验证,以及把验证信息返回给页面.Controller方法参数的验证有两种:第一种是直接用javax.validation里的各种注解来验证,这个可以用来验证单个属性.第二种是用mvc自己的注解后缀为Ex,总共有15个,如下所列.这种注解主要有俩参数,第一个参数是自定义验证信息,第2个参数是数组,里面是需要验证的参数。</p>
 
@@ -1567,7 +1566,7 @@
     SizeEx //字符串,集合,数组,map必须和给定得size一样
 </code></pre>
 
-    <h2 id="6.3">6.3 参数的校验</h2>
+    <h2 id="6_3">6.3 参数的校验</h2>
 
     <p>只需在参数前面加上@Param和@Validation注解即可.用@Param("paramName"),用@Validation(errorPath = "validateParam")表示验证validateParam方法的参数.errorPath参数用来指定验证错误信息的显示页面,一般和参数的提交页面是同一个.</p>
 
@@ -1603,7 +1602,7 @@
 
     <p>还有一种用的mvc自定义个扩展注解,将在下面章节给大家介绍.</p>
 
-    <h2 id="6.4">6.4 javabean的校验</h2>
+    <h2 id="6_4">6.4 javabean的校验</h2>
 
     <p>javaBean的属性增加校验条件然后给ValidateController增加Bean校验的事例方法.可以使用hibernate-validator的所有对javaBean的验证,详细的参考<a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-gettingstarted-uel">hibernate-validator</a>.这里我们主要简单的介绍JavaBean的验证和mvc的扩展注解一起使用。</p>
 
@@ -1667,7 +1666,7 @@
     }
 </code></pre>
 
-    <h2 id="6.5">6.5 校验的错误信息</h2>
+    <h2 id="6_5">6.5 校验的错误信息</h2>
 
     <p>errorMessage用以显示验证过后的错误信息,使用时必须引入mvc的检验标签。errerMessage有property和type两个属性.property是必须填写的,表示显示哪个属性或参数的错误信息.type表示显示的类型有propertyPath、message、invalidValue三种.invalidValue:表示错误的值, message:表示错误信息, propertyPath:表示被校验的属性名称或参数名称</p>
 
@@ -1675,7 +1674,7 @@
     &lt;mvc:errorMsg property="id" /&gt;
 </code></pre>
 
-    <h2 id="6.6">6.6 自定义的数据校验</h2>
+    <h2 id="6_6">6.6 自定义的数据校验</h2>
 
     <p>详情请参见<a href="http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-gettingstarted-uel">hibernate-validator</a>.</p>
 </div>
@@ -1688,7 +1687,7 @@
 
     <p>one-web支持多种格式,多个文件的上传。您只需在页面上,上传表单要enctype="multipart/form-data",method="POST" 两个属性,表单里要有type为file的input用于选择文件，file类型的input个数不限。</p>
 
-    <h2 id="7.1">7.1 单个文件的上传</h2>
+    <h2 id="7_1">7.1 单个文件的上传</h2>
 
     <p>单个文件的上传只要form中有file类型的input。</p>
 
@@ -1718,7 +1717,7 @@
     }
 </code></pre>
 
-    <h2 id="7.2">7.2 多个文件的上传</h2>
+    <h2 id="7_2">7.2 多个文件的上传</h2>
 
     <p>多文件的上传是依靠file类型的input 的name属性的前缀来区分的例如 name=doc1和name=doc2 可以用@Param("doc")同时获取。</p>
 
@@ -1748,11 +1747,11 @@
 
     <p>}</p>
 
-    <h2 id="7.3">7.3 混合文件上传</h2>
+    <h2 id="7_3">7.3 混合文件上传</h2>
 
     <p>混合模式就是上面两种上传的综合，只需要将两个方法的参数累加到一起，将form合并到一起即可。</p>
 
-    <h2 id="7.4">7.4 上传所有文件</h2>
+    <h2 id="7_4">7.4 上传所有文件</h2>
 
     <p>上传所有文件的方法为不在控制器的MultipartFile参数增加@Param注解.
         控制器代码：</p>
@@ -1780,7 +1779,7 @@
     </ul>
 
 
-    <h2 id="8.1">8.1 最简单的</h2>
+    <h2 id="8_1">8.1 最简单的</h2>
 
 <pre><code>//// 直接放在controllers包或其子包下
     public class ErrorHandler implements ControllerErrorHandler {
@@ -1791,7 +1790,7 @@
     }
 </code></pre>
 
-    <h2 id="8.2">8.2 放在哪里才能生效？</h2>
+    <h2 id="8_2">8.2 放在哪里才能生效？</h2>
 
     <ul>
         <li>放在controllers目录下，和controller们在一起。</li>
@@ -1800,7 +1799,7 @@
     </ul>
 
 
-    <h2 id="8.3">8.3 区分异常类型的</h2>
+    <h2 id="8_3">8.3 区分异常类型的</h2>
 
 <pre><code>public class ErrorHandler implements ControllerErrorHandler {
 
@@ -1844,7 +1843,7 @@
     </ul>
 
 
-    <h2 id="8.4">8.4 更好的区分不同的异常类型</h2>
+    <h2 id="8_4">8.4 更好的区分不同的异常类型</h2>
 
 <pre><code>package com.sinosoft.controllers;
 
@@ -1868,7 +1867,7 @@
     }
 </code></pre>
 
-    <h2 id="8.5">8.5 将异常让渡给上级模块的错误处理器处理</h2>
+    <h2 id="8_5">8.5 将异常让渡给上级模块的错误处理器处理</h2>
 
     <p>controllers自己或其子package下都可以拥有独立的ControllerErrorHandler。 如果在web调用过程中，控制器、拦截器等发生异常时，如果给定的module含有自己ControllerErrorHanlder时， 则由他处理；如果自己没有则调用上级的ControllerErrorHandler处理。</p>
 
@@ -1896,7 +1895,7 @@
     }
 </code></pre>
 
-    <h2 id="8.6">8.6 异常处理的Adapter</h2>
+    <h2 id="8_6">8.6 异常处理的Adapter</h2>
 
     <p>以上parentErrorHanlder的逻辑，Web-Platform提供的ErrorHandlerAdpater类已经封装了</p>
 

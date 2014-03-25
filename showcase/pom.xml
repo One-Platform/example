@@ -399,7 +399,7 @@
                 <artifactId>tomcat-maven-plugin</artifactId>
                 <configuration>
                     <uriEncoding>UTF-8</uriEncoding>
-                    <path>/showCase</path>
+                    <path>/one</path>
                     <port>9000</port>
                 </configuration>
             </plugin>
