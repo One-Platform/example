@@ -34,7 +34,7 @@
 <div class="bs-docs-featurette">
     <div class="container">
         <h2 class="bs-docs-featurette-title">专为大家,无处不在</h2>
-        <p class="lead">从解决方案到项目管理,您都可以在这里找到答案</p>
+        <p class="lead">从解决方案到技术细节,您都可以在这里找到答案</p>
 
         <hr class="half-rule">
         <div class="row">
