@@ -35,7 +35,7 @@
 
     <div class="container">
         <div class="row">
-            <p class="lead text-left" id="develop">组件</p>
+            <p class="lead text-left" id="develop">开发</p>
             <div class="col-sm-4" >
                 <a class="project--container project--container--link" href="${ctx}/project/web">
                     <i class="icon-leaf icon-5x" style="color:#563d7c;"></i>

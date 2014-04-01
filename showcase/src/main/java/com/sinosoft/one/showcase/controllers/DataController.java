@@ -28,8 +28,8 @@ public class DataController {
         projectRelease.setReleaseStatus("SNAPSHOT");
         projectRelease.setRefDocUrl(inv.getRequest().getContextPath()+"/project/doc");
         projectRelease.setApiDocUrl(inv.getRequest().getContextPath()+"/api/apidocs-web/index.html");
-        projectRelease.setGroupId("org.springframework");
-        projectRelease.setArtifactId("spring-framework");
+        projectRelease.setGroupId("com.sinosoft.one");
+        projectRelease.setArtifactId("mvc");
         Repository repository = new Repository();
         repository.setId("spring-snapshots");
         repository.setName("Spring Snapshots");

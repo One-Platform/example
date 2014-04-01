@@ -516,7 +516,7 @@
 <p><br>
     <p>在src下创建com.sinosoft.controllers(或web).hello包，在包下创建一个控制器RelaxController
     注意RelaxController所在的包</p>
-    <code>hello/RelaxController.java</code></p>
+    <code>hello/HelloController.java</code></p>
 
 <div class="highlight">
     <button class="copy-button snippet" id="copy-button-1" data-clipboard-target="code-block-1"></button><pre
@@ -531,23 +531,23 @@
         class="o">;</span>
 
 
-    <span class="nd">@Path("relax")</span>
-    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">RelaxController</span> <span
+    <span class="nd">@Path("hello")</span>
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">HelloController</span> <span
             class="o">{</span>
 
     <span class="nd"> @Get("one")</span>
-    <span class="kd">public String</span> <span class="nf">one</span> <span class="n">( Invocation inv )</span><span class="o">{</span><span
+    <span class="kd">public String</span> <span class="nf">one</span> <span class="n">(Invocation inv)</span><span class="o">{</span><span
             class="o">
-        <span class="n">inv</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">"now"</span><span class="o">,</span><span class="k">"This is the frist one!"</span>
-        <span class="o">);</span>
-    <span class="o">}</span>;</span>
+        <span class="n">inv</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="k">"now"</span><span class="o">,</span><span class="k">"This is the frist one!"</span><span class="o">);</span>
+        <span class="n">return</span><span class="k">"hello"</span>;
+    <span class="o">}</span></span>
 
     <span class="o">}</span>
 </code></pre>
 </div>
 <p><br>
-    <p>在WebContent下创建views/hello文件夹，在包下创建一个JSP文件Hello-Relax.jsp</p>
-    <code>Hello-Relax.jsp</code></p>
+    <p>在webapp下创建views/hello文件夹，在包下创建一个JSP文件hello.jsp</p>
+    <code>hello.jsp</code></p>
 
 <div class="highlight">
     <button class="copy-button snippet" id="copy-button-2" data-clipboard-target="code-block-2"></button><pre
@@ -559,12 +559,12 @@
     &lt;title&gt;The First One MVC&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-    &lt;h1&gt;${now}&lt;/h1&gt;
+    &lt;h1&gt;<span>$</span>{now}&lt;/h1&gt;
     &lt;/body&gt;
     &lt;/html&gt;
 </code></pre>
 </div>
-<p>在web容器上运行一下(假设项目名为oneMvc)：访问http://localhost:8080/oneMvc/hello/relax/one.第一个mvc程序就构建好了</p>
+<p>在web容器上运行一下(假设项目名为one)：访问http://localhost:8080/one/hello/hello/one.第一个mvc程序就构建好了</p>
 </div>
 </div>
 <div class="col-md-4 ">
