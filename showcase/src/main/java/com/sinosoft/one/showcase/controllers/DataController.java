@@ -31,12 +31,12 @@ public class DataController {
         projectRelease.setGroupId("com.sinosoft.one");
         projectRelease.setArtifactId("mvc");
         Repository repository = new Repository();
-        repository.setId("spring-snapshots");
-        repository.setName("Spring Snapshots");
-        repository.setUrl("http://repo.spring.io/snapshot");
+        repository.setId("nexus");
+        repository.setName("Team Nexus Repository");
+        repository.setUrl("http://219.141.211.14:6010/nexus/content/groups/public");
         repository.setSnapshotsEnabled(true);
         projectRelease.setRepository(repository);
-        projectRelease.setVersion("1.0.3.BUILD-SNAPSHOT");
+        projectRelease.setVersion("1.0.3-SNAPSHOT");
         projectRelease.setVersionDisplayName("1.0.3");
         projectRelease.setCurrent(true);
         projectRelease.setGeneralAvailability(false);
