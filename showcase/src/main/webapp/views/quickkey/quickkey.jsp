@@ -31,7 +31,7 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="${ctx}/static/images/bootstrap/apple-touch-icon-144-precomposed.png" />
     <link rel="shortcut icon" href="${ctx}/static/images/bootstrap/favicon.png" />
-    <script type="text/javascript" src="${ctx}/static/js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="${ctx}/static/js/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="${ctx}/static/js/mousetrap.js"></script>
 
 

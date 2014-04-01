@@ -5,7 +5,7 @@
         <css>/static/css/bootstrap/github.min.css</css>
         <css>/static/css/bootstrap/bootstrap_master.css</css>
 
-        <js>/static/js/jquery-1.7.1.js</js>
+        <js>/static/js/jquery-1.11.0.js</js>
         <js>/static/js/bootstrap/bootstrap.js</js>
     </group>
 </groups>

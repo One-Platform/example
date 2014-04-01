@@ -5,7 +5,7 @@ Spring.ProjectDocumentationWidget = function () {
     var mavenWidgetEl = $('.js-download-maven-widget');
     var documentationEl = $('.js-documentation-widget');
 //    var projectUrl = apiBaseUrl + "/project_metadata/" + projectId;
-    var projectUrl = "http://localhost:9000/showcase/webVersion";
+    var projectUrl = ctx+"/webVersion";
     var promise = Spring.loadProject(projectUrl);
     promise.then(function (project) {
         Spring.buildDocumentationWidget(documentationEl, project);

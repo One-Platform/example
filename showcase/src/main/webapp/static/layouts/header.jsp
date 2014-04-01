@@ -22,20 +22,21 @@
             <li><a href="${ctx}/document">文档</a></li>
             <li><a href="${ctx}/guides">指南</a></li>
             <li class="dropdown">
-                <a href="${ctx}/peoject" class="dropdown-toggle" data-toggle="dropdown">平台 <b class="caret"></b></a>
+
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">组件</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#develop">开发</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#test">测试</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">管理</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">运营</a></li>
+                    <%--<li><a href="">组件</a></li>--%>
+                    <%--<li class="divider"></li>--%>
+                    <li><a href="${ctx}/project">开发</a></li>
+                    <%--<li class="divider"></li>--%>
+                    <%--<li><a href="#test">测试</a></li>--%>
+                    <%--<li class="divider"></li>--%>
+                    <%--<li><a href="#">管理</a></li>--%>
+                    <%--<li class="divider"></li>--%>
+                    <%--<li><a href="#">运营</a></li>--%>
                 </ul>
             </li>
-            <li><a href="#">论坛</a></li>
+            <li><a href="${ctx}/forum">论坛</a></li>
         </ul>
     </nav><!-- /.navbar-collapse -->
     </div>

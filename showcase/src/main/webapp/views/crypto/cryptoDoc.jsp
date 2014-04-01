@@ -132,7 +132,7 @@ crypto</em>config.xml
 &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
 &lt;head&gt;
 &lt;title&gt;前端加密&lt;/title&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;${ctx}/static/js/jquery-1.7.1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;${ctx}/static/js/jquery-1.11.0.js&quot;&gt;&lt;/script&gt;
 &lt;!-- 加密的核心JS，必须引用 --&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;${ctx}/static/js/crypto/cryptocore.js&quot;&gt;&lt;/script&gt;
 &lt;!-- form提交时，需要引用的前台加密JS --&gt;
@@ -172,7 +172,7 @@ crypto</em>config.xml
 &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
 &lt;head&gt;
 &lt;title&gt;前端加密&lt;/title&gt;
-&lt;script type=&quot;text/javascript&quot; src=&quot;${ctx}/static/js/jquery-1.7.1.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;${ctx}/static/js/jquery-1.11.0.js&quot;&gt;&lt;/script&gt;
 &lt;!-- 加密的核心JS，必须引用 --&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;${ctx}/static/js/crypto/cryptocore.js&quot;&gt;&lt;/script&gt;
 &lt;!-- ajax提交时，需要引用的前台加密JS --&gt;
@@ -333,7 +333,7 @@ public void testDeleteUnCryptoConfigs() {
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<%-- <script src="${ctx}/static/js/jquery-1.7.1.js"></script> --%>
+<%-- <script src="${ctx}/static/js/jquery-1.11.0.js"></script> --%>
 
 <!-- Bootstrap core JS file
  注意：此文件跟随官网最新版本更新，随时会有改变。建议使用下面v3.0.3版本的CDN链接！
