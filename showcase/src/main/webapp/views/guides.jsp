@@ -57,8 +57,8 @@
 <div class="content-container--body">
     <div data-filterable-container="">
         <div class="content-section-title--container">
-            <h3 class="content-section-title no-margin">指导教程</h3>
-            <p class="content-section-sub-title">只需花费15-30分钟,就可以对平台的组件进行快读的入门</p>
+            <h3 class="content-section-title no-margin"></h3>
+            <p class="content-section-sub-title"><a href="${ctx}/quickstart/restful">快速构建Restful风格的WEB工程</a></p>
         </div>
         <%--<div class="guide--container" data-filterable="Designing and Implementing RESTful Web Services with Spring Learn how to design and implement RESTful web services with Spring">--%>
             <%--<a class="guide--title" href="http://spring.io/guides/tutorials/rest/">用maven构建java工程</a>--%>
