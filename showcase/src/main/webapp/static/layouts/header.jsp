@@ -25,15 +25,15 @@
 
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <%--<li><a href="">组件</a></li>--%>
-                    <%--<li class="divider"></li>--%>
+                    <li><a href="">组件</a></li>
+                    <li class="divider"></li>
                     <li><a href="${ctx}/project">开发</a></li>
-                    <%--<li class="divider"></li>--%>
-                    <%--<li><a href="#test">测试</a></li>--%>
-                    <%--<li class="divider"></li>--%>
-                    <%--<li><a href="#">管理</a></li>--%>
-                    <%--<li class="divider"></li>--%>
-                    <%--<li><a href="#">运营</a></li>--%>
+                    <li class="divider"></li>
+                    <li><a href="#test">测试</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">管理</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">运营</a></li>
                 </ul>
             </li>
             <li><a href="${ctx}/forum">论坛</a></li>
