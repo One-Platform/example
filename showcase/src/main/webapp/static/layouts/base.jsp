@@ -10,7 +10,7 @@
 <link href="${ctx}/static/css/bootstrap/docs.css" rel="stylesheet" />
 <link href="${ctx}/static/css/bootstrap/github.min.css" rel="stylesheet" />
 <link href="${ctx}/static/css/bootstrap/bootstrap_master.css" rel="stylesheet" />
-
+<link rel="shortcut icon"  href="${ctx}/static/images/bootstrap/favicon.png" />
 <link href="${ctx}/static/css/main.css" rel="stylesheet" />
 <script>
     var ctx = '${ctx}';
