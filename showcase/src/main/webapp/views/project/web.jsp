@@ -467,7 +467,7 @@
                         org.springframework
                         <span  class="nt">&lt;/groupId&gt;</span>
                         <span class="nt">&lt;artifactId&gt;</span>
-                        spring-context<span
+                        mvc<span
                                 class="nt">&lt;/artifactId&gt;</span>
                         <span class="nt">&lt;version&gt;</span>4.0.2.RELEASE<span class="nt">&lt;/version&gt;</span>
                         <span class="nt">&lt;/dependency&gt;</span>
@@ -739,7 +739,7 @@
         <span class="nt">&lt;dependencies&gt;</span>
             <span class="nt">&lt;dependency&gt;</span>
                 <span class="nt">&lt;groupId&gt;</span>{@= groupId @}<span class="nt">&lt;/groupId&gt;</span>
-                <span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
+                <span class="nt">&lt;artifactId&gt;</span>mvc<span class="nt">&lt;/artifactId&gt;</span>
                 <span class="nt">&lt;version&gt;</span>{@= version @}<span class="nt">&lt;/version&gt;</span>
             <span class="nt">&lt;/dependency&gt;</span>
         <span class="nt">&lt;/dependencies&gt;</span>
@@ -763,7 +763,7 @@
 </script>
 <script type="text/html" id="project-download-gradle-widget-template">
     <div class="highlight"><pre><code class="groovy"><span class="n">dependencies</span> <span class="o">{</span>
-        <span class="n">compile</span> <span class="s1">&#39;{@= groupId @}:spring-context:{@= version @}&#39;</span>
+        <span class="n">compile</span> <span class="s1">&#39;{@= groupId @}:mvc:{@= version @}&#39;</span>
         <span class="o">}</span>
     </code></pre>
     </div>
