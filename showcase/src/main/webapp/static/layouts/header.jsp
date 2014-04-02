@@ -25,7 +25,7 @@
 
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目 <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="">组件</a></li>
+                    <li><a href="${ctx}/project">组件</a></li>
                     <li class="divider"></li>
                     <li><a href="${ctx}/project">开发</a></li>
                     <li class="divider"></li>
