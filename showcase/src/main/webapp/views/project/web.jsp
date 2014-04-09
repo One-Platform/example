@@ -358,7 +358,7 @@
 <div id="download-widget">
     <div class="row download-widget--container">
         <div class="download-widget--header js-item-dropdown-widget--wrapper">
-            <div class="download-widget--title">
+            <div class="download-widget--title" onclick="download();">
                 Download
             </div>
             <div data-download-widget-controls="" style="display: inline-block">
@@ -779,6 +779,12 @@
 </script>
 <script type="text/html" id="project-download-zip-widget-template">
     This is a zip url
+</script>
+<script type="text/javascript">
+    function download(){
+       window.open("${ctx}/download/mvc.zip");
+
+    }
 </script>
 
 </body>
