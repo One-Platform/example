@@ -33,6 +33,13 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/github.min.css">
+    <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+    <script>
+        hljs.tabReplace = ' ';
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144"
           href="${ctx}/static/images/bootstrap/apple-touch-icon-144-precomposed.png">
